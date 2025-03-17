@@ -7222,3 +7222,7 @@ texture = ExtResource("82_gv0k0")
 [node name="MossTree24" type="Sprite2D" parent="."]
 position = Vector2(643, 615)
 texture = ExtResource("25_2ctpi")
+
+[node name="Rock1GrassShadow7" type="Sprite2D" parent="."]
+position = Vector2(787, 497)
+texture = ExtResource("45_sbw2c")
