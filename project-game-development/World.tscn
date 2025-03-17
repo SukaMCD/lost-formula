@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://b57tqdcspn73p"]
+[gd_scene load_steps=55 format=3 uid="uid://b57tqdcspn73p"]
 
 [ext_resource type="Texture2D" uid="uid://dhx7wd1k4evkn" path="res://asset/asset.jpeg" id="1_lvugr"]
 [ext_resource type="Texture2D" uid="uid://4hvj7jit08mo" path="res://craftpix-net-385863-free-top-down-trees-pixel-art/PNG/Assets_separately/Trees_shadow/Fruit_tree2.png" id="14_jdw34"]
@@ -44,6 +44,7 @@
 [ext_resource type="Texture2D" uid="uid://jriukrbcj5bh" path="res://Objects_separately/Rock1_grass_shadow1.png" id="49_ap4n5"]
 [ext_resource type="Texture2D" uid="uid://csav2g5p1a5ey" path="res://craftpix-net-385863-free-top-down-trees-pixel-art/PNG/Assets_separately/Trees_shadow/Palm_tree2_1.png" id="50_f6cia"]
 [ext_resource type="Texture2D" uid="uid://dy85cmwtncnt4" path="res://Objects_separately/Rock1_grass_shadow3.png" id="51_yee6v"]
+[ext_resource type="PackedScene" uid="uid://bprilfd50p28q" path="res://player.tscn" id="52_olhe2"]
 [ext_resource type="Texture2D" uid="uid://suhtt6x8s2sc" path="res://Objects_separately/Rock1_1.png" id="60_1f0fc"]
 [ext_resource type="Texture2D" uid="uid://dgbnoc0polcb8" path="res://Objects_separately/Rock1_2.png" id="61_1wp7l"]
 [ext_resource type="Texture2D" uid="uid://b732loqdrsfeo" path="res://Objects_separately/Rock1_grass_shadow_dark1.png" id="64_ogo37"]
@@ -7239,3 +7240,6 @@ texture = ExtResource("46_akmfn")
 [node name="PalmTree35" type="Sprite2D" parent="."]
 position = Vector2(636, 443)
 texture = ExtResource("50_f6cia")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("52_olhe2")]
+position = Vector2(-726, 83)

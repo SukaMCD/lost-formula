@@ -11,10 +11,17 @@ script = ExtResource("1_q86ka")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(559.5, 312.75)
+position = Vector2(956, 543)
 scale = Vector2(1.98437, 2.4125)
 texture = ExtResource("1_mrkwx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(555, 309)
+position = Vector2(956, 539)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_lhdi0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(956, 539)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
