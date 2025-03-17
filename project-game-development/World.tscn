@@ -7243,4 +7243,5 @@ texture = ExtResource("50_f6cia")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="CharacterBody2D" parent="CanvasLayer" instance=ExtResource("52_w2ua5")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("52_w2ua5")]
+position = Vector2(224, 514)
