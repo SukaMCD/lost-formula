@@ -3,19 +3,13 @@ extends CharacterBody2D
 @export var speed: float = 200
 
 func _physics_process(delta):
-	var input_vector = Vector2(
-		Input.get_axis("left", "right"),
-		Input.get_axis("up", "down")
-	)
+	# Gerakan kiri/kanan
+	var direction_x = Input.get_axis("left", "right")
+	# Gerakan atas/bawah
+	var direction_y = Input.get_axis("up", "down")
 
-	# Normalisasi supaya diagonal nggak lebih cepat
-	if input_vector.length() > 0:
-		input_vector = input_vector.normalized()
+	# Update velocity berdasarkan input
+	velocity.x = direction_x * speed
+	velocity.y = direction_y * speed
 
-	velocity = input_vector * speed
-
-	move_and_slide()
-
-	# (Optional) Untuk debug arah / animasi
-	# if velocity.length() > 0:
-	# 	print("Moving", velocity)
+	move_and_slide()  # Pindahkan karakter dengan physics engine
