@@ -14,15 +14,16 @@ script = ExtResource("1_q86ka")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0.999977, -2.00001)
-scale = Vector2(2.43935, 2.99375)
+scale = Vector2(1.42639, 1.75057)
 texture = ExtResource("1_mrkwx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.25, -7.75)
+scale = Vector2(0.584743, 0.584743)
 shape = SubResource("RectangleShape2D_lhdi0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+zoom = Vector2(7, 7)
 limit_left = 0
 limit_top = 0
 limit_right = 1280
