@@ -143,12 +143,11 @@ scale = Vector2(0.584743, 0.584743)
 shape = SubResource("RectangleShape2D_lhdi0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(7, 7)
 limit_left = 0
 limit_top = 0
 limit_right = 1280
 limit_bottom = 1320
-position_smoothing_speed = 10.0
+position_smoothing_speed = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2, -26)
