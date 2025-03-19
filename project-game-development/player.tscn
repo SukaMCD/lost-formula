@@ -143,6 +143,7 @@ scale = Vector2(0.584743, 0.584743)
 shape = SubResource("RectangleShape2D_lhdi0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(7, 7)
 limit_left = 0
 limit_top = 0
 limit_right = 1280
@@ -153,4 +154,4 @@ position_smoothing_speed = 1.0
 position = Vector2(-2, -26)
 scale = Vector2(0.632813, 0.632813)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"Run"
+animation = &"Idle"
