@@ -6680,6 +6680,9 @@ tile_map_data = PackedByteArray("AAAsADoAAAAZAB4AAAAsADsAAAA0ACAAAAAtADwAAAAnADA
 tile_set = SubResource("TileSet_mjgr2")
 metadata/_edit_lock_ = true
 
+[node name="CharacterBody2D" parent="." instance=ExtResource("52_w2ua5")]
+position = Vector2(206, 465)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
@@ -7372,6 +7375,3 @@ position = Vector2(636, 443)
 texture = ExtResource("50_f6cia")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("52_w2ua5")]
-position = Vector2(193, 498)
