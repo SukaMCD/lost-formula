@@ -6680,8 +6680,8 @@ tile_map_data = PackedByteArray("AAAsADoAAAAZAB4AAAAsADsAAAA0ACAAAAAtADwAAAAnADA
 tile_set = SubResource("TileSet_mjgr2")
 metadata/_edit_lock_ = true
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("52_w2ua5")]
-position = Vector2(206, 465)
+[node name="Main Character" parent="." instance=ExtResource("52_w2ua5")]
+position = Vector2(205, 537)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
