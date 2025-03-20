@@ -3,7 +3,7 @@
 ### Project Info
 - **Engine**: Godot 4.1+
 - **Tipe Game**: 2D Top-Down Adventure
-- **Style**: Pixel Art (character), Vector UI (UI/UX)
+- **Style**: Vector (character & UI/UX)
 
 ---
 
