@@ -42,8 +42,8 @@
 [ext_resource type="Texture2D" uid="uid://d07i6yo7euqdq" path="res://Objects_separately/Rock1_grass_shadow4.png" id="48_5r2h4"]
 [ext_resource type="Texture2D" uid="uid://jriukrbcj5bh" path="res://Objects_separately/Rock1_grass_shadow1.png" id="49_ap4n5"]
 [ext_resource type="Texture2D" uid="uid://csav2g5p1a5ey" path="res://craftpix-net-385863-free-top-down-trees-pixel-art/PNG/Assets_separately/Trees_shadow/Palm_tree2_1.png" id="50_f6cia"]
+[ext_resource type="PackedScene" uid="uid://cbewa6u2b2ked" path="res://player.tscn" id="51_p6sh6"]
 [ext_resource type="Texture2D" uid="uid://dy85cmwtncnt4" path="res://Objects_separately/Rock1_grass_shadow3.png" id="51_yee6v"]
-[ext_resource type="PackedScene" uid="uid://sww683cihmyi" path="res://player.tscn" id="52_w2ua5"]
 [ext_resource type="Texture2D" uid="uid://suhtt6x8s2sc" path="res://Objects_separately/Rock1_1.png" id="60_1f0fc"]
 [ext_resource type="Texture2D" uid="uid://dgbnoc0polcb8" path="res://Objects_separately/Rock1_2.png" id="61_1wp7l"]
 [ext_resource type="Texture2D" uid="uid://b732loqdrsfeo" path="res://Objects_separately/Rock1_grass_shadow_dark1.png" id="64_ogo37"]
@@ -6680,8 +6680,8 @@ tile_map_data = PackedByteArray("AAAsADoAAAAZAB4AAAAsADsAAAA0ACAAAAAtADwAAAAnADA
 tile_set = SubResource("TileSet_mjgr2")
 metadata/_edit_lock_ = true
 
-[node name="Main Character" parent="." instance=ExtResource("52_w2ua5")]
-position = Vector2(205, 537)
+[node name="PlayerRoot" parent="." instance=ExtResource("51_p6sh6")]
+position = Vector2(220, 562)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
