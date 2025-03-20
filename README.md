@@ -1,7 +1,7 @@
 # Lost Formula - Contributor README
 
 ### Project Info
-- **Engine**: Godot 4.1+
+- **Engine**: Godot 4.4
 - **Tipe Game**: 2D Top-Down Adventure
 - **Style**: Vector (character & UI/UX)
 
