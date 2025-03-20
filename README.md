@@ -1,6 +1,4 @@
----
-
-## Lost Formula - Contributor README
+# Lost Formula - Contributor README
 
 ### Project Info
 - **Engine**: Godot 4.1+
