@@ -1,5 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://cbewa6u2b2ked"]
+[gd_scene load_steps=22 format=3 uid="uid://cbewa6u2b2ked"]
 
+[ext_resource type="Script" uid="uid://b2ran2twf82b5" path="res://character_body_2d.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://bcu4ln1pb63cv" path="res://craftpix-net-439247-free-fantasy-chibi-male-sprites-pixel-art/Swordsman/Idle.png" id="1_rihsh"]
 [ext_resource type="Texture2D" uid="uid://djhdt7m4h2d03" path="res://craftpix-net-439247-free-fantasy-chibi-male-sprites-pixel-art/Swordsman/Run.png" id="2_vop8p"]
 
@@ -135,6 +136,7 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 scale = Vector2(0.5, 0.5)
+script = ExtResource("1_i3pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(-1.25, -7.75)
