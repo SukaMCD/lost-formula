@@ -7945,3 +7945,87 @@ texture = ExtResource("43_bmvjr")
 [node name="Rock53" type="Sprite2D" parent="."]
 position = Vector2(1910, 870)
 texture = ExtResource("43_bmvjr")
+
+[node name="Rock54" type="Sprite2D" parent="."]
+position = Vector2(539, 816)
+texture = ExtResource("42_oy1i2")
+
+[node name="Rock55" type="Sprite2D" parent="."]
+position = Vector2(769, 811)
+texture = ExtResource("42_oy1i2")
+
+[node name="Rock56" type="Sprite2D" parent="."]
+position = Vector2(707, 809)
+texture = ExtResource("42_oy1i2")
+
+[node name="Rock57" type="Sprite2D" parent="."]
+position = Vector2(650, 809)
+texture = ExtResource("42_oy1i2")
+
+[node name="Rock58" type="Sprite2D" parent="."]
+position = Vector2(910, 804)
+texture = ExtResource("42_oy1i2")
+
+[node name="Rock59" type="Sprite2D" parent="."]
+position = Vector2(678, 812)
+texture = ExtResource("42_oy1i2")
+
+[node name="Rock60" type="Sprite2D" parent="."]
+position = Vector2(731, 796)
+texture = ExtResource("42_oy1i2")
+
+[node name="Rock61" type="Sprite2D" parent="."]
+position = Vector2(631, 802)
+texture = ExtResource("42_oy1i2")
+
+[node name="Rock62" type="Sprite2D" parent="."]
+position = Vector2(460, 816)
+texture = ExtResource("42_oy1i2")
+
+[node name="ChristmasTree26" type="Sprite2D" parent="."]
+position = Vector2(844, 885)
+texture = ExtResource("22_mfyw0")
+
+[node name="ChristmasTree27" type="Sprite2D" parent="."]
+position = Vector2(1050, 882)
+texture = ExtResource("22_mfyw0")
+
+[node name="ChristmasTree28" type="Sprite2D" parent="."]
+position = Vector2(992, 884)
+texture = ExtResource("22_mfyw0")
+
+[node name="ChristmasTree29" type="Sprite2D" parent="."]
+position = Vector2(923, 888)
+texture = ExtResource("22_mfyw0")
+
+[node name="ChristmasTree30" type="Sprite2D" parent="."]
+position = Vector2(1390, 874)
+texture = ExtResource("22_mfyw0")
+
+[node name="ChristmasTree31" type="Sprite2D" parent="."]
+position = Vector2(1330, 877)
+texture = ExtResource("22_mfyw0")
+
+[node name="ChristmasTree32" type="Sprite2D" parent="."]
+position = Vector2(660, 888)
+texture = ExtResource("22_mfyw0")
+
+[node name="ChristmasTree33" type="Sprite2D" parent="."]
+position = Vector2(585, 888)
+texture = ExtResource("22_mfyw0")
+
+[node name="ChristmasTree34" type="Sprite2D" parent="."]
+position = Vector2(1575, 871)
+texture = ExtResource("22_mfyw0")
+
+[node name="ChristmasTree35" type="Sprite2D" parent="."]
+position = Vector2(1496, 874)
+texture = ExtResource("22_mfyw0")
+
+[node name="ChristmasTree36" type="Sprite2D" parent="."]
+position = Vector2(1709, 877)
+texture = ExtResource("22_mfyw0")
+
+[node name="ChristmasTree37" type="Sprite2D" parent="."]
+position = Vector2(1823, 874)
+texture = ExtResource("22_mfyw0")
