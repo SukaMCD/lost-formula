@@ -1619,24 +1619,6 @@ position = Vector2(808, 108)
 scale = Vector2(0.421748, 0.397217)
 texture = ExtResource("23_wu20s")
 
-[node name="Building5" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(218, 445)
-scale = Vector2(0.485533, 0.465184)
-texture = ExtResource("24_txhgd")
-
-[node name="Building7" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(929, 627)
-scale = Vector2(0.418131, 0.384987)
-texture = ExtResource("26_82lfr")
-
-[node name="Building8" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(557, 639)
-scale = Vector2(0.576663, 0.50724)
-texture = ExtResource("27_kw5lr")
-
 [node name="Decor1" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(450, 141)
@@ -1905,7 +1887,7 @@ texture = ExtResource("6_ttuw5")
 
 [node name="Building6" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1312, 604)
+position = Vector2(1326, 604)
 scale = Vector2(0.334742, 0.337467)
 texture = ExtResource("25_5a1ot")
 
@@ -1928,3 +1910,304 @@ texture = ExtResource("17_t22k8")
 position = Vector2(1229, 886.5)
 scale = Vector2(1, 1.35938)
 texture = ExtResource("17_t22k8")
+
+[node name="Road49" type="Sprite2D" parent="."]
+position = Vector2(1166, 887.5)
+scale = Vector2(1, 1.39063)
+texture = ExtResource("17_t22k8")
+
+[node name="Road50" type="Sprite2D" parent="."]
+position = Vector2(1102, 889)
+scale = Vector2(1, 1.4375)
+texture = ExtResource("17_t22k8")
+
+[node name="Road51" type="Sprite2D" parent="."]
+position = Vector2(1038, 890)
+scale = Vector2(1, 1.46875)
+texture = ExtResource("17_t22k8")
+
+[node name="Road52" type="Sprite2D" parent="."]
+position = Vector2(974, 892.5)
+scale = Vector2(1, 1.54688)
+texture = ExtResource("17_t22k8")
+
+[node name="Road53" type="Sprite2D" parent="."]
+position = Vector2(910, 895)
+scale = Vector2(1, 1.625)
+texture = ExtResource("17_t22k8")
+
+[node name="Road54" type="Sprite2D" parent="."]
+position = Vector2(846, 896)
+scale = Vector2(1, 1.65625)
+texture = ExtResource("17_t22k8")
+
+[node name="Road55" type="Sprite2D" parent="."]
+position = Vector2(782, 896.5)
+scale = Vector2(1, 1.67188)
+texture = ExtResource("17_t22k8")
+
+[node name="Road56" type="Sprite2D" parent="."]
+position = Vector2(718, 896)
+scale = Vector2(1, 1.65625)
+texture = ExtResource("17_t22k8")
+
+[node name="Road57" type="Sprite2D" parent="."]
+position = Vector2(654, 897)
+scale = Vector2(1, 1.6875)
+texture = ExtResource("17_t22k8")
+
+[node name="Road58" type="Sprite2D" parent="."]
+position = Vector2(590, 897.5)
+scale = Vector2(1, 1.70313)
+texture = ExtResource("17_t22k8")
+
+[node name="Road59" type="Sprite2D" parent="."]
+position = Vector2(526, 897.5)
+scale = Vector2(1, 1.70313)
+texture = ExtResource("17_t22k8")
+
+[node name="Road60" type="Sprite2D" parent="."]
+position = Vector2(462, 898.5)
+scale = Vector2(1, 1.73438)
+texture = ExtResource("17_t22k8")
+
+[node name="Road61" type="Sprite2D" parent="."]
+position = Vector2(398, 897.5)
+scale = Vector2(1, 1.70313)
+texture = ExtResource("17_t22k8")
+
+[node name="Road62" type="Sprite2D" parent="."]
+position = Vector2(334, 898)
+scale = Vector2(1, 1.75)
+texture = ExtResource("17_t22k8")
+
+[node name="Road63" type="Sprite2D" parent="."]
+position = Vector2(270, 898)
+scale = Vector2(1, 1.75)
+texture = ExtResource("17_t22k8")
+
+[node name="Road64" type="Sprite2D" parent="."]
+position = Vector2(206, 899.5)
+scale = Vector2(1, 1.79688)
+texture = ExtResource("17_t22k8")
+
+[node name="Road65" type="Sprite2D" parent="."]
+position = Vector2(142, 904.5)
+scale = Vector2(1, 1.95313)
+texture = ExtResource("16_whipd")
+
+[node name="Road66" type="Sprite2D" parent="."]
+position = Vector2(1230, 749)
+texture = ExtResource("11_asybs")
+
+[node name="Road67" type="Sprite2D" parent="."]
+position = Vector2(1166, 746.5)
+scale = Vector2(1, 1.07813)
+texture = ExtResource("11_asybs")
+
+[node name="Road68" type="Sprite2D" parent="."]
+position = Vector2(1103, 745)
+scale = Vector2(0.999999, 1.15625)
+texture = ExtResource("11_asybs")
+
+[node name="Road69" type="Sprite2D" parent="."]
+position = Vector2(1039.13, 748)
+scale = Vector2(1.00391, 1.10156)
+texture = ExtResource("5_x7o2k")
+
+[node name="Road70" type="Sprite2D" parent="."]
+position = Vector2(975, 746)
+texture = ExtResource("6_ttuw5")
+
+[node name="Building7" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1000, 580)
+scale = Vector2(0.418131, 0.384987)
+texture = ExtResource("26_82lfr")
+
+[node name="Road71" type="Sprite2D" parent="."]
+position = Vector2(911, 747)
+texture = ExtResource("11_asybs")
+
+[node name="Road72" type="Sprite2D" parent="."]
+position = Vector2(847, 746)
+scale = Vector2(1, 1.07813)
+texture = ExtResource("11_asybs")
+
+[node name="Road73" type="Sprite2D" parent="."]
+position = Vector2(1293, 813)
+texture = ExtResource("14_lopk7")
+
+[node name="Road74" type="Sprite2D" parent="."]
+position = Vector2(1229, 811.5)
+scale = Vector2(1, 0.984375)
+texture = ExtResource("14_lopk7")
+
+[node name="Road75" type="Sprite2D" parent="."]
+position = Vector2(1166, 812)
+scale = Vector2(0.96875, 1)
+texture = ExtResource("14_lopk7")
+
+[node name="Road76" type="Sprite2D" parent="."]
+position = Vector2(1103, 813)
+texture = ExtResource("14_lopk7")
+
+[node name="Road77" type="Sprite2D" parent="."]
+position = Vector2(1039, 812)
+scale = Vector2(1, 0.96875)
+texture = ExtResource("14_lopk7")
+
+[node name="Road78" type="Sprite2D" parent="."]
+position = Vector2(975.5, 810.5)
+scale = Vector2(1.01563, 1.01563)
+texture = ExtResource("14_lopk7")
+
+[node name="Road79" type="Sprite2D" parent="."]
+position = Vector2(911, 811)
+texture = ExtResource("14_lopk7")
+
+[node name="Road80" type="Sprite2D" parent="."]
+position = Vector2(847, 811.25)
+scale = Vector2(1, 1.00781)
+texture = ExtResource("14_lopk7")
+
+[node name="Road81" type="Sprite2D" parent="."]
+position = Vector2(783, 811)
+texture = ExtResource("14_lopk7")
+
+[node name="Road82" type="Sprite2D" parent="."]
+position = Vector2(719, 811)
+texture = ExtResource("14_lopk7")
+
+[node name="Road83" type="Sprite2D" parent="."]
+position = Vector2(655, 811)
+texture = ExtResource("14_lopk7")
+
+[node name="Road84" type="Sprite2D" parent="."]
+position = Vector2(591, 811)
+texture = ExtResource("14_lopk7")
+
+[node name="Road85" type="Sprite2D" parent="."]
+position = Vector2(527, 811)
+texture = ExtResource("14_lopk7")
+
+[node name="Road86" type="Sprite2D" parent="."]
+position = Vector2(463, 811)
+texture = ExtResource("14_lopk7")
+
+[node name="Road87" type="Sprite2D" parent="."]
+position = Vector2(399, 811)
+texture = ExtResource("14_lopk7")
+
+[node name="Road88" type="Sprite2D" parent="."]
+position = Vector2(335, 810)
+texture = ExtResource("14_lopk7")
+
+[node name="Road89" type="Sprite2D" parent="."]
+position = Vector2(271, 810)
+texture = ExtResource("14_lopk7")
+
+[node name="Road90" type="Sprite2D" parent="."]
+position = Vector2(207, 810)
+texture = ExtResource("14_lopk7")
+
+[node name="Road91" type="Sprite2D" parent="."]
+position = Vector2(143, 810.5)
+scale = Vector2(1, 0.984376)
+texture = ExtResource("13_c7q20")
+
+[node name="Road92" type="Sprite2D" parent="."]
+position = Vector2(784, 743.5)
+scale = Vector2(1, 1.10938)
+texture = ExtResource("11_asybs")
+
+[node name="Road93" type="Sprite2D" parent="."]
+position = Vector2(720, 741)
+scale = Vector2(1, 1.1875)
+texture = ExtResource("11_asybs")
+
+[node name="Road94" type="Sprite2D" parent="."]
+position = Vector2(656, 738.5)
+scale = Vector2(1, 1.26563)
+texture = ExtResource("11_asybs")
+
+[node name="Road95" type="Sprite2D" parent="."]
+position = Vector2(592, 738.5)
+scale = Vector2(1, 1.26563)
+texture = ExtResource("5_x7o2k")
+
+[node name="Road96" type="Sprite2D" parent="."]
+position = Vector2(528, 738.5)
+scale = Vector2(1, 1.26563)
+texture = ExtResource("6_ttuw5")
+
+[node name="Building8" type="Sprite2D" parent="Road96"]
+texture_filter = 1
+position = Vector2(42, -120.494)
+scale = Vector2(0.576663, 0.400782)
+texture = ExtResource("27_kw5lr")
+
+[node name="Road97" type="Sprite2D" parent="."]
+position = Vector2(464, 738.5)
+scale = Vector2(1, 1.26563)
+texture = ExtResource("11_asybs")
+
+[node name="Road98" type="Sprite2D" parent="."]
+position = Vector2(400, 737)
+scale = Vector2(1, 1.3125)
+texture = ExtResource("11_asybs")
+
+[node name="Road99" type="Sprite2D" parent="."]
+position = Vector2(339, 735.5)
+scale = Vector2(1, 1.32813)
+texture = ExtResource("11_asybs")
+
+[node name="Road100" type="Sprite2D" parent="."]
+position = Vector2(275, 736)
+scale = Vector2(1, 1.375)
+texture = ExtResource("5_x7o2k")
+
+[node name="Road101" type="Sprite2D" parent="."]
+position = Vector2(209, 736.5)
+scale = Vector2(1.09375, 1.35937)
+texture = ExtResource("6_ttuw5")
+
+[node name="Road1" type="Sprite2D" parent="."]
+position = Vector2(144, 738)
+scale = Vector2(1, 1.28125)
+texture = ExtResource("2_tlyvh")
+
+[node name="Road102" type="Sprite2D" parent="."]
+position = Vector2(277.5, 661)
+scale = Vector2(1.10937, 1)
+texture = ExtResource("15_lpt80")
+
+[node name="Road103" type="Sprite2D" parent="."]
+position = Vector2(278.5, 597)
+scale = Vector2(1.14063, 1)
+texture = ExtResource("15_lpt80")
+
+[node name="Road104" type="Sprite2D" parent="."]
+position = Vector2(209, 662)
+scale = Vector2(1.03125, 1)
+texture = ExtResource("13_c7q20")
+
+[node name="Road105" type="Sprite2D" parent="."]
+position = Vector2(209, 598)
+scale = Vector2(1.03125, 1)
+texture = ExtResource("13_c7q20")
+
+[node name="Road106" type="Sprite2D" parent="."]
+position = Vector2(281, 536)
+scale = Vector2(1.21875, 1)
+texture = ExtResource("15_lpt80")
+
+[node name="Road107" type="Sprite2D" parent="."]
+position = Vector2(210, 535)
+texture = ExtResource("13_c7q20")
+
+[node name="Building5" type="Sprite2D" parent="Road107"]
+texture_filter = 1
+position = Vector2(35, -124)
+scale = Vector2(0.485533, 0.465184)
+texture = ExtResource("24_txhgd")
