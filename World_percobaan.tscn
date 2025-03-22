@@ -7385,647 +7385,808 @@ texture = ExtResource("50_f6cia")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Tree4" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(275, 850)
 texture = ExtResource("32_ma5hq")
 
 [node name="PalmTree23" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(325, 829)
 texture = ExtResource("50_f6cia")
 
 [node name="PalmTree36" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(312, 861)
 texture = ExtResource("52_i3ffs")
 
 [node name="PalmTree37" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(349, 847)
 texture = ExtResource("50_f6cia")
 
 [node name="FruitTree10" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(372, 863)
 texture = ExtResource("34_36313")
 
 [node name="MossTree25" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(409, 841)
 texture = ExtResource("27_rcljr")
 
 [node name="MossTree26" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(312, 868)
 texture = ExtResource("25_2ctpi")
 
 [node name="MossTree27" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(344, 871)
 texture = ExtResource("40_80spu")
 
 [node name="PalmTree38" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(386, 870)
 texture = ExtResource("50_f6cia")
 
 [node name="ChristmasTree21" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(444, 863)
 texture = ExtResource("22_mfyw0")
 
 [node name="ChristmasTree22" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(475, 876)
 texture = ExtResource("23_3eian")
 
 [node name="Rock11NoShadow4" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(420, 892)
 texture = ExtResource("23_08rga")
 
 [node name="Rock11NoShadow5" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(346, 897)
 texture = ExtResource("23_08rga")
 
 [node name="Rock18" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(261, 887)
 texture = ExtResource("41_wqavw")
 
 [node name="Rock19" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(294, 895)
 texture = ExtResource("41_wqavw")
 
 [node name="MossTree28" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(510, 889)
 texture = ExtResource("25_2ctpi")
 
 [node name="FruitTree11" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(488, 908)
 texture = ExtResource("34_36313")
 
 [node name="PalmTree39" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(499, 837)
 texture = ExtResource("28_h6q3d")
 
 [node name="MossTree29" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(541, 858)
 texture = ExtResource("25_2ctpi")
 
 [node name="PalmTree40" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(579, 823)
 texture = ExtResource("83_srgwx")
 
 [node name="PalmTree41" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(575, 857)
 texture = ExtResource("52_i3ffs")
 
 [node name="PalmTree42" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(615, 845)
 texture = ExtResource("28_h6q3d")
 
 [node name="PalmTree43" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(576, 879)
 texture = ExtResource("28_h6q3d")
 
 [node name="PalmTree44" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(623, 887)
 texture = ExtResource("88_xyi3a")
 
 [node name="PalmTree45" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(539, 900)
 texture = ExtResource("82_gv0k0")
 
 [node name="PalmTree46" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(660, 847)
 texture = ExtResource("88_xyi3a")
 
 [node name="MossTree30" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(663, 879)
 texture = ExtResource("25_2ctpi")
 
 [node name="PalmTree47" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(699, 852)
 texture = ExtResource("28_h6q3d")
 
 [node name="FruitTree12" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(694, 879)
 texture = ExtResource("34_36313")
 
 [node name="PalmTree48" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(739, 841)
 texture = ExtResource("28_h6q3d")
 
 [node name="PalmTree49" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(736, 866)
 texture = ExtResource("83_srgwx")
 
 [node name="PalmTree50" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(771, 853)
 texture = ExtResource("82_gv0k0")
 
 [node name="Rock20" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(708, 896)
 scale = Vector2(0.71875, 0.703125)
 texture = ExtResource("60_1f0fc")
 
 [node name="Tree13" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(765, 874)
 texture = ExtResource("32_ma5hq")
 
 [node name="Tree14" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(808, 826)
 texture = ExtResource("32_ma5hq")
 
 [node name="Tree15" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(852, 824)
 texture = ExtResource("30_sxug2")
 
 [node name="Tree16" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(808, 871)
 texture = ExtResource("31_2vkbv")
 
 [node name="PalmTree51" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(887, 820)
 texture = ExtResource("82_gv0k0")
 
 [node name="MossTree31" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(922, 834)
 texture = ExtResource("40_80spu")
 
 [node name="PalmTree52" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(955, 812)
 texture = ExtResource("88_xyi3a")
 
 [node name="MossTree32" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(998, 820)
 texture = ExtResource("27_rcljr")
 
 [node name="FruitTree13" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1046, 805)
 texture = ExtResource("33_xyitn")
 
 [node name="ChristmasTree23" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1093, 818)
 texture = ExtResource("22_mfyw0")
 
 [node name="Tree17" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1148, 804)
 texture = ExtResource("32_ma5hq")
 
 [node name="PalmTree53" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1188, 815)
 texture = ExtResource("82_gv0k0")
 
 [node name="PalmTree54" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1214, 791)
 texture = ExtResource("28_h6q3d")
 
 [node name="MossTree33" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1267, 799)
 texture = ExtResource("27_rcljr")
 
 [node name="MossTree34" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(850, 860)
 texture = ExtResource("27_rcljr")
 
 [node name="Tree18" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1319, 794)
 texture = ExtResource("32_ma5hq")
 
 [node name="PalmTree55" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1356, 808)
 texture = ExtResource("82_gv0k0")
 
 [node name="MossTree35" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1386, 804)
 texture = ExtResource("40_80spu")
 
 [node name="ChristmasTree24" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1428, 792)
 texture = ExtResource("22_mfyw0")
 
 [node name="ChristmasTree25" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1485, 784)
 texture = ExtResource("22_mfyw0")
 
 [node name="PalmTree56" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1530, 792)
 texture = ExtResource("28_h6q3d")
 
 [node name="PalmTree57" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1568, 783)
 texture = ExtResource("28_h6q3d")
 
 [node name="PalmTree58" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1609, 787)
 texture = ExtResource("83_srgwx")
 
 [node name="PalmTree59" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1649, 781)
 texture = ExtResource("83_srgwx")
 
 [node name="PalmTree60" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1681, 787)
 texture = ExtResource("82_gv0k0")
 
 [node name="PalmTree61" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1704, 784)
 texture = ExtResource("82_gv0k0")
 
 [node name="PalmTree62" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1737, 775)
 texture = ExtResource("50_f6cia")
 
 [node name="Tree19" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1795, 770)
 texture = ExtResource("32_ma5hq")
 
 [node name="Tree20" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1845, 762)
 texture = ExtResource("32_ma5hq")
 
 [node name="Tree21" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1890, 776)
 texture = ExtResource("31_2vkbv")
 
 [node name="BrokenTree1" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(887, 847)
 texture = ExtResource("53_7470a")
 
 [node name="BrokenTree2" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(887, 868)
 texture = ExtResource("54_nrxlq")
 
 [node name="BrokenTree5" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(921, 860)
 texture = ExtResource("55_bdxe7")
 
 [node name="BrokenTree6" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(922, 866)
 texture = ExtResource("56_g4y68")
 
 [node name="Rock21" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(951, 861)
 texture = ExtResource("60_1f0fc")
 
 [node name="Rock22" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1185, 844)
 texture = ExtResource("41_wqavw")
 
 [node name="Rock23" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1399, 837)
 texture = ExtResource("41_wqavw")
 
 [node name="Rock24" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1684, 823)
 texture = ExtResource("41_wqavw")
 
 [node name="Rock25" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1549, 833)
 texture = ExtResource("41_wqavw")
 
 [node name="Rock26" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1818, 820)
 texture = ExtResource("41_wqavw")
 
 [node name="Rock27" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1208, 834)
 texture = ExtResource("43_bmvjr")
 
 [node name="Rock28" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1124, 839)
 texture = ExtResource("43_bmvjr")
 
 [node name="Rock29" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1452, 818)
 texture = ExtResource("43_bmvjr")
 
 [node name="Rock30" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1515, 815)
 texture = ExtResource("43_bmvjr")
 
 [node name="Rock31" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1631, 810)
 texture = ExtResource("43_bmvjr")
 
 [node name="Rock32" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1757, 799)
 texture = ExtResource("43_bmvjr")
 
 [node name="Rock33" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(980, 871)
 texture = ExtResource("57_3chcu")
 
 [node name="Rock42NoShadow" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1222, 857)
 texture = ExtResource("58_jd6tb")
 
 [node name="Rock43" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1430, 844)
 texture = ExtResource("59_ataof")
 
 [node name="Rock44" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1575, 837)
 texture = ExtResource("60_ngx0x")
 
 [node name="Rock4GrassShadow2" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1871, 820)
 texture = ExtResource("61_xke13")
 
 [node name="Tree22" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1027, 850)
 texture = ExtResource("32_ma5hq")
 
 [node name="Tree23" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1269, 842)
 texture = ExtResource("32_ma5hq")
 
 [node name="Tree24" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1615, 820)
 texture = ExtResource("32_ma5hq")
 
 [node name="PalmTree63" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(895, 874)
 texture = ExtResource("83_srgwx")
 
 [node name="PalmTree64" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1080.5, 847.5)
 scale = Vector2(1.17188, 1.32813)
 texture = ExtResource("83_srgwx")
 
 [node name="PalmTree65" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(810, 897)
 texture = ExtResource("52_i3ffs")
 
 [node name="PalmTree66" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(924, 884)
 texture = ExtResource("52_i3ffs")
 
 [node name="PalmTree67" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1001, 884)
 texture = ExtResource("52_i3ffs")
 
 [node name="PalmTree68" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1053, 879)
 texture = ExtResource("52_i3ffs")
 
 [node name="PalmTree69" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1127, 853)
 texture = ExtResource("88_xyi3a")
 
 [node name="MossTree36" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1174, 853)
 texture = ExtResource("27_rcljr")
 
 [node name="MossTree37" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1319, 837)
 texture = ExtResource("25_2ctpi")
 
 [node name="MossTree38" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1356, 833)
 texture = ExtResource("40_80spu")
 
 [node name="FruitTree14" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1383, 836)
 texture = ExtResource("33_xyitn")
 
 [node name="MossTree39" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1460, 820)
 texture = ExtResource("25_2ctpi")
 
 [node name="MossTree40" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1504, 828)
 texture = ExtResource("27_rcljr")
 
 [node name="PalmTree70" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1710, 813)
 texture = ExtResource("82_gv0k0")
 
 [node name="PalmTree71" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1752, 797)
 texture = ExtResource("28_h6q3d")
 
 [node name="PalmTree72" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1663, 820)
 texture = ExtResource("83_srgwx")
 
 [node name="PalmTree73" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1786, 823)
 texture = ExtResource("52_i3ffs")
 
 [node name="PalmTree74" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1897, 802)
 texture = ExtResource("83_srgwx")
 
 [node name="PalmTree75" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1724, 828)
 texture = ExtResource("52_i3ffs")
 
 [node name="Tree25" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1456, 857)
 texture = ExtResource("32_ma5hq")
 
 [node name="Tree26" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1344, 860)
 texture = ExtResource("30_sxug2")
 
 [node name="Tree27" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1555, 849)
 texture = ExtResource("32_ma5hq")
 
 [node name="PalmTree76" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1513, 861)
 texture = ExtResource("52_i3ffs")
 
 [node name="PalmTree77" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1412, 865)
 texture = ExtResource("52_i3ffs")
 
 [node name="PalmTree78" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1303, 863)
 texture = ExtResource("52_i3ffs")
 
 [node name="PalmTree79" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1378, 874)
 texture = ExtResource("52_i3ffs")
 
 [node name="PalmTree80" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1609, 849)
 texture = ExtResource("28_h6q3d")
 
 [node name="MossTree41" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1671, 853)
 texture = ExtResource("27_rcljr")
 
 [node name="FruitTree15" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1726, 844)
 texture = ExtResource("33_xyitn")
 
 [node name="MossTree42" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1781, 852)
 texture = ExtResource("27_rcljr")
 
 [node name="MossTree43" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1834, 834)
 texture = ExtResource("27_rcljr")
 
 [node name="PalmTree81" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1887, 844)
 texture = ExtResource("28_h6q3d")
 
 [node name="PalmTree82" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1232, 876)
 texture = ExtResource("88_xyi3a")
 
 [node name="PalmTree83" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(956, 887)
 texture = ExtResource("82_gv0k0")
 
 [node name="Rock34" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1109, 886)
 texture = ExtResource("61_1wp7l")
 
 [node name="Rock35" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1141, 899)
 texture = ExtResource("41_wqavw")
 
 [node name="Rock36" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1285, 882)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock37" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1259, 892)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock38" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1225, 824)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock39" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1027, 894)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock40" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1072, 890)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock41" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(873, 887)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock42" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(977, 894)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock45" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1193, 894)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock46" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1312, 874)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock14NoShadow6" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1491, 870)
 texture = ExtResource("67_oj4e0")
 
 [node name="Rock47" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1526, 876)
 texture = ExtResource("43_bmvjr")
 
 [node name="Rock48" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1583, 870)
 texture = ExtResource("43_bmvjr")
 
 [node name="Rock49" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1636, 868)
 texture = ExtResource("43_bmvjr")
 
 [node name="Rock50" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1700, 874)
 texture = ExtResource("43_bmvjr")
 
 [node name="Rock51" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1811, 876)
 texture = ExtResource("43_bmvjr")
 
 [node name="Rock52" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1863, 870)
 texture = ExtResource("43_bmvjr")
 
 [node name="Rock53" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1910, 870)
 texture = ExtResource("43_bmvjr")
 
 [node name="Rock54" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(539, 816)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock55" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(769, 811)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock56" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(707, 809)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock57" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(650, 809)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock58" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(910, 804)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock59" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(678, 812)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock60" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(731, 796)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock61" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(631, 802)
 texture = ExtResource("42_oy1i2")
 
 [node name="Rock62" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(460, 816)
 texture = ExtResource("42_oy1i2")
 
 [node name="ChristmasTree26" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(844, 885)
 texture = ExtResource("22_mfyw0")
 
 [node name="ChristmasTree27" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1050, 882)
 texture = ExtResource("22_mfyw0")
 
 [node name="ChristmasTree28" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(992, 884)
 texture = ExtResource("22_mfyw0")
 
 [node name="ChristmasTree29" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(923, 888)
 texture = ExtResource("22_mfyw0")
 
 [node name="ChristmasTree30" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1390, 874)
 texture = ExtResource("22_mfyw0")
 
 [node name="ChristmasTree31" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1330, 877)
 texture = ExtResource("22_mfyw0")
 
 [node name="ChristmasTree32" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(660, 888)
 texture = ExtResource("22_mfyw0")
 
 [node name="ChristmasTree33" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(585, 888)
 texture = ExtResource("22_mfyw0")
 
 [node name="ChristmasTree34" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1575, 871)
 texture = ExtResource("22_mfyw0")
 
 [node name="ChristmasTree35" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1496, 874)
 texture = ExtResource("22_mfyw0")
 
 [node name="ChristmasTree36" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1709, 877)
 texture = ExtResource("22_mfyw0")
 
 [node name="ChristmasTree37" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1823, 874)
 texture = ExtResource("22_mfyw0")
