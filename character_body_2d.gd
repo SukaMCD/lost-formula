@@ -1,29 +1,48 @@
 extends CharacterBody2D
 
-@export var speed: float = 200
+@export var speed: float = 150
+@onready var sprite = $AnimatedSprite2D
 
-@onready var sprite = $AnimatedSprite2D  # Akses animasi sprite
+var last_direction_x = 1  # 1 = kanan, -1 = kiri
 
 func _physics_process(_delta):
-	# Input arah
-	var direction_x = Input.get_axis("left", "right")
-	var direction_y = Input.get_axis("up", "down")
+	var input_vector = Vector2.ZERO
 
-	# Bikin vector arah
-	var direction = Vector2(direction_x, direction_y).normalized()
+	if Input.is_action_pressed("ui_right"):
+		input_vector.x += 1
+	if Input.is_action_pressed("ui_left"):
+		input_vector.x -= 1
+	if Input.is_action_pressed("ui_down"):
+		input_vector.y += 1
+	if Input.is_action_pressed("ui_up"):
+		input_vector.y -= 1
 
-	# Update velocity
-	velocity = direction * speed
+	input_vector = input_vector.normalized()
 
-	# Gerakin player
+	velocity = input_vector * speed
 	move_and_slide()
 
-	# Animasi jalan
-	if direction.length() > 0:
-		if direction_x != 0:
-			sprite.flip_h = direction_x < 0  # True kalau ke kiri
-			sprite.play("Run")
-		elif direction_y != 0:
-			sprite.play("Run")  # Bisa ganti animasi sesuai arah vertikal
+	# Gerak update arah terakhir
+	if input_vector.length() > 0:
+		if input_vector.x != 0:
+			last_direction_x = input_vector.x
+
+		# WALK Animasi
+		if input_vector.x != 0:
+			sprite.play("Walk")
+			# Walk default ke kiri, jadi flip kalau ke kanan
+			sprite.flip_h = last_direction_x > 0
+		
+		elif input_vector.y < 0:
+			sprite.play("Up")
+			sprite.flip_h = last_direction_x > 0
+		
+		elif input_vector.y > 0:
+			sprite.play("Down")
+			sprite.flip_h = last_direction_x > 0
+		
 	else:
+		# IDLE Animasi
 		sprite.play("Idle")
+		# Idle default ke kanan, jadi flip kalau ke kiri
+		sprite.flip_h = last_direction_x < 0
