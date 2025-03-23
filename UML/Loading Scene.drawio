@@ -1,0 +1,28 @@
+<mxfile host="65bd71144e">
+    <diagram id="bSTIQOwIrcYN39m9EomH" name="Page-1">
+        <mxGraphModel dx="739" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="LOADING SCENE" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="40" width="190" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="LFX Studio&lt;div&gt;(Loading Screen)&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="205" y="110" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;p style=&quot;font-family: &amp;quot;YAFdJt8dAY0 0&amp;quot;, _fb_, auto; --cyV3ZQ: 25.3333px; --gJPlXQ: 1.4; line-height: 34%;&quot; class=&quot;cvGsUA direction-ltr align-center para-style-body&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-kerning: none;&quot; class=&quot;OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none&quot;&gt;Loading screen&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="365" y="110" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;p style=&quot;font-family: &amp;quot;YAFdJt8dAY0 0&amp;quot;, _fb_, auto; --cyV3ZQ: 25.3333px; --gJPlXQ: 1.4; line-height: 34%;&quot; class=&quot;cvGsUA direction-ltr align-center para-style-body&quot;&gt;Main Menu&lt;/p&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="525" y="110" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
