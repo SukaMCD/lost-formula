@@ -261,6 +261,7 @@ animations = [{
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 texture_filter = 1
 scale = Vector2(0.5, 0.5)
+collision_layer = 3
 script = ExtResource("1_i3pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]

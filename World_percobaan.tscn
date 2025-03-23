@@ -1,6 +1,7 @@
-[gd_scene load_steps=64 format=4 uid="uid://b57tqdcspn73p"]
+[gd_scene load_steps=65 format=4 uid="uid://b57tqdcspn73p"]
 
 [ext_resource type="Texture2D" uid="uid://dhx7wd1k4evkn" path="res://TileSet Assets/asset.jpeg" id="1_lvugr"]
+[ext_resource type="PackedScene" uid="uid://bd53pejoiei72" path="res://enemy.tscn" id="2_oxpod"]
 [ext_resource type="Texture2D" uid="uid://4hvj7jit08mo" path="res://asset/craftpix-net-385863-free-top-down-trees-pixel-art/PNG/Assets_separately/Trees_shadow/Fruit_tree2.png" id="14_jdw34"]
 [ext_resource type="Texture2D" uid="uid://dc0xt8upbtvw2" path="res://asset/craftpix-net-385863-free-top-down-trees-pixel-art/PNG/Assets_separately/Trees_shadow/Christmas_tree1.png" id="22_mfyw0"]
 [ext_resource type="Texture2D" uid="uid://bhdhop1htwjqr" path="res://asset/craftpix-net-385863-free-top-down-trees-pixel-art/PNG/Assets_separately/Trees_shadow/Christmas_tree2.png" id="23_3eian"]
@@ -6690,6 +6691,9 @@ tile_set = SubResource("TileSet_mjgr2")
 
 [node name="PlayerRoot" parent="." instance=ExtResource("51_p6sh6")]
 position = Vector2(220, 562)
+
+[node name="enemy" parent="." instance=ExtResource("2_oxpod")]
+position = Vector2(209, 442)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
