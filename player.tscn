@@ -6,8 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://c02sulkckv0wa" path="res://Assets/Main-character/walk (back side).png" id="4_1jxqw"]
 [ext_resource type="Texture2D" uid="uid://ctglr3g86lkyg" path="res://Assets/Main-character/walk (left_right side).png" id="5_dw050"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhdi0"]
-size = Vector2(68.5, 85.5)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sweqy"]
+radius = 13.6812
+height = 74.3916
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b26j0"]
 atlas = ExtResource("2_sweqy")
@@ -265,9 +266,9 @@ collision_layer = 3
 script = ExtResource("1_i3pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-1.25, -7.75)
+position = Vector2(2, 20)
 scale = Vector2(0.584743, 0.584743)
-shape = SubResource("RectangleShape2D_lhdi0")
+shape = SubResource("CapsuleShape2D_sweqy")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 texture_filter = 1
@@ -279,7 +280,6 @@ limit_bottom = 1320
 position_smoothing_speed = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(0, -24)
 scale = Vector2(0.632813, 0.632813)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
 animation = &"Idle"

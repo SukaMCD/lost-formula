@@ -247,8 +247,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_o707m"]
 radius = 82.2192
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_difxq"]
-radius = 6.18466
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qi2p4"]
+radius = 4.0
+height = 22.0
 
 [node name="enemy" type="CharacterBody2D"]
 script = ExtResource("1_qi2p4")
@@ -267,8 +268,8 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_o707m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 5)
-shape = SubResource("CircleShape2D_difxq")
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_qi2p4")
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
