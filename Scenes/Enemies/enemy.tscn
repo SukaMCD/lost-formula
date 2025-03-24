@@ -1,7 +1,7 @@
 [gd_scene load_steps=38 format=3 uid="uid://bd53pejoiei72"]
 
 [ext_resource type="Texture2D" uid="uid://brum5vyx60pww" path="res://Assets/dummy/Unarmed_Run_full.png" id="1_4gyqm"]
-[ext_resource type="Script" uid="uid://cu502tvimporn" path="res://enemy.gd" id="1_qi2p4"]
+[ext_resource type="Script" uid="uid://cu502tvimporn" path="res://Scenes/Enemies/enemy.gd" id="1_qi2p4"]
 [ext_resource type="Texture2D" uid="uid://dm16gqx18mxgq" path="res://Assets/dummy/Unarmed_Idle_full.png" id="2_qi2p4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iifgy"]
