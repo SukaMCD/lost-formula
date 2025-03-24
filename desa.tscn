@@ -1826,7 +1826,6 @@ texture = ExtResource("6_ttuw5")
 
 [node name="Road45" type="Sprite2D" parent="."]
 position = Vector2(1357, 812)
-scale = Vector2(1, 1)
 texture = ExtResource("14_lopk7")
 
 [node name="Road46" type="Sprite2D" parent="."]
@@ -2565,7 +2564,7 @@ texture = ExtResource("20_q6nfl")
 
 [node name="Building3" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1078, 58)
+position = Vector2(1106, 39)
 scale = Vector2(0.338592, 0.281209)
 texture = ExtResource("21_8j7y7")
 
