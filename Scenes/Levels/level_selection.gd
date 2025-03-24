@@ -25,3 +25,10 @@ func column_size(grid_node):
 		grid_node.columns = total_levels / 2
 	else:
 		grid_node.columns = (total_levels / 2) + 1
+
+func print_loading_level():
+	$Label_loading.text = "Loading..."
+	$Label_loading.visible_characters = 7
+	for _i in range(0, 3):
+		$Label.visible_characters += 1
+		await get_tree().create_timer(0.3).timeout

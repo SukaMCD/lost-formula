@@ -22,6 +22,11 @@ alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_tsd2a")
+theme_override_font_sizes/font_size = 60
+text = "LEVEL SELECTION"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -39,35 +44,39 @@ columns = 2
 [node name="Control2" type="Control" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="."]
+[node name="Label_loading" type="Label" parent="."]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 23.0
-offset_right = 1924.0
-offset_bottom = 196.0
+offset_left = -1.0
+offset_top = 936.0
+offset_right = 1914.0
+offset_bottom = 1079.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_tsd2a")
 theme_override_font_sizes/font_size = 60
-text = "LEVEL SELECTION"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+clip_text = true
+text_overrun_behavior = 1
+ellipsis_char = ""
 
 [node name="CanvasGroup" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="CanvasGroup" instance=ExtResource("3_fg0ae")]
-offset_left = 176.0
-offset_top = 232.0
-offset_right = -1144.0
-offset_bottom = -110.0
+offset_left = 252.0
+offset_top = 166.0
+offset_right = -1150.0
+offset_bottom = -297.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "LEVEL 1"
 
 [node name="Control2" parent="CanvasGroup" instance=ExtResource("3_fg0ae")]
-offset_left = 1097.0
-offset_top = 220.0
-offset_right = -223.0
-offset_bottom = -122.0
+offset_left = 1157.0
+offset_top = 179.0
+offset_right = -282.0
+offset_bottom = -299.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "LEVEL 2"
