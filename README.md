@@ -16,9 +16,9 @@ git clone https://github.com/SukaMCD/lost-formula.git
 
 ### Struktur Project (Folder Penting)
 ```
-/scenes          -> Semua scene utama (player, map, ui)
-/scripts         -> Script GDScript
-/assets          -> Sprite, tileset, UI, dll
+/Scenes          -> Semua scene utama (player, map, ui)
+/Scripts         -> Script GDScript
+/Assets          -> Sprite, tileset, UI, dll
 ```
 
 ---
@@ -39,7 +39,7 @@ git clone https://github.com/SukaMCD/lost-formula.git
 
 ### Cara Run Lokal
 1. Buka project di Godot 4.4
-2. Scene utama: `scenes/world.tscn`
+2. Scene utama: `Scenes/world.tscn`
 3. Mainkan (F5)
 
 ---
