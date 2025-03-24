@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://ppc6tjdyc5y8"]
+
+[ext_resource type="Script" uid="uid://c88wrbsu8ockb" path="res://base_button.gd" id="1_k1upb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1upb"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmms1"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0qxm"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Control" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 301.0
+offset_top = 143.0
+offset_right = -1496.0
+offset_bottom = -824.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/disabled = SubResource("StyleBoxFlat_k1upb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hmms1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0qxm")
+script = ExtResource("1_k1upb")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
