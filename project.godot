@@ -19,6 +19,7 @@ config/icon="res://UI/icon.svg"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Loading="*res://Loading/loading.gd"
+NavigationManager="*res://Scenes/GLOBAL/navigation_manager.gd"
 
 [display]
 

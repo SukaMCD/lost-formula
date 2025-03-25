@@ -1,7 +1,8 @@
-[gd_scene load_steps=65 format=4 uid="uid://b57tqdcspn73p"]
+[gd_scene load_steps=66 format=4 uid="uid://b57tqdcspn73p"]
 
 [ext_resource type="Texture2D" uid="uid://dhx7wd1k4evkn" path="res://TileSet Assets/asset.jpeg" id="1_8y5le"]
 [ext_resource type="PackedScene" uid="uid://cbewa6u2b2ked" path="res://Scenes/Player/player.tscn" id="2_3306l"]
+[ext_resource type="PackedScene" uid="uid://do7bo123mhekl" path="res://Scenes/Worlds/door.tscn" id="2_iscim"]
 [ext_resource type="PackedScene" uid="uid://bd53pejoiei72" path="res://Scenes/Enemies/enemy.tscn" id="3_iscim"]
 [ext_resource type="Texture2D" uid="uid://dwcn3mcbhbt6r" path="res://Assets/Objects_separately/Rock1_grass_shadow_dark2.png" id="4_45qbf"]
 [ext_resource type="Texture2D" uid="uid://julxgaeo4gfx" path="res://Assets/Objects_separately/Rock1_grass_shadow_dark4.png" id="5_6x3ok"]
@@ -6682,6 +6683,21 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_lock_ = true
 
+[node name="door" type="Node" parent="."]
+
+[node name="Door_E" parent="door" instance=ExtResource("2_iscim")]
+position = Vector2(1882, 703)
+destination_level_tag = "desa"
+destination_Door_tag = "W"
+spawn_direction = "left"
+
+[node name="CollisionShape2D" parent="door/Door_E" index="0"]
+position = Vector2(0, -3)
+
+[node name="Spawn" parent="door/Door_E" index="1"]
+position = Vector2(-19, -3)
+scale = Vector2(-1.46846, 2.98235)
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 
 [node name="background" type="TileMapLayer" parent="TileMapLayer"]
@@ -8194,3 +8210,5 @@ texture = ExtResource("20_nkdp0")
 texture_filter = 1
 position = Vector2(1823, 874)
 texture = ExtResource("20_nkdp0")
+
+[editable path="door/Door_E"]
