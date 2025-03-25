@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://55nk0e2y8tqd" path="res://TileSet Assets/road/road_8.png" id="17_t22k8"]
 [ext_resource type="Texture2D" uid="uid://cm2f6rw1c0v4r" path="res://TileSet Assets/road/road_9.png" id="18_cqw1k"]
 [ext_resource type="Texture2D" uid="uid://w8c2bk6jdh50" path="res://Assets/village/buildings/building_1/building_1.png" id="19_7nan2"]
-[ext_resource type="PackedScene" uid="uid://do7bo123mhekl" path="res://Scenes/Worlds/door.tscn" id="19_verej"]
+[ext_resource type="PackedScene" uid="uid://do7bo123mhekl" path="res://Scenes/UI/door.tscn" id="19_verej"]
 [ext_resource type="Texture2D" uid="uid://cmar1rp0hj0ba" path="res://Assets/village/buildings/building_2/building_1.png" id="20_q6nfl"]
 [ext_resource type="Texture2D" uid="uid://cth2clraluiep" path="res://Assets/village/buildings/building_6/building_1.png" id="21_8j7y7"]
 [ext_resource type="Texture2D" uid="uid://dxp2r13mq0om3" path="res://Assets/village/buildings/building_7/building_1.png" id="22_nvrst"]

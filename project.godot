@@ -18,7 +18,7 @@ config/icon="res://UI/icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-Loading="*res://Loading/loading.gd"
+Loading="*res://Scripts/Elements/loading.gd"
 NavigationManager="*res://Scenes/GLOBAL/navigation_manager.gd"
 
 [display]

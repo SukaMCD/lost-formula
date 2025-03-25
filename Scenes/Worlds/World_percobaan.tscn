@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dhx7wd1k4evkn" path="res://TileSet Assets/asset.jpeg" id="1_8y5le"]
 [ext_resource type="PackedScene" uid="uid://cbewa6u2b2ked" path="res://Scenes/Player/player.tscn" id="2_3306l"]
-[ext_resource type="PackedScene" uid="uid://do7bo123mhekl" path="res://Scenes/Worlds/door.tscn" id="2_iscim"]
+[ext_resource type="PackedScene" uid="uid://do7bo123mhekl" path="res://Scenes/UI/door.tscn" id="2_iscim"]
 [ext_resource type="PackedScene" uid="uid://bd53pejoiei72" path="res://Scenes/Enemies/enemy.tscn" id="3_iscim"]
 [ext_resource type="Texture2D" uid="uid://dwcn3mcbhbt6r" path="res://Assets/Objects_separately/Rock1_grass_shadow_dark2.png" id="4_45qbf"]
 [ext_resource type="Texture2D" uid="uid://julxgaeo4gfx" path="res://Assets/Objects_separately/Rock1_grass_shadow_dark4.png" id="5_6x3ok"]

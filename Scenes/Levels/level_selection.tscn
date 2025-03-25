@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ok7pudrbw581"]
 
-[ext_resource type="Script" uid="uid://cujej4ra45315" path="res://Scenes/Levels/level_selection.gd" id="1_au0oc"]
+[ext_resource type="Script" uid="uid://cujej4ra45315" path="res://Scripts/Elements/level_selection.gd" id="1_au0oc"]
 [ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="1_tsd2a"]
 [ext_resource type="PackedScene" uid="uid://ppc6tjdyc5y8" path="res://Scenes/UI/base_button.tscn" id="3_fg0ae"]
 
