@@ -1,7 +1,7 @@
 extends Button
 
 
-var level_path: String = "res://Scenes/Worlds/World_percobaan.tscn"
+var level_path: String = "res://Loading/efek.tscn"
 
 " This is for the loading text text mentioned in the HUD.gd "
 " You can leave this out "

@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=4 uid="uid://cng2di0rqsmp6"]
+[gd_scene load_steps=62 format=4 uid="uid://cng2di0rqsmp6"]
 
 [ext_resource type="Texture2D" uid="uid://cbribimtu62p8" path="res://TileSet Assets/land/land_1.png" id="1_tm7nf"]
 [ext_resource type="Texture2D" uid="uid://g5ytm7n2s8hw" path="res://TileSet Assets/road/road_1.png" id="2_tlyvh"]
@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://cic3f4jax43df" path="res://TileSet Assets/land/land_6.png" id="38_cqw1k"]
 [ext_resource type="Texture2D" uid="uid://r6kr1qc80064" path="res://TileSet Assets/land/land_16.png" id="39_7nan2"]
 [ext_resource type="Texture2D" uid="uid://b8c55tks2ckun" path="res://TileSet Assets/land/land_13.png" id="41_q6nfl"]
+[ext_resource type="PackedScene" uid="uid://cbewa6u2b2ked" path="res://Scenes/Player/player.tscn" id="42_j2i1s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8v0iv"]
 texture = ExtResource("1_tm7nf")
@@ -2609,3 +2610,6 @@ texture_filter = 1
 position = Vector2(983, 79)
 scale = Vector2(0.693548, 0.598859)
 texture = ExtResource("29_3a75i")
+
+[node name="PlayerRoot" parent="." instance=ExtResource("42_j2i1s")]
+position = Vector2(1, -4)

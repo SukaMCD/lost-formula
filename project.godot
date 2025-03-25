@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Project Game Development"
-run/main_scene="res://Scenes/Worlds/World_percobaan.tscn"
+run/main_scene="uid://b57tqdcspn73p"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://UI/icon.svg"
 
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Loading="*res://Loading/loading.gd"
 
 [display]
 

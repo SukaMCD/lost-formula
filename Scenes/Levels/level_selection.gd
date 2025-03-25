@@ -17,7 +17,7 @@ func generate_buttons(name: int, grid_node):
 	var bb = base_button.instantiate()  # `instance()` diubah ke `instantiate()` di Godot 4
 	bb.name = str(name)  # Set nama tombol
 	bb.text = str(name)  # Set teks tombol
-	bb.level_path = "res://Scenes/Worlds/World_percobaan.tscn" + str(name) + ".tscn"  # Perbaikan path level
+	bb.level_path = "res://Loading/efek.tscn" + str(name) + ".tscn"  # Perbaikan path level
 	grid_node.add_child(bb)  # Tambahkan tombol ke grid
 
 func column_size(grid_node):
