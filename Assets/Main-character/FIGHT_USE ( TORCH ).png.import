@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctglr3g86lkyg"
-path="res://.godot/imported/walk (left_right side).png-5cba2433a524ad2694760eff83989d65.ctex"
+uid="uid://cth1b6ryfgxip"
+path="res://.godot/imported/FIGHT_USE ( TORCH ).png-7570a093f7962f1dece846f67bfebf4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Main-character/walk (left_right side).png"
-dest_files=["res://.godot/imported/walk (left_right side).png-5cba2433a524ad2694760eff83989d65.ctex"]
+source_file="res://Assets/Main-character/FIGHT_USE ( TORCH ).png"
+dest_files=["res://.godot/imported/FIGHT_USE ( TORCH ).png-7570a093f7962f1dece846f67bfebf4b.ctex"]
 
 [params]
 

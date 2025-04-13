@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c02sulkckv0wa"
-path="res://.godot/imported/walk (back side).png-47de57f8af96eb85d1a1efd70f9dc77a.ctex"
+uid="uid://blkwmff6na70b"
+path="res://.godot/imported/FIGHT ( SWORD ).png-ece72fecc6561edd59a4b299935b2057.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Main-character/walk (back side).png"
-dest_files=["res://.godot/imported/walk (back side).png-47de57f8af96eb85d1a1efd70f9dc77a.ctex"]
+source_file="res://Assets/Main-character/FIGHT ( SWORD ).png"
+dest_files=["res://.godot/imported/FIGHT ( SWORD ).png-ece72fecc6561edd59a4b299935b2057.ctex"]
 
 [params]
 

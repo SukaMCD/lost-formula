@@ -1,10 +1,10 @@
 [gd_scene load_steps=40 format=3 uid="uid://cbewa6u2b2ked"]
 
 [ext_resource type="Script" uid="uid://b2ran2twf82b5" path="res://Scripts/Characters/character_body_2d.gd" id="1_i3pqv"]
-[ext_resource type="Texture2D" uid="uid://cfg4id0i1cp1o" path="res://Assets/Main-character/walk (front side).png" id="2_sweqy"]
-[ext_resource type="Texture2D" uid="uid://csyd4agfmytgn" path="res://Assets/Main-character/idle.png" id="3_2hs0m"]
-[ext_resource type="Texture2D" uid="uid://c02sulkckv0wa" path="res://Assets/Main-character/walk (back side).png" id="4_1jxqw"]
-[ext_resource type="Texture2D" uid="uid://ctglr3g86lkyg" path="res://Assets/Main-character/walk (left_right side).png" id="5_dw050"]
+[ext_resource type="Texture2D" path="res://Assets/Main-character/walk (front side).png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://bbgfb3tq7qkj2" path="res://Assets/Main-character/idle.png" id="3_2hs0m"]
+[ext_resource type="Texture2D" path="res://Assets/Main-character/walk (back side).png" id="4_1jxqw"]
+[ext_resource type="Texture2D" path="res://Assets/Main-character/walk (left_right side).png" id="5_dw050"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sweqy"]
 radius = 13.6812
@@ -282,5 +282,4 @@ position_smoothing_speed = 1.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 scale = Vector2(0.632813, 0.632813)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"Idle"
-frame_progress = 0.0265635
+animation = &"Down"
