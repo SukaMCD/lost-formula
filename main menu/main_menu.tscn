@@ -1,9 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://jj2f5y00mtah"]
+[gd_scene load_steps=13 format=3 uid="uid://jj2f5y00mtah"]
 
 [ext_resource type="Script" uid="uid://dy1ubepae1f8f" path="res://main menu/main_menu.gd" id="1_cok42"]
+[ext_resource type="Texture2D" uid="uid://33j4vtvl1ypc" path="res://UI/WhatsApp Image 2025-03-19 at 11.16.40.jpeg" id="2_6fy38"]
 [ext_resource type="StyleBox" uid="uid://c6c5rw0j6t75c" path="res://main menu/new_style_box_flat.tres" id="2_m48o8"]
 [ext_resource type="StyleBox" uid="uid://cguha14q86ln0" path="res://main menu/main_menu.tres" id="3_ra13p"]
-[ext_resource type="Script" uid="uid://2n0d1u8ukvvg" path="res://main menu/label.gd" id="4_ra13p"]
+[ext_resource type="FontFile" uid="uid://bpcsw5p0acs12" path="res://Fonts/ancient_ad/Ancient Ad.ttf" id="4_6fy38"]
+[ext_resource type="FontFile" uid="uid://cey82r2bdlm5f" path="res://Fonts/stardew_valley/Stardew Valley ALL CAPS.ttf" id="6_auhsi"]
+[ext_resource type="PackedScene" uid="uid://b13ke44u4d8v5" path="res://UI/leaf.tscn" id="7_auhsi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_auhsi"]
+texture = ExtResource("2_6fy38")
+modulate_color = Color(0.493545, 0.493546, 0.493546, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_45qoi"]
 bg_color = Color(1, 1, 1, 0)
@@ -13,6 +20,8 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ra13p"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="GDScript" id="GDScript_45qoi"]
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -27,6 +36,12 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_cok42")
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1926.0
+offset_bottom = 1083.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_auhsi")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -34,10 +49,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -496.0
-offset_top = -38.0
-offset_right = 484.0
-offset_bottom = 62.0
+offset_left = -482.0
+offset_top = 63.0
+offset_right = 498.0
+offset_bottom = 163.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 40
@@ -55,7 +70,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_45qoi")
 theme_override_styles/hover = ExtResource("3_ra13p")
 theme_override_styles/pressed = ExtResource("2_m48o8")
 theme_override_styles/normal = ExtResource("3_ra13p")
-text = "PLAY"
+text = "SETTINGS"
 
 [node name="Button2" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(300, 100)
@@ -85,14 +100,44 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_ra13p")
 theme_override_styles/hover = ExtResource("3_ra13p")
 theme_override_styles/pressed = ExtResource("2_m48o8")
 theme_override_styles/normal = ExtResource("3_ra13p")
-text = "PLAY"
+text = "CREDITS"
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_right = 445.0
-offset_bottom = 118.0
-theme_override_font_sizes/font_size = 50
+[node name="Label" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -403.0
+offset_top = 117.0
+offset_right = 426.0
+offset_bottom = 350.0
+grow_horizontal = 2
+theme_override_constants/text_highlight_h_padding = 10
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/normal_font = ExtResource("4_6fy38")
+theme_override_font_sizes/normal_font_size = 100
 text = "LOST FORMULA"
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("4_ra13p")
+script = SubResource("GDScript_45qoi")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -548.0
+offset_top = 178.0
+offset_right = 557.0
+offset_bottom = 586.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.647059, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_auhsi")
+theme_override_font_sizes/normal_font_size = 90
+text = "A FOREST MYSTERY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node" parent="." instance=ExtResource("7_auhsi")]

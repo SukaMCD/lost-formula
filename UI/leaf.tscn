@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://b13ke44u4d8v5"]
+
+[ext_resource type="Texture2D" uid="uid://cq3hbrspqykup" path="res://UI/leaf.png" id="2_gq5tq"]
+
+[sub_resource type="GDScript" id="GDScript_y0aog"]
+script/source = "extends Node
+
+func _process(delta):
+	# Mendapatkan transformasi canvas
+	var canvas = get_canvas_transform()
+	var top_left = -canvas.origin / canvas.get_scale()
+	var size = get_viewport_rect().size / canvas.get_scale()
+
+	# Mengatur posisi global CPUParticles2D
+	$GPUParticles2D.global_position.x = top_left.x + size.x / 2
+	$GPUParticles2D.global_position.y = top_left.y + 50
+
+	# Mengatur bentuk emisi (gunakan EmissionShape)
+	var emission_shape = $CPUParticles2D.emission_shape
+	emission_shape.extents = Vector3(size.x, 50, 1)
+"
+
+[sub_resource type="Gradient" id="Gradient_a241i"]
+offsets = PackedFloat32Array(0, 0.00485437, 0.0825243, 0.145631)
+colors = PackedColorArray(0, 0, 0, 1, 0.054902, 0.054902, 0.054902, 0, 0.771873, 0.771873, 0.771873, 0.758621, 1, 1, 1, 1)
+
+[node name="Node" type="Node"]
+script = SubResource("GDScript_y0aog")
+
+[node name="GPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 20
+texture = ExtResource("2_gq5tq")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(276, 176)
+direction = Vector2(0.5, 1)
+spread = 30.0
+initial_velocity_min = 500.0
+initial_velocity_max = 500.0
+angular_velocity_min = 470.0
+angular_velocity_max = 470.0
+orbit_velocity_min = 0.1
+orbit_velocity_max = 0.1
+linear_accel_min = 0.3
+linear_accel_max = 0.3
+angle_min = 90.0
+angle_max = 90.0
+scale_amount_min = 0.15
+scale_amount_max = 0.15
+color_ramp = SubResource("Gradient_a241i")
