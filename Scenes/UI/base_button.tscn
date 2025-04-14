@@ -1,23 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://ppc6tjdyc5y8"]
 
+[ext_resource type="StyleBox" uid="uid://cguha14q86ln0" path="res://main menu/main_menu.tres" id="1_ahca5"]
 [ext_resource type="Script" uid="uid://c88wrbsu8ockb" path="res://Scripts/Elements/base_button.gd" id="1_k1upb"]
+[ext_resource type="StyleBox" uid="uid://c6c5rw0j6t75c" path="res://main menu/new_style_box_flat.tres" id="2_n43cf"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1upb"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmms1"]
-bg_color = Color(1, 1, 1, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0qxm"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ljnn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Control" type="Button"]
 anchors_preset = 15
@@ -32,9 +20,10 @@ grow_vertical = 2
 theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/disabled = SubResource("StyleBoxFlat_k1upb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_hmms1")
-theme_override_styles/normal = SubResource("StyleBoxFlat_d0qxm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_5ljnn")
+theme_override_styles/hover = ExtResource("1_ahca5")
+theme_override_styles/pressed = ExtResource("2_n43cf")
+theme_override_styles/normal = ExtResource("1_ahca5")
 script = ExtResource("1_k1upb")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://jj2f5y00mtah"]
+[gd_scene load_steps=12 format=3 uid="uid://jj2f5y00mtah"]
 
 [ext_resource type="Script" uid="uid://dy1ubepae1f8f" path="res://main menu/main_menu.gd" id="1_cok42"]
 [ext_resource type="Texture2D" uid="uid://33j4vtvl1ypc" path="res://UI/WhatsApp Image 2025-03-19 at 11.16.40.jpeg" id="2_6fy38"]
@@ -6,7 +6,6 @@
 [ext_resource type="StyleBox" uid="uid://cguha14q86ln0" path="res://main menu/main_menu.tres" id="3_ra13p"]
 [ext_resource type="FontFile" uid="uid://bpcsw5p0acs12" path="res://Fonts/ancient_ad/Ancient Ad.ttf" id="4_6fy38"]
 [ext_resource type="FontFile" uid="uid://cey82r2bdlm5f" path="res://Fonts/stardew_valley/Stardew Valley ALL CAPS.ttf" id="6_auhsi"]
-[ext_resource type="PackedScene" uid="uid://b13ke44u4d8v5" path="res://UI/leaf.tscn" id="7_auhsi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_auhsi"]
 texture = ExtResource("2_6fy38")
@@ -139,5 +138,3 @@ theme_override_font_sizes/normal_font_size = 90
 text = "A FOREST MYSTERY"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Node" parent="." instance=ExtResource("7_auhsi")]
