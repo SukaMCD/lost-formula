@@ -1,9 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://huntro51e7eq"]
 
-[ext_resource type="PackedScene" uid="uid://b57tqdcspn73p" path="res://Scenes/Worlds/World_percobaan.tscn" id="1_fo7sq"]
+[ext_resource type="PackedScene" uid="uid://cng2di0rqsmp6" path="res://Scenes/Worlds/desa.tscn" id="1_fo7sq"]
 
 [node name="menu_pause" type="Node2D"]
+position = Vector2(9, 6)
 
 [node name="Control" parent="." instance=ExtResource("1_fo7sq")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(944, 545)
