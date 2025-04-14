@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://jj2f5y00mtah"]
+[gd_scene load_steps=8 format=3 uid="uid://jj2f5y00mtah"]
 
 [ext_resource type="Script" uid="uid://dy1ubepae1f8f" path="res://main menu/main_menu.gd" id="1_cok42"]
 [ext_resource type="StyleBox" uid="uid://c6c5rw0j6t75c" path="res://main menu/new_style_box_flat.tres" id="2_m48o8"]
 [ext_resource type="StyleBox" uid="uid://cguha14q86ln0" path="res://main menu/main_menu.tres" id="3_ra13p"]
+[ext_resource type="Script" uid="uid://2n0d1u8ukvvg" path="res://main menu/label.gd" id="4_ra13p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_45qoi"]
 bg_color = Color(1, 1, 1, 0)
@@ -33,10 +34,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -490.0
-offset_top = -50.0
-offset_right = 490.0
-offset_bottom = 50.0
+offset_left = -496.0
+offset_top = -38.0
+offset_right = 484.0
+offset_bottom = 62.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 40
@@ -85,3 +86,13 @@ theme_override_styles/hover = ExtResource("3_ra13p")
 theme_override_styles/pressed = ExtResource("2_m48o8")
 theme_override_styles/normal = ExtResource("3_ra13p")
 text = "PLAY"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 445.0
+offset_bottom = 118.0
+theme_override_font_sizes/font_size = 50
+text = "LOST FORMULA"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_ra13p")
