@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bynrj6m6l170v"]
+
+[node name="game" type="Node"]
+
+[node name="menu_pause" type="Node2D" parent="."]
