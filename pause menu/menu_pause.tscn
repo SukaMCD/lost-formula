@@ -1,5 +1,9 @@
-[gd_scene format=3 uid="uid://bynrj6m6l170v"]
+[gd_scene load_steps=2 format=3 uid="uid://huntro51e7eq"]
 
-[node name="game" type="Node"]
+[ext_resource type="PackedScene" uid="uid://b57tqdcspn73p" path="res://Scenes/Worlds/World_percobaan.tscn" id="1_fo7sq"]
 
-[node name="menu_pause" type="Node2D" parent="."]
+[node name="menu_pause" type="Node2D"]
+
+[node name="Control" parent="." instance=ExtResource("1_fo7sq")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
