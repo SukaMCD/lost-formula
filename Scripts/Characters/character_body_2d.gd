@@ -32,7 +32,7 @@ func _physics_process(_delta):
 		if input_vector.x != 0:
 			sprite.play("Walk")
 			# Walk default ke kiri, jadi flip kalau ke kanan
-			sprite.flip_h = last_direction_x > 0
+			sprite.flip_h = last_direction_x < 0
 		
 		elif input_vector.y < 0:
 			sprite.play("Up")
