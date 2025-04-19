@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://b2ran2twf82b5" path="res://Scripts/Characters/character_body_2d.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://gsfnwslklv0j" path="res://Assets/Main-character/WALK FRONT SIDE (1).png" id="2_htcer"]
-[ext_resource type="Texture2D" uid="uid://bbgfb3tq7qkj2" path="res://Assets/Main-character/idle.png" id="3_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://bbgfb3tq7qkj2" path="res://Assets/Main-character/IDLE.png" id="3_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://bqi01mjugobs7" path="res://Assets/Main-character/WALK BACK SIDE.png" id="4_dd0ac"]
 [ext_resource type="Texture2D" uid="uid://bpwffgu38rexn" path="res://Assets/Main-character/WALK ( RIGHT SIDE ).png" id="5_0u5uq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sweqy"]
-radius = 13.6812
-height = 74.3916
+radius = 58.1452
+height = 294.146
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jlvik"]
 atlas = ExtResource("2_htcer")
@@ -113,22 +113,22 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 1e+06,
 "texture": SubResource("AtlasTexture_htcer")
 }, {
-"duration": 1.0,
+"duration": 1e+06,
 "texture": SubResource("AtlasTexture_dd0ac")
 }, {
-"duration": 1.0,
+"duration": 1e+06,
 "texture": SubResource("AtlasTexture_0u5uq")
 }, {
-"duration": 1.0,
+"duration": 1e+06,
 "texture": SubResource("AtlasTexture_eksi1")
 }, {
-"duration": 1.0,
+"duration": 1e+06,
 "texture": SubResource("AtlasTexture_jincj")
 }, {
-"duration": 1.0,
+"duration": 1e+06,
 "texture": SubResource("AtlasTexture_rqdc0")
 }],
 "loop": true,
@@ -182,22 +182,27 @@ collision_layer = 3
 script = ExtResource("1_i3pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(2, 20)
+position = Vector2(4, 20)
 scale = Vector2(0.584743, 0.584743)
 shape = SubResource("CapsuleShape2D_sweqy")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 texture_filter = 1
-zoom = Vector2(6, 6)
+zoom = Vector2(4, 4)
 limit_left = 0
 limit_top = 0
-limit_right = 1280
-limit_bottom = 1320
-position_smoothing_speed = 1.0
+limit_right = 1920
+limit_bottom = 1080
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+editor_draw_limits = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(2, 20)
-scale = Vector2(0.0368, 0.0368)
+texture_filter = 1
+position = Vector2(-6, 22)
+scale = Vector2(0.134357, 0.117887)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
 animation = &"Idle"
 frame_progress = 0.541385

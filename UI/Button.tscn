@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dst0du6mb8vw5"]
+
+[ext_resource type="Script" uid="uid://bkxhvl70gl38w" path="res://UI/button.gd" id="1_31k33"]
+[ext_resource type="Texture2D" uid="uid://dpk0bcinlxvpq" path="res://UI/btn_menu.png" id="2_u880a"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_31k33")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 422.0
+offset_top = 121.0
+offset_right = 530.0
+offset_bottom = 230.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+icon = ExtResource("2_u880a")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,49 +1,68 @@
 extends CharacterBody2D
+class_name Player
 
-class_name player
 @export var speed: float = 150
 @onready var sprite = $AnimatedSprite2D
 
-var last_direction_x = 1  # 1 = kanan, -1 = kiri
+var last_direction_x = 1
+var input_enabled: bool = true
 
-func _physics_process(_delta):
-	var input_vector = Vector2.ZERO
+func _ready():
+	# Pastikan pause mode diatur dengan benar
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 
-	if Input.is_action_pressed("ui_right"):
-		input_vector.x += 1
-	if Input.is_action_pressed("ui_left"):
-		input_vector.x -= 1
-	if Input.is_action_pressed("ui_down"):
-		input_vector.y += 1
-	if Input.is_action_pressed("ui_up"):
-		input_vector.y -= 1
+func _physics_process(delta):
+	if !input_enabled || get_tree().paused:
+		velocity = Vector2.ZERO
+		sprite.play("Idle")
+		return
+	
+	var input_vector = get_input_vector()
+	process_movement(input_vector)
+	update_animation(input_vector)
 
-	input_vector = input_vector.normalized()
+func get_input_vector() -> Vector2:
+	if !input_enabled || get_tree().paused:
+		return Vector2.ZERO
+		
+	return Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
 
+func process_movement(input_vector: Vector2):
 	velocity = input_vector * speed
 	move_and_slide()
+	
+	if input_vector.x != 0:
+		last_direction_x = sign(input_vector.x)
 
-	# Gerak update arah terakhir
+func update_animation(input_vector: Vector2):
+	if !input_enabled || get_tree().paused:
+		sprite.play("Idle")
+		return
+		
 	if input_vector.length() > 0:
 		if input_vector.x != 0:
-			last_direction_x = input_vector.x
-
-		# WALK Animasi
-		if input_vector.x != 0:
 			sprite.play("Walk")
-			# Walk default ke kiri, jadi flip kalau ke kanan
 			sprite.flip_h = last_direction_x < 0
-		
 		elif input_vector.y < 0:
 			sprite.play("Up")
-			sprite.flip_h = last_direction_x > 0
-		
+			sprite.flip_h = last_direction_x < 0
 		elif input_vector.y > 0:
 			sprite.play("Down")
-			sprite.flip_h = last_direction_x > 0
-		
+			sprite.flip_h = last_direction_x < 0
 	else:
-		# IDLE Animasi
 		sprite.play("Idle")
-		# Idle default ke kanan, jadi flip kalau ke kiri
 		sprite.flip_h = last_direction_x < 0
+
+func set_input_enabled(enabled: bool):
+	input_enabled = enabled
+	if !enabled:
+		velocity = Vector2.ZERO
+		sprite.stop()
+
+func _unhandled_input(event):
+	if event.is_action_pressed("accept"):
+		# Biarkan pause menu menangani input pause
+		return
+		
+	if !input_enabled || get_tree().paused:
+		get_viewport().set_input_as_handled()

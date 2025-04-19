@@ -1,5 +1,4 @@
 extends Area2D
-
 class_name Door
 
 @export var destination_level_tag: String
@@ -8,7 +7,8 @@ class_name Door
 
 @onready var spawn = $Spawn
 
-
 func _on_body_entered(body):
-	if body is player:
+	# Pengecekan yang lebih robust
+	if body.is_in_group("player") or body.get_class() == "Player" or body is Player:
+		print("Player entered door to: ", destination_level_tag)
 		NavigationManager.go_to_level(destination_level_tag, destination_Door_tag)
