@@ -182,12 +182,13 @@ collision_layer = 3
 script = ExtResource("1_i3pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(4, 20)
+position = Vector2(4, -2)
 scale = Vector2(0.584743, 0.584743)
 shape = SubResource("CapsuleShape2D_sweqy")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 texture_filter = 1
+position = Vector2(0, -2)
 zoom = Vector2(4, 4)
 limit_left = 0
 limit_top = 0
@@ -201,8 +202,8 @@ editor_draw_limits = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
-position = Vector2(-6, 22)
-scale = Vector2(0.134357, 0.117887)
+position = Vector2(-1.50002, -6.13573)
+scale = Vector2(0.105566, 0.0965983)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
 animation = &"Idle"
 frame_progress = 0.541385

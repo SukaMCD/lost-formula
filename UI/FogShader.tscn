@@ -26,7 +26,7 @@ motion_mirroring = Vector2(320, 180)
 
 [node name="ColorRect" type="ColorRect" parent="ParallaxLayer"]
 material = SubResource("ShaderMaterial_y3l60")
-offset_left = -329.0
-offset_top = -176.0
-offset_right = 1966.0
-offset_bottom = 1091.0
+offset_left = -301.0
+offset_top = -173.0
+offset_right = 1949.0
+offset_bottom = 1094.0
