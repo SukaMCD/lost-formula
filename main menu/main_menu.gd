@@ -32,3 +32,7 @@ func btn_hovered(button: Button):
 		else:
 			# Jika tidak dihover, kembalikan skala ke normal
 			start_tween(button, "scale", Vector2.ONE, tween_duration)
+
+
+func _on_button_2_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Worlds/forest.tscn")
