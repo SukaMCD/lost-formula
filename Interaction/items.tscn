@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq7yvm22ukxn2"]
+
+[ext_resource type="Texture2D" uid="uid://3mu75c1x6g3l" path="res://Assets/forest/Forest/PNG/Objects_separated/Beige_stone_grass2.png" id="1_8i7sh"]
+[ext_resource type="Script" uid="uid://bm5xa10vvgn0j" path="res://Interaction/items.gd" id="1_61nid"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jlppy"]
+
+[node name="Items" type="Area2D"]
+collision_mask = 6
+script = ExtResource("1_61nid")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8i7sh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jlppy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

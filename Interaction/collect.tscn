@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://mmofgm0qxmda"]
+
+[ext_resource type="Texture2D" uid="uid://3mu75c1x6g3l" path="res://Assets/forest/Forest/PNG/Objects_separated/Beige_stone_grass2.png" id="1_2hhwh"]
+[ext_resource type="Script" uid="uid://d1sq6hea4pxe5" path="res://Interaction/collect.gd" id="1_sws0y"]
+[ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="2_iefua"]
+[ext_resource type="AudioStream" uid="uid://cvb80c3hgrjsg" path="res://Audio/Interaction.wav" id="3_jusml"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sws0y"]
+font = ExtResource("2_iefua")
+font_size = 10
+shadow_size = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iefua"]
+radius = 16.1245
+
+[node name="Collectible" type="Area2D"]
+script = ExtResource("1_sws0y")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InteractionLabel" type="Label" parent="CanvasLayer"]
+offset_left = -55.0
+offset_top = -39.0
+offset_right = 50.0
+offset_bottom = -16.0
+text = "[E] "
+label_settings = SubResource("LabelSettings_sws0y")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CollectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_jusml")
+volume_db = 8.474
+area_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_iefua")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 1.90735e-06)
+scale = Vector2(1.15625, 1.375)
+texture = ExtResource("1_2hhwh")
+
+[node name="DetectionTimer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
