@@ -1,4 +1,4 @@
-[gd_scene load_steps=207 format=4 uid="uid://dkaupuhm4j7e3"]
+[gd_scene load_steps=208 format=4 uid="uid://dkaupuhm4j7e3"]
 
 [ext_resource type="Script" uid="uid://bw7yj02jpvjmt" path="res://Scenes/Worlds/forest.gd" id="1_1gotx"]
 [ext_resource type="Texture2D" uid="uid://bp2nu123o32o3" path="res://Assets/forest/grassland/Tiled_files/water_detilazation.png" id="1_86vi4"]
@@ -93,6 +93,7 @@
 [ext_resource type="Texture2D" uid="uid://brtu153pupd4" path="res://Assets/forest/Forest/Tiled_files/Objects.png" id="86_2k048"]
 [ext_resource type="Texture2D" uid="uid://d1bkitbww5q10" path="res://Assets/forest/grassland/PNG/Details.png" id="87_2k048"]
 [ext_resource type="PackedScene" uid="uid://mmofgm0qxmda" path="res://Interaction/collect.tscn" id="93_2h4kg"]
+[ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="94_mbxr0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_knb8s"]
 texture = ExtResource("2_4eku6")
@@ -14225,7 +14226,7 @@ y_sort_enabled = true
 
 [node name="PlayerRoot" parent="." groups=["Player"] instance=ExtResource("83_xydxr")]
 texture_filter = 1
-position = Vector2(199, 593)
+position = Vector2(239, 593)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
@@ -14244,3 +14245,5 @@ offset_bottom = -93.96
 
 [node name="Collectible" parent="Node2D" instance=ExtResource("93_2h4kg")]
 position = Vector2(369, 459)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("94_mbxr0")]

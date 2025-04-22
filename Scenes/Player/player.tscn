@@ -1,10 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://cbewa6u2b2ked"]
+[gd_scene load_steps=30 format=3 uid="uid://cbewa6u2b2ked"]
 
 [ext_resource type="Script" uid="uid://b2ran2twf82b5" path="res://Scripts/Characters/character_body_2d.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://gsfnwslklv0j" path="res://Assets/Main-character/WALK FRONT SIDE (1).png" id="2_htcer"]
 [ext_resource type="Texture2D" uid="uid://bbgfb3tq7qkj2" path="res://Assets/Main-character/IDLE.png" id="3_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://bqi01mjugobs7" path="res://Assets/Main-character/WALK BACK SIDE.png" id="4_dd0ac"]
 [ext_resource type="Texture2D" uid="uid://bpwffgu38rexn" path="res://Assets/Main-character/WALK ( RIGHT SIDE ).png" id="5_0u5uq"]
+[ext_resource type="AudioStream" uid="uid://bi6dlw4hut3dr" path="res://Audio/footsteps-dirtpath.wav" id="6_dd0ac"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sweqy"]
 radius = 58.1452
@@ -219,3 +220,7 @@ collision_mask = 16
 position = Vector2(0, 15)
 rotation = -0.0266723
 shape = SubResource("CircleShape2D_htcer")
+
+[node name="FootstepPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_dd0ac")
+volume_db = 14.492
