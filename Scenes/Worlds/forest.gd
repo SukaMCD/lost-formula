@@ -1,6 +1,6 @@
 extends Node2D
 
-# Di script Main/World scene
+@onready var transition = $CanvasLayer2/AnimationPlayer
+
 func _ready():
-	var pause_menu = preload("res://UI/paused_menu.tscn").instantiate()
-	add_child(pause_menu)
+	$CanvasLayer2/AnimationPlayer.play("Fade_out")

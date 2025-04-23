@@ -1,4 +1,4 @@
-[gd_scene load_steps=207 format=4 uid="uid://dkaupuhm4j7e3"]
+[gd_scene load_steps=208 format=4 uid="uid://dkaupuhm4j7e3"]
 
 [ext_resource type="Script" uid="uid://bw7yj02jpvjmt" path="res://Scenes/Worlds/forest.gd" id="1_1gotx"]
 [ext_resource type="Texture2D" uid="uid://bp2nu123o32o3" path="res://Assets/forest/grassland/Tiled_files/water_detilazation.png" id="1_86vi4"]
@@ -95,6 +95,7 @@
 [ext_resource type="Texture2D" uid="uid://d1bkitbww5q10" path="res://Assets/forest/grassland/PNG/Details.png" id="87_2k048"]
 [ext_resource type="PackedScene" uid="uid://mmofgm0qxmda" path="res://Interaction/collect.tscn" id="93_2h4kg"]
 [ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="94_mbxr0"]
+[ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="96_noknt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_knb8s"]
 texture = ExtResource("2_4eku6")
@@ -11921,3 +11922,7 @@ offset_bottom = -93.96
 position = Vector2(369, 459)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("94_mbxr0")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="AnimationPlayer" parent="CanvasLayer2" instance=ExtResource("96_noknt")]
