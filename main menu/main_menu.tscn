@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://33j4vtvl1ypc" path="res://UI/WhatsApp Image 2025-03-19 at 11.16.40.jpeg" id="2_6fy38"]
 [ext_resource type="StyleBox" uid="uid://c6c5rw0j6t75c" path="res://main menu/new_style_box_flat.tres" id="2_m48o8"]
 [ext_resource type="StyleBox" uid="uid://cguha14q86ln0" path="res://main menu/main_menu.tres" id="3_ra13p"]
-[ext_resource type="FontFile" uid="uid://bpcsw5p0acs12" path="res://Fonts/ancient_ad/Ancient Ad.ttf" id="4_6fy38"]
-[ext_resource type="FontFile" uid="uid://cey82r2bdlm5f" path="res://Fonts/stardew_valley/Stardew Valley ALL CAPS.ttf" id="6_auhsi"]
+[ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="5_6fy38"]
+[ext_resource type="FontFile" uid="uid://tkxc8wuyouse" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf" id="6_auhsi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_auhsi"]
 texture = ExtResource("2_6fy38")
@@ -106,16 +106,16 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -403.0
-offset_top = 117.0
-offset_right = 426.0
-offset_bottom = 350.0
+offset_left = -870.0
+offset_top = 35.0
+offset_right = 949.0
+offset_bottom = 346.0
 grow_horizontal = 2
 theme_override_constants/text_highlight_h_padding = 10
 theme_override_constants/shadow_offset_y = 20
 theme_override_constants/shadow_outline_size = 15
-theme_override_fonts/normal_font = ExtResource("4_6fy38")
-theme_override_font_sizes/normal_font_size = 100
+theme_override_fonts/normal_font = ExtResource("5_6fy38")
+theme_override_font_sizes/normal_font_size = 150
 text = "LOST FORMULA"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -126,10 +126,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -548.0
-offset_top = 178.0
-offset_right = 557.0
-offset_bottom = 586.0
+offset_left = -514.0
+offset_top = 114.0
+offset_right = 591.0
+offset_bottom = 522.0
 grow_horizontal = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.647059, 0, 1)
