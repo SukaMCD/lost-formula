@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://jj2f5y00mtah"]
+[gd_scene load_steps=13 format=3 uid="uid://jj2f5y00mtah"]
 
 [ext_resource type="Script" uid="uid://dy1ubepae1f8f" path="res://main menu/main_menu.gd" id="1_cok42"]
 [ext_resource type="Texture2D" uid="uid://33j4vtvl1ypc" path="res://UI/WhatsApp Image 2025-03-19 at 11.16.40.jpeg" id="2_6fy38"]
@@ -6,6 +6,7 @@
 [ext_resource type="StyleBox" uid="uid://cguha14q86ln0" path="res://main menu/main_menu.tres" id="3_ra13p"]
 [ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="5_6fy38"]
 [ext_resource type="FontFile" uid="uid://tkxc8wuyouse" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf" id="6_auhsi"]
+[ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="7_auhsi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_auhsi"]
 texture = ExtResource("2_6fy38")
@@ -27,8 +28,9 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -4.0
-offset_bottom = -4.0
+offset_top = 6.0
+offset_right = 3.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -37,8 +39,9 @@ script = ExtResource("1_cok42")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
+offset_top = -7.0
 offset_right = 1926.0
-offset_bottom = 1083.0
+offset_bottom = 1076.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_auhsi")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -99,17 +102,17 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_ra13p")
 theme_override_styles/hover = ExtResource("3_ra13p")
 theme_override_styles/pressed = ExtResource("2_m48o8")
 theme_override_styles/normal = ExtResource("3_ra13p")
-text = "CREDITS"
+text = "EXIT"
 
 [node name="Label" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -870.0
-offset_top = 35.0
-offset_right = 949.0
-offset_bottom = 346.0
+offset_left = -668.0
+offset_top = 105.0
+offset_right = 702.0
+offset_bottom = 328.0
 grow_horizontal = 2
 theme_override_constants/text_highlight_h_padding = 10
 theme_override_constants/shadow_offset_y = 20
@@ -126,10 +129,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -514.0
-offset_top = 114.0
-offset_right = 591.0
-offset_bottom = 522.0
+offset_left = -550.0
+offset_top = 187.0
+offset_right = 555.0
+offset_bottom = 595.0
 grow_horizontal = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.647059, 0, 1)
@@ -139,4 +142,10 @@ text = "A FOREST MYSTERY"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AnimationPlayer" parent="CanvasLayer" instance=ExtResource("7_auhsi")]
+
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
