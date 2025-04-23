@@ -26,6 +26,7 @@ InteractionManager="*res://Interaction/InteractionManager.tscn"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=1
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 

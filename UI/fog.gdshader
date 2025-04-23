@@ -4,7 +4,7 @@ shader_type canvas_item;
 // Noise texture
 uniform sampler2D noise_texture: repeat_enable, filter_nearest;
 // Fog density
-uniform float density: hint_range(0.0, 1.0) = 0.25;
+uniform float density: hint_range(0.0, 2.0) = 0.6; // <- dari 0.25 ke 0.6
 // Fog speed
 uniform vec2 speed = vec2(0.02, 0.01);
 

@@ -39,9 +39,9 @@ script = ExtResource("1_cok42")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_top = -7.0
-offset_right = 1926.0
-offset_bottom = 1076.0
+offset_top = -4.0
+offset_right = 1929.0
+offset_bottom = 1085.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_auhsi")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -109,10 +109,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -668.0
-offset_top = 105.0
-offset_right = 702.0
-offset_bottom = 328.0
+offset_left = -667.5
+offset_top = 183.0
+offset_right = 702.5
+offset_bottom = 406.0
 grow_horizontal = 2
 theme_override_constants/text_highlight_h_padding = 10
 theme_override_constants/shadow_offset_y = 20
@@ -129,10 +129,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -550.0
-offset_top = 187.0
-offset_right = 555.0
-offset_bottom = 595.0
+offset_left = -542.5
+offset_top = 216.0
+offset_right = 562.5
+offset_bottom = 624.0
 grow_horizontal = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.647059, 0, 1)
