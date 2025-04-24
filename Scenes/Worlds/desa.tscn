@@ -8349,7 +8349,6 @@ metadata/_edit_lock_ = true
 
 [node name="Door_W" parent="door" instance=ExtResource("19_verej")]
 position = Vector2(74, 817)
-destination_level_tag = "World_percobaan"
 destination_Door_tag = "E"
 spawn_direction = "right"
 

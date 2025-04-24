@@ -10,10 +10,10 @@ func _ready() -> void:
 func _on_start_pressed() -> void:
 	# Aktifkan ColorRect sebelum memainkan animasi
 	$CanvasLayer/AnimationPlayer/ColorRect.visible = true
-	$CanvasLayer/AnimationPlayer.play("fade_to_black")
+	$CanvasLayer/AnimationPlayer.play("Fade_in")
 
 func _on_button_2_pressed() -> void:
-	$CanvasLayer/AnimationPlayer.play("Fade_in")
+	$CanvasLayer/AnimationPlayer.play("Fade_out")
 	get_tree().change_scene_to_file("res://Scenes/Player/forest.tscn")
 
 # Fungsi yang dipanggil saat tombol 'Exit' ditekan

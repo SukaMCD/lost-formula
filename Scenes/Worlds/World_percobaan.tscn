@@ -6694,7 +6694,6 @@ tile_set = SubResource("TileSet_mjgr2")
 
 [node name="Door_E" parent="door" instance=ExtResource("2_iscim")]
 position = Vector2(1882, 703)
-destination_level_tag = "desa"
 destination_Door_tag = "W"
 spawn_direction = "left"
 
