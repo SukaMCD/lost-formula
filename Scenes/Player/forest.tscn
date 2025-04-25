@@ -1,4 +1,4 @@
-[gd_scene load_steps=210 format=4 uid="uid://dkaupuhm4j7e3"]
+[gd_scene load_steps=212 format=4 uid="uid://dkaupuhm4j7e3"]
 
 [ext_resource type="Script" uid="uid://bw7yj02jpvjmt" path="res://Scenes/forest.gd" id="1_1gotx"]
 [ext_resource type="Texture2D" uid="uid://bp2nu123o32o3" path="res://Assets/forest/grassland/Tiled_files/water_detilazation.png" id="1_86vi4"]
@@ -97,6 +97,8 @@
 [ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="94_mbxr0"]
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="96_noknt"]
 [ext_resource type="PackedScene" uid="uid://do7bo123mhekl" path="res://Scenes/UI/door.tscn" id="97_nobsm"]
+[ext_resource type="AudioStream" uid="uid://ckudbjlljwhdv" path="res://Audio/Forest.wav" id="98_gmx8p"]
+[ext_resource type="PackedScene" uid="uid://bjxj5328l2ux2" path="res://Scenes/Enemies/Enemy (2).tscn" id="99_2q6my"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_knb8s"]
 texture = ExtResource("2_4eku6")
@@ -11907,20 +11909,7 @@ y_sort_enabled = true
 
 [node name="PlayerRoot" parent="." groups=["Player"] instance=ExtResource("83_xydxr")]
 texture_filter = 1
-position = Vector2(228, 594)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="Control" parent="CanvasLayer" instance=ExtResource("85_1gotx")]
-anchor_left = 0.049
-anchor_top = 0.52
-anchor_right = 0.065
-anchor_bottom = 0.587
-offset_left = -190.08
-offset_top = -21.6
-offset_right = -220.8
-offset_bottom = -93.96
+position = Vector2(216, 589)
 
 [node name="Node2D" type="Node" parent="."]
 
@@ -11949,3 +11938,19 @@ gizmo_extents = 0.0
 [node name="CanvasLayer" type="CanvasLayer" parent="Node/Door"]
 
 [node name="AnimationPlayer" parent="Node/Door/CanvasLayer" instance=ExtResource("96_noknt")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("98_gmx8p")
+volume_db = 3.887
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause_menu" parent="CanvasLayer" instance=ExtResource("85_1gotx")]
+visible = false
+offset_left = -8.0
+offset_top = 317.0
+offset_right = -1434.0
+offset_bottom = -467.0
+
+[node name="Node2D2" parent="." instance=ExtResource("99_2q6my")]
+position = Vector2(1164, 604)

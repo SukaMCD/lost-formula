@@ -1,11 +1,17 @@
-[gd_scene load_steps=30 format=3 uid="uid://cbewa6u2b2ked"]
+[gd_scene load_steps=42 format=3 uid="uid://cbewa6u2b2ked"]
 
 [ext_resource type="Script" uid="uid://b2ran2twf82b5" path="res://Scripts/Characters/character_body_2d.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://gsfnwslklv0j" path="res://Assets/Main-character/WALK FRONT SIDE (1).png" id="2_htcer"]
 [ext_resource type="Texture2D" uid="uid://bbgfb3tq7qkj2" path="res://Assets/Main-character/IDLE.png" id="3_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://bqi01mjugobs7" path="res://Assets/Main-character/WALK BACK SIDE.png" id="4_dd0ac"]
 [ext_resource type="Texture2D" uid="uid://bpwffgu38rexn" path="res://Assets/Main-character/WALK ( RIGHT SIDE ).png" id="5_0u5uq"]
-[ext_resource type="AudioStream" uid="uid://bi6dlw4hut3dr" path="res://Audio/footsteps-dirtpath.wav" id="6_dd0ac"]
+[ext_resource type="AudioStream" uid="uid://dwouo667t3xf4" path="res://Audio/Steps.wav" id="6_dd0ac"]
+[ext_resource type="Texture2D" uid="uid://crtbyxde6av5x" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/tile000.png" id="6_oikmp"]
+[ext_resource type="Texture2D" uid="uid://cd6qle2jf01cn" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/tile001.png" id="7_06tpx"]
+[ext_resource type="Texture2D" uid="uid://8k8lyw1ayt80" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/tile002.png" id="8_7g0yx"]
+[ext_resource type="Texture2D" uid="uid://be265w4wrovqq" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/FIGHT ( SWORD ) (1) - Copy.png" id="9_dey5f"]
+[ext_resource type="Texture2D" uid="uid://xeoqw0t28fnc" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/FIGHT ( SWORD 1).png" id="10_r5xpd"]
+[ext_resource type="Texture2D" uid="uid://bywh1gwrgvdm" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/tile006.png" id="11_ks1b7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sweqy"]
 radius = 58.1452
@@ -91,6 +97,30 @@ region = Rect2(1252, 0, 626, 1328)
 atlas = ExtResource("5_0u5uq")
 region = Rect2(1878, 0, 626, 1328)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qr1w5"]
+atlas = ExtResource("6_oikmp")
+region = Rect2(0, 0, 891, 1328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ythyg"]
+atlas = ExtResource("7_06tpx")
+region = Rect2(0, 0, 891, 1328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmb2s"]
+atlas = ExtResource("8_7g0yx")
+region = Rect2(0, 0, 891, 1328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur3l4"]
+atlas = ExtResource("9_dey5f")
+region = Rect2(0, 0, 940, 1328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ahak"]
+atlas = ExtResource("10_r5xpd")
+region = Rect2(0, 0, 712, 1328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rukb4"]
+atlas = ExtResource("11_ks1b7")
+region = Rect2(0, 0, 891, 1328)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_n7ghd"]
 animations = [{
 "frames": [{
@@ -99,6 +129,18 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gk6dx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlvik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gk6dx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhyir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74mp2")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jhyir")
@@ -131,6 +173,12 @@ animations = [{
 }, {
 "duration": 1e+06,
 "texture": SubResource("AtlasTexture_rqdc0")
+}, {
+"duration": 1e+06,
+"texture": SubResource("AtlasTexture_eksi1")
+}, {
+"duration": 1e+06,
+"texture": SubResource("AtlasTexture_jincj")
 }],
 "loop": true,
 "name": &"Idle",
@@ -164,6 +212,18 @@ animations = [{
 "texture": SubResource("AtlasTexture_aqm4k")
 }, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_hnuln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcvs5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqm4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8ma5")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_rcvs5")
 }, {
 "duration": 1.0,
@@ -171,6 +231,29 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qr1w5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ythyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmb2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur3l4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ahak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rukb4")
+}],
+"loop": true,
+"name": &"new_animation",
 "speed": 5.0
 }]
 
@@ -185,31 +268,28 @@ scale = Vector2(0.5, 0.5)
 collision_layer = 3
 script = ExtResource("1_i3pqv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(4, -2)
-scale = Vector2(0.584743, 0.584743)
-shape = SubResource("CapsuleShape2D_sweqy")
-
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-texture_filter = 1
-position = Vector2(0, -2)
+scale = Vector2(2, 2)
 zoom = Vector2(4, 4)
 limit_left = 0
 limit_top = 0
 limit_right = 1920
 limit_bottom = 1080
-limit_smoothed = true
 position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-editor_draw_limits = true
+rotation_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(4, -2)
+scale = Vector2(0.584743, 0.584743)
+shape = SubResource("CapsuleShape2D_sweqy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
 position = Vector2(9.53674e-07, -1.19209e-07)
 scale = Vector2(0.0986353, 0.0858955)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"Idle"
+animation = &"new_animation"
+frame_progress = 0.159173
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
@@ -220,6 +300,8 @@ position = Vector2(2, 25)
 rotation = -0.0266723
 shape = SubResource("CircleShape2D_htcer")
 
-[node name="FootstepPlayer" type="AudioStreamPlayer2D" parent="."]
+[node name="sfx_player" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_dd0ac")
-volume_db = 14.492
+volume_db = 24.0
+pitch_scale = 1.57
+attenuation = 0.933033
