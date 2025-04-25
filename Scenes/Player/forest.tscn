@@ -1,6 +1,6 @@
 [gd_scene load_steps=210 format=4 uid="uid://dkaupuhm4j7e3"]
 
-[ext_resource type="Script" uid="uid://bw7yj02jpvjmt" path="res://Scenes/Worlds/forest.gd" id="1_1gotx"]
+[ext_resource type="Script" uid="uid://bw7yj02jpvjmt" path="res://Scenes/forest.gd" id="1_1gotx"]
 [ext_resource type="Texture2D" uid="uid://bp2nu123o32o3" path="res://Assets/forest/grassland/Tiled_files/water_detilazation.png" id="1_86vi4"]
 [ext_resource type="Texture2D" uid="uid://bffaq84kvto0q" path="res://Assets/forest/Forest/PNG/Ground_grass.png" id="2_4eku6"]
 [ext_resource type="Texture2D" uid="uid://c0t22ljlw6mqa" path="res://Assets/forest/grassland/Tiled_files/water_detilazation_v2.png" id="2_dlp03"]
