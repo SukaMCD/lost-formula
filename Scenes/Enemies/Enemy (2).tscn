@@ -8,13 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://cjjb8p4y6l27f" path="res://Enemy/Enemy/Hellhound_2/Run.png" id="5_jdgko"]
 [ext_resource type="Texture2D" uid="uid://d38qohoi72tsh" path="res://Enemy/Enemy/Hellhound_2/Walk.png" id="6_j4qr3"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2iwxp"]
-atlas = ExtResource("1_6do27")
-region = Rect2(0, 0, 128, 128)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_4v6dm"]
 atlas = ExtResource("1_6do27")
 region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2iwxp"]
+atlas = ExtResource("1_6do27")
+region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2r3mv"]
 atlas = ExtResource("1_6do27")
@@ -176,10 +176,10 @@ region = Rect2(1024, 0, 128, 128)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2iwxp")
+"texture": SubResource("AtlasTexture_4v6dm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4v6dm")
+"texture": SubResource("AtlasTexture_2iwxp")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2r3mv")
@@ -329,7 +329,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73x2u"]
-size = Vector2(282, 275.625)
+size = Vector2(222.5, 201.906)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6do27"]
 radius = 48.0104
@@ -348,11 +348,11 @@ frame_progress = 0.989776
 [node name="DetectionArea" type="Area2D" parent="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/DetectionArea"]
-position = Vector2(9, 36)
+position = Vector2(6, 32)
 shape = SubResource("RectangleShape2D_73x2u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(9, 34)
+position = Vector2(9, 31)
 shape = SubResource("CircleShape2D_6do27")
 
 [connection signal="body_entered" from="CharacterBody2D/DetectionArea" to="." method="_on_detection_area_body_entered"]
