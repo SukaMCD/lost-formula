@@ -11952,5 +11952,7 @@ offset_top = 317.0
 offset_right = -1434.0
 offset_bottom = -467.0
 
-[node name="Node2D2" parent="." instance=ExtResource("99_2q6my")]
-position = Vector2(1164, 604)
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="Node2D" parent="CanvasLayer3" instance=ExtResource("99_2q6my")]
+position = Vector2(1260, 475)

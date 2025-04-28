@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cw03fojjio1oq"
+path="res://.godot/imported/CUTSCENE (INTRO).ogg-51bb6a08f5a689d880a13b76b64438ed.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/CUTSCENE (INTRO).ogg"
+dest_files=["res://.godot/imported/CUTSCENE (INTRO).ogg-51bb6a08f5a689d880a13b76b64438ed.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -342,8 +342,7 @@ script = ExtResource("1_rvmyp")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(17, -6)
 sprite_frames = SubResource("SpriteFrames_rr4pi")
-animation = &"Attack"
-frame_progress = 0.989776
+animation = &"Idle"
 
 [node name="DetectionArea" type="Area2D" parent="CharacterBody2D"]
 
