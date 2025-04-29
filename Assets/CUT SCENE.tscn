@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfklxipfcokga"]
+[gd_scene load_steps=4 format=3 uid="uid://bfklxipfcokga"]
 
-[ext_resource type="VideoStream" path="res://CUTSCENE (INTRO).ogv" id="1_vn03u"]
+[ext_resource type="VideoStream" uid="uid://dh1oga55gp5a4" path="res://CUTSCENE (INTRO).ogv" id="1_vn03u"]
 [ext_resource type="Script" uid="uid://d0u401m2j3par" path="res://Assets/cut_scene.gd" id="2_ey17s"]
+[ext_resource type="PackedScene" uid="uid://bubx3ab7u6lwm" path="res://Scenes/UI/tombol.tscn" id="3_xnxrh"]
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer"]
 offset_left = 5.0
@@ -13,5 +14,8 @@ volume_db = 17.9
 autoplay = true
 expand = true
 script = ExtResource("2_ey17s")
+
+[node name="Tombol" parent="." instance=ExtResource("3_xnxrh")]
+position = Vector2(1660, 919)
 
 [connection signal="finished" from="." to="." method="_on_finished"]

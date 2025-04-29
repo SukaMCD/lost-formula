@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bubx3ab7u6lwm"]
+
+[ext_resource type="Script" uid="uid://bg8p16m685s2d" path="res://Scenes/UI/tombol.gd" id="1_vlwbe"]
+[ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="2_atesj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vt0ly"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pukmv"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Tombol" type="Node2D"]
+script = ExtResource("1_vlwbe")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 252.0
+offset_bottom = 109.0
+theme_override_fonts/font = ExtResource("2_atesj")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vt0ly")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pukmv")
+text = " SKIP >"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
