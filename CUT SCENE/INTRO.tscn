@@ -10,6 +10,7 @@ script = ExtResource("1_uqkve")
 offset_right = 1924.0
 offset_bottom = 1080.0
 stream = ExtResource("2_csxqw")
-volume_db = 24.0
+volume_db = 17.98
+autoplay = true
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

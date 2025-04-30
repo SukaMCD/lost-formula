@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://c5b3rjbtsly0y"]
+[gd_scene load_steps=22 format=4 uid="uid://c5b3rjbtsly0y"]
 
 [ext_resource type="Texture2D" uid="uid://i2nkiv3fcdj8" path="res://Assets/forest/grassland/PNG/ground_grasss.png" id="1_ily10"]
 [ext_resource type="Texture2D" uid="uid://cih5ul5rbmmyo" path="res://Assets/forest/grassland/Tiled_files/ground_grasss.png" id="2_tp760"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://b6fkka2geb3xc" path="res://Assets/forest/grassland/Tiled_files/Trees_rocks.png" id="4_fwomk"]
 [ext_resource type="Texture2D" uid="uid://tdbjwv105myi" path="res://Assets/forest/grassland/PNG/Trees_rocks.png" id="5_qbefv"]
 [ext_resource type="Texture2D" uid="uid://brtu153pupd4" path="res://Assets/forest/Forest/Tiled_files/Objects.png" id="6_fwomk"]
-[ext_resource type="PackedScene" uid="uid://cbewa6u2b2ked" path="res://Scenes/Player/player.tscn" id="7_qbefv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tp760"]
 texture = ExtResource("1_ily10")
@@ -3590,9 +3589,6 @@ tile_set = SubResource("TileSet_gqigo")
 texture_filter = 1
 tile_map_data = PackedByteArray("AABAAAkAAwANAAEAAABAAAoAAwANAAIAAABBAAkAAwAOAAEAAABBAAoAAwAOAAIAAABBAAsAAwAOAAMAAABCAAkAAwAPAAEAAABCAAoAAwAPAAIAAABCAAsAAwAPAAMAAABDAAkAAwAQAAEAAABDAAoAAwAQAAIAAABDAAsAAwAQAAMAAABLAAgAAwANAAEAAABLAAkAAwANAAIAAABMAAgAAwAOAAEAAABMAAkAAwAOAAIAAABMAAoAAwAOAAMAAABNAAgAAwAPAAEAAABNAAkAAwAPAAIAAABNAAoAAwAPAAMAAABOAAgAAwAQAAEAAABOAAkAAwAQAAIAAABOAAoAAwAQAAMAAABEAAgAAwANAAEAAABEAAkAAwANAAIAAABFAAgAAwAOAAEAAABFAAkAAwAOAAIAAABFAAoAAwAOAAMAAABGAAgAAwAPAAEAAABGAAkAAwAPAAIAAABGAAoAAwAPAAMAAABHAAgAAwAQAAEAAABHAAkAAwAQAAIAAABHAAoAAwAQAAMAAAAuAAcAAwANAAEAAAAuAAgAAwANAAIAAAAvAAcAAwAOAAEAAAAvAAgAAwAOAAIAAAAvAAkAAwAOAAMAAAAwAAcAAwAPAAEAAAAwAAgAAwAPAAIAAAAwAAkAAwAPAAMAAAAxAAcAAwAQAAEAAAAxAAgAAwAQAAIAAAAxAAkAAwAQAAMAAAA=")
 tile_set = SubResource("TileSet_gqigo")
-
-[node name="PlayerRoot" parent="Tilemap" instance=ExtResource("7_qbefv")]
-position = Vector2(57, 480)
 
 [node name="tree" type="TileMapLayer" parent="Tilemap"]
 texture_filter = 1

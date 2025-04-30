@@ -12,6 +12,7 @@ script = ExtResource("1_rum7g")
 shape = SubResource("RectangleShape2D_l5kau")
 
 [node name="Spawn" type="Marker2D" parent="."]
+position = Vector2(-45, -3)
 gizmo_extents = 0.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

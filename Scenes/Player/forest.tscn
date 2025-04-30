@@ -98,6 +98,7 @@
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="96_noknt"]
 [ext_resource type="PackedScene" uid="uid://do7bo123mhekl" path="res://Scenes/UI/door.tscn" id="97_nobsm"]
 [ext_resource type="AudioStream" uid="uid://ckudbjlljwhdv" path="res://Audio/Forest.wav" id="98_gmx8p"]
+[ext_resource type="PackedScene" uid="uid://bjxj5328l2ux2" path="res://Scenes/Enemies/Enemy (2).tscn" id="99_2q6my"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_knb8s"]
 texture = ExtResource("2_4eku6")
@@ -11808,9 +11809,6 @@ sources/0 = SubResource("TileSetAtlasSource_r4ilv")
 sources/1 = SubResource("TileSetAtlasSource_qo1bb")
 sources/2 = SubResource("TileSetAtlasSource_4eku6")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nobsm"]
-size = Vector2(47, 29.75)
-
 [node name="Forest" type="Node2D"]
 y_sort_enabled = true
 texture_filter = 1
@@ -11926,12 +11924,8 @@ position = Vector2(369, 459)
 [node name="Door" parent="Node" instance=ExtResource("97_nobsm")]
 position = Vector2(1570, 497)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node/Door"]
-position = Vector2(-1, -1)
-shape = SubResource("RectangleShape2D_nobsm")
-
 [node name="Spawn2" type="Marker2D" parent="Node/Door"]
-position = Vector2(-1, 1)
+position = Vector2(-27, -1)
 gizmo_extents = 0.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Node/Door"]
@@ -11952,3 +11946,6 @@ offset_right = -1434.0
 offset_bottom = -467.0
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="Node2D" parent="CanvasLayer3" instance=ExtResource("99_2q6my")]
+position = Vector2(1278, 467)

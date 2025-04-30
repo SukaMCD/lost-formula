@@ -6701,7 +6701,7 @@ spawn_direction = "left"
 position = Vector2(-635, 21)
 
 [node name="Spawn" parent="door/Door_E" index="1"]
-position = Vector2(-657, 23)
+position = Vector2(-669, 24)
 scale = Vector2(-1.46846, 2.98235)
 
 [node name="PlayerRoot" parent="." instance=ExtResource("2_3306l")]
