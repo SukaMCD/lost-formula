@@ -4652,7 +4652,7 @@ sources/2 = SubResource("TileSetAtlasSource_hpc4t")
 sources/3 = SubResource("TileSetAtlasSource_5ge37")
 sources/4 = SubResource("TileSetAtlasSource_ruabu")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="tilemap" type="Node" parent="."]
 
