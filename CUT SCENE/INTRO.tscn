@@ -8,7 +8,7 @@ script = ExtResource("1_uqkve")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 offset_right = 1924.0
-offset_bottom = 1085.0
+offset_bottom = 1080.0
 stream = ExtResource("2_csxqw")
 volume_db = 24.0
 
