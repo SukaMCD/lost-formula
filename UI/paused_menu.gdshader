@@ -7,4 +7,3 @@ void fragment() {
 	vec4 color = textureLod(screen_texture, SCREEN_UV, lod);
 	COLOR = color;
 }
-

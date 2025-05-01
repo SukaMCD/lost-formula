@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bfklxipfcokga"]
 
-[ext_resource type="VideoStream" uid="uid://dh1oga55gp5a4" path="res://CUTSCENE (INTRO).ogv" id="1_vn03u"]
+[ext_resource type="VideoStream" path="res://CUT SCENE/cut-sceneee.ogv" id="1_xnxrh"]
 [ext_resource type="Script" uid="uid://d0u401m2j3par" path="res://Assets/cut_scene.gd" id="2_ey17s"]
 [ext_resource type="PackedScene" uid="uid://bubx3ab7u6lwm" path="res://Scenes/UI/tombol.tscn" id="3_xnxrh"]
 
@@ -9,7 +9,7 @@ offset_left = 5.0
 offset_top = -1.0
 offset_right = 1916.0
 offset_bottom = 1070.0
-stream = ExtResource("1_vn03u")
+stream = ExtResource("1_xnxrh")
 volume_db = 17.9
 autoplay = true
 expand = true

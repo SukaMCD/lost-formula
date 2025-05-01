@@ -33,7 +33,6 @@ func _play_animation(direction: Vector2):
 		# Gerak ke atas
 		sprite.play("Up")
 
-
 func _on_detection_area_body_entered(body: Node2D) -> void:
 	player = body
 	player_chase = true

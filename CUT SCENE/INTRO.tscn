@@ -1,15 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6q6v60qhvphl"]
 
 [ext_resource type="Script" uid="uid://couqeqsx5c1f1" path="res://CUT SCENE/intro.gd" id="1_uqkve"]
-[ext_resource type="VideoStream" uid="uid://df70xr86h87fn" path="res://CUT SCENE/0429(1).ogv" id="2_csxqw"]
+[ext_resource type="VideoStream" path="res://CUT SCENE/intro.ogv" id="2_uqkve"]
 
 [node name="Intro" type="Node2D"]
 script = ExtResource("1_uqkve")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-offset_right = 1924.0
-offset_bottom = 1080.0
-stream = ExtResource("2_csxqw")
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1921.0
+offset_bottom = 1081.0
+stream = ExtResource("2_uqkve")
 volume_db = 17.98
 autoplay = true
 
