@@ -1,10 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://bubx3ab7u6lwm"]
+[gd_scene load_steps=7 format=3 uid="uid://bubx3ab7u6lwm"]
 
 [ext_resource type="Script" uid="uid://bg8p16m685s2d" path="res://Scenes/UI/tombol.gd" id="1_vlwbe"]
 [ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="2_atesj"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atesj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwrag"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vt0ly"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8, 0.8, 0.8, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pukmv"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -13,10 +24,17 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 script = ExtResource("1_vlwbe")
 
 [node name="Button" type="Button" parent="."]
-offset_right = 252.0
-offset_bottom = 109.0
+offset_left = -29.0
+offset_top = 1.0
+offset_right = 213.0
+offset_bottom = 103.0
+theme_override_constants/outline_size = 6
+theme_override_constants/h_separation = 5
+theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("2_atesj")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 65
+theme_override_styles/focus = SubResource("StyleBoxFlat_atesj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_qwrag")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vt0ly")
 theme_override_styles/normal = SubResource("StyleBoxFlat_pukmv")
 text = " SKIP >"

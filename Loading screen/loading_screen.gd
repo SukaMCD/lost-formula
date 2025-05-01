@@ -13,18 +13,18 @@ var interval := 0.5
 func _ready():
 	loading_bar.play("load")
 	karakter.play("karakter")
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	karakter.play("Idle")
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.3).timeout
 	anim_player.play("Fade_out")
 	await anim_player.animation_finished
-	await get_tree().create_timer(0.8).timeout
+	await get_tree().create_timer(1.0).timeout
 	get_tree().change_scene_to_file("res://main menu/main_menu.tscn")
 
 func _process(delta):
 	timer += delta
 	if timer >= interval:
 		timer = 0.0
-		dot_count = (dot_count + 1) % 4
+		dot_count = (dot_count + 1) % 7
 		var dots = ".".repeat(dot_count)
 		loading_label.text = "Loading" + dots

@@ -120,7 +120,7 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 3.0,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_ekfxf")
 }, {
 "duration": 3.0,
@@ -182,9 +182,8 @@ texture = ExtResource("2_ub4wi")
 position = Vector2(934, 514)
 scale = Vector2(0.334237, 0.279292)
 sprite_frames = SubResource("SpriteFrames_uwx2e")
-animation = &"karakter"
-frame = 3
-frame_progress = 0.771638
+animation = &"Idle"
+speed_scale = 2.0
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="."]
 

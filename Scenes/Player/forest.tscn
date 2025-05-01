@@ -95,10 +95,9 @@
 [ext_resource type="Texture2D" uid="uid://d1bkitbww5q10" path="res://Assets/forest/grassland/PNG/Details.png" id="87_2k048"]
 [ext_resource type="PackedScene" uid="uid://mmofgm0qxmda" path="res://Interaction/collect.tscn" id="93_2h4kg"]
 [ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="94_mbxr0"]
+[ext_resource type="Script" uid="uid://cky1modqs6d5x" path="res://Scenes/Player/enterence.gd" id="96_gmx8p"]
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="96_noknt"]
-[ext_resource type="PackedScene" uid="uid://do7bo123mhekl" path="res://Scenes/UI/door.tscn" id="97_nobsm"]
 [ext_resource type="AudioStream" uid="uid://ckudbjlljwhdv" path="res://Audio/Forest.wav" id="98_gmx8p"]
-[ext_resource type="PackedScene" uid="uid://bjxj5328l2ux2" path="res://Scenes/Enemies/Enemy (2).tscn" id="99_2q6my"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_knb8s"]
 texture = ExtResource("2_4eku6")
@@ -11809,6 +11808,9 @@ sources/0 = SubResource("TileSetAtlasSource_r4ilv")
 sources/1 = SubResource("TileSetAtlasSource_qo1bb")
 sources/2 = SubResource("TileSetAtlasSource_4eku6")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q6my"]
+size = Vector2(59.5, 39.5)
+
 [node name="Forest" type="Node2D"]
 y_sort_enabled = true
 texture_filter = 1
@@ -11906,7 +11908,7 @@ y_sort_enabled = true
 
 [node name="PlayerRoot" parent="." groups=["Player"] instance=ExtResource("83_xydxr")]
 texture_filter = 1
-position = Vector2(216, 589)
+position = Vector2(214, 605)
 
 [node name="Node2D" type="Node" parent="."]
 
@@ -11921,16 +11923,17 @@ position = Vector2(369, 459)
 
 [node name="Node" type="Node" parent="."]
 
-[node name="Door" parent="Node" instance=ExtResource("97_nobsm")]
-position = Vector2(1570, 497)
+[node name="Enterence" type="Area2D" parent="Node"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("96_gmx8p")
+metadata/_edit_group_ = true
 
-[node name="Spawn2" type="Marker2D" parent="Node/Door"]
-position = Vector2(-27, -1)
-gizmo_extents = 0.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Enterence"]
+position = Vector2(1627, 502)
+shape = SubResource("RectangleShape2D_2q6my")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Node/Door"]
-
-[node name="AnimationPlayer" parent="Node/Door/CanvasLayer" instance=ExtResource("96_noknt")]
+[node name="AnimationPlayer" parent="Node" instance=ExtResource("96_noknt")]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("98_gmx8p")
@@ -11947,5 +11950,4 @@ offset_bottom = -467.0
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="."]
 
-[node name="Node2D" parent="CanvasLayer3" instance=ExtResource("99_2q6my")]
-position = Vector2(1278, 467)
+[connection signal="body_entered" from="Node/Enterence" to="Node/Enterence" method="_on_body_entered"]
