@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://ckv6qqpnvln76"]
+[gd_scene load_steps=25 format=4 uid="uid://ckv6qqpnvln76"]
 
 [ext_resource type="Texture2D" uid="uid://dpscoaaxrrahi" path="res://Assets/forest/Forest/Tiled_files/lianas.png" id="1_p4cih"]
 [ext_resource type="Texture2D" uid="uid://brtu153pupd4" path="res://Assets/forest/Forest/Tiled_files/Objects.png" id="2_yfexy"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://tdbjwv105myi" path="res://Assets/forest/grassland/PNG/Trees_rocks.png" id="5_1wlr7"]
 [ext_resource type="Texture2D" uid="uid://bj211dcdqyltn" path="res://Assets/forest/grassland/PNG/water_detilazation.png" id="5_ruabu"]
 [ext_resource type="Texture2D" uid="uid://bddi2pvcyb5t0" path="res://Assets/forest/Forest/PNG/Objects.png" id="6_ruabu"]
+[ext_resource type="PackedScene" uid="uid://cbewa6u2b2ked" path="res://Scenes/Player/player.tscn" id="10_3itu3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0voq6"]
 texture = ExtResource("1_p4cih")
@@ -4705,3 +4706,8 @@ tile_set = SubResource("TileSet_gk2bu")
 
 [node name="TileMapLayer5" type="TileMapLayer" parent="tilemap/Tree"]
 tile_set = SubResource("TileSet_gk2bu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PlayerRoot" parent="CanvasLayer" instance=ExtResource("10_3itu3")]
+position = Vector2(81, 349)

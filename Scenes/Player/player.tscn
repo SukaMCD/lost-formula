@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://cbewa6u2b2ked"]
+[gd_scene load_steps=43 format=3 uid="uid://cbewa6u2b2ked"]
 
 [ext_resource type="Script" uid="uid://b2ran2twf82b5" path="res://Scripts/Characters/character_body_2d.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://gsfnwslklv0j" path="res://Assets/Main-character/WALK FRONT SIDE (1).png" id="2_htcer"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://be265w4wrovqq" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/FIGHT ( SWORD ) (1) - Copy.png" id="9_dey5f"]
 [ext_resource type="Texture2D" uid="uid://xeoqw0t28fnc" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/FIGHT ( SWORD 1).png" id="10_r5xpd"]
 [ext_resource type="Texture2D" uid="uid://bywh1gwrgvdm" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/tile006.png" id="11_ks1b7"]
+[ext_resource type="PackedScene" uid="uid://b7qx0vdyj25xk" path="res://UI/paused_menu.tscn" id="13_06tpx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sweqy"]
 radius = 30.7828
@@ -304,3 +305,5 @@ stream = ExtResource("6_dd0ac")
 volume_db = 24.0
 pitch_scale = 1.57
 attenuation = 0.933033
+
+[node name="CanvasLayer" parent="." instance=ExtResource("13_06tpx")]

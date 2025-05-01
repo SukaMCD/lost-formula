@@ -1,4 +1,4 @@
-[gd_scene load_steps=211 format=4 uid="uid://dkaupuhm4j7e3"]
+[gd_scene load_steps=210 format=4 uid="uid://dkaupuhm4j7e3"]
 
 [ext_resource type="Script" uid="uid://bw7yj02jpvjmt" path="res://Scenes/forest.gd" id="1_1gotx"]
 [ext_resource type="Texture2D" uid="uid://bp2nu123o32o3" path="res://Assets/forest/grassland/Tiled_files/water_detilazation.png" id="1_86vi4"]
@@ -89,7 +89,6 @@
 [ext_resource type="Texture2D" uid="uid://bv1u4yg8ta2hh" path="res://Assets/forest/Forest/Tiled_files/Ground_grass.png" id="81_s15b8"]
 [ext_resource type="Texture2D" uid="uid://d0iem3numbqks" path="res://Assets/forest/grassland/PNG/Objects_separated/Bush6.png" id="82_w7l1v"]
 [ext_resource type="PackedScene" uid="uid://cbewa6u2b2ked" path="res://Scenes/Player/player.tscn" id="83_xydxr"]
-[ext_resource type="PackedScene" uid="uid://b7qx0vdyj25xk" path="res://UI/paused_menu.tscn" id="85_1gotx"]
 [ext_resource type="Texture2D" uid="uid://bddi2pvcyb5t0" path="res://Assets/forest/Forest/PNG/Objects.png" id="85_dfoln"]
 [ext_resource type="Texture2D" uid="uid://brtu153pupd4" path="res://Assets/forest/Forest/Tiled_files/Objects.png" id="86_2k048"]
 [ext_resource type="Texture2D" uid="uid://d1bkitbww5q10" path="res://Assets/forest/grassland/PNG/Details.png" id="87_2k048"]
@@ -11913,7 +11912,7 @@ position = Vector2(214, 605)
 [node name="Node2D" type="Node" parent="."]
 
 [node name="Collectible" parent="Node2D" instance=ExtResource("93_2h4kg")]
-position = Vector2(369, 459)
+position = Vector2(899, 700)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("94_mbxr0")]
 
@@ -11938,16 +11937,5 @@ shape = SubResource("RectangleShape2D_2q6my")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("98_gmx8p")
 volume_db = 3.887
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Pause_menu" parent="CanvasLayer" instance=ExtResource("85_1gotx")]
-visible = false
-offset_left = -8.0
-offset_top = 317.0
-offset_right = -1434.0
-offset_bottom = -467.0
-
-[node name="CanvasLayer3" type="CanvasLayer" parent="."]
 
 [connection signal="body_entered" from="Node/Enterence" to="Node/Enterence" method="_on_body_entered"]

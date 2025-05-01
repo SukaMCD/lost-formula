@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://mmofgm0qxmda"]
 
-[ext_resource type="Texture2D" uid="uid://3mu75c1x6g3l" path="res://Assets/forest/Forest/PNG/Objects_separated/Beige_stone_grass2.png" id="1_2hhwh"]
 [ext_resource type="Script" uid="uid://d1sq6hea4pxe5" path="res://Interaction/collect.gd" id="1_sws0y"]
 [ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="2_iefua"]
 [ext_resource type="AudioStream" uid="uid://cvb80c3hgrjsg" path="res://Audio/Interaction.wav" id="3_jusml"]
+[ext_resource type="Texture2D" uid="uid://c87j8n5va6ikh" path="res://Assets/Tanaman/flare blosoom.png" id="4_jusml"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sws0y"]
 font = ExtResource("2_iefua")
@@ -11,7 +11,7 @@ font_size = 10
 shadow_size = 2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iefua"]
-radius = 16.1245
+radius = 27.0185
 
 [node name="Collectible" type="Area2D"]
 script = ExtResource("1_sws0y")
@@ -34,13 +34,14 @@ stream = ExtResource("3_jusml")
 volume_db = 24.0
 area_mask = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_iefua")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2, 1.90735e-06)
-scale = Vector2(1.15625, 1.375)
-texture = ExtResource("1_2hhwh")
+position = Vector2(-9.53674e-07, -1)
+scale = Vector2(0.0248047, 0.0304688)
+texture = ExtResource("4_jusml")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 2)
+shape = SubResource("CircleShape2D_iefua")
 
 [node name="DetectionTimer" type="Timer" parent="."]
 
