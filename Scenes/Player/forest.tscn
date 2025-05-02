@@ -1,4 +1,4 @@
-[gd_scene load_steps=210 format=4 uid="uid://dkaupuhm4j7e3"]
+[gd_scene load_steps=211 format=4 uid="uid://dkaupuhm4j7e3"]
 
 [ext_resource type="Script" uid="uid://bw7yj02jpvjmt" path="res://Scenes/forest.gd" id="1_1gotx"]
 [ext_resource type="Texture2D" uid="uid://bp2nu123o32o3" path="res://Assets/forest/grassland/Tiled_files/water_detilazation.png" id="1_86vi4"]
@@ -96,6 +96,7 @@
 [ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="94_mbxr0"]
 [ext_resource type="Script" uid="uid://cky1modqs6d5x" path="res://Scenes/Player/enterence.gd" id="96_gmx8p"]
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="96_noknt"]
+[ext_resource type="PackedScene" uid="uid://bjxj5328l2ux2" path="res://Scenes/Enemies/Enemy (2).tscn" id="98_2q6my"]
 [ext_resource type="AudioStream" uid="uid://ckudbjlljwhdv" path="res://Audio/Forest.wav" id="98_gmx8p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_knb8s"]
@@ -11937,5 +11938,10 @@ shape = SubResource("RectangleShape2D_2q6my")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("98_gmx8p")
 volume_db = 3.887
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Node2D" parent="CanvasLayer" instance=ExtResource("98_2q6my")]
+position = Vector2(1172, 483)
 
 [connection signal="body_entered" from="Node/Enterence" to="Node/Enterence" method="_on_body_entered"]
