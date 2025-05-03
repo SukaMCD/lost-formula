@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b2wx5ad3485ta"]
+
+[ext_resource type="Texture2D" uid="uid://drlbt7cl5eios" path="res://Assets/Tanaman/ignis bloom.png" id="1_s50ld"]
+[ext_resource type="Script" uid="uid://cenmx236griyl" path="res://brewing/Item.gd" id="2_qap1w"]
+
+[resource]
+script = ExtResource("2_qap1w")
+icon = ExtResource("1_s50ld")
+name = "Ignis bloom"
+repice = Array[ExtResource("2_qap1w")]([])
+type = "Material"
+description = "Material used for crafting."
+metadata/_custom_type_script = "uid://cenmx236griyl"

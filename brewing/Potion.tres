@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dxy8yfsqbt6w1"]
+
+[ext_resource type="Texture2D" uid="uid://cfb513n3wo1td" path="res://Assets/Tanaman/PotionHP.png" id="1_txl2m"]
+[ext_resource type="Script" uid="uid://cenmx236griyl" path="res://brewing/Item.gd" id="2_jkxbh"]
+
+[resource]
+script = ExtResource("2_jkxbh")
+icon = ExtResource("1_txl2m")
+name = "Potion"
+repice = Array[ExtResource("2_jkxbh")]([])
+type = "Potion"
+description = "Potion used for combat."
+metadata/_custom_type_script = "uid://cenmx236griyl"

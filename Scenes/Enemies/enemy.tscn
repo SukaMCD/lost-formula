@@ -256,7 +256,7 @@ script = ExtResource("1_qi2p4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_g3onx")
-animation = &"Down"
+animation = &"Idle"
 
 [node name="DetectionArea" type="Area2D" parent="."]
 collision_layer = 2

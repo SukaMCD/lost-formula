@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlju6i8r8qauu"]
+
+[ext_resource type="Script" uid="uid://d2ae7hjhrb200" path="res://brewing/repice_slot.gd" id="1_ce5bx"]
+
+[node name="RecipeSlot" type="PanelContainer"]
+script = ExtResource("1_ce5bx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2

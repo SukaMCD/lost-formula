@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://hhk6aao8e7io"]
+
+[ext_resource type="Texture2D" uid="uid://bxy4s6ra13kp3" path="res://Assets/Tanaman/Kunyit.PNG" id="1_eiask"]
+[ext_resource type="Script" uid="uid://cenmx236griyl" path="res://brewing/Item.gd" id="2_itvph"]
+
+[resource]
+script = ExtResource("2_itvph")
+icon = ExtResource("1_eiask")
+name = "Kunyit"
+repice = Array[ExtResource("2_itvph")]([])
+type = "Material"
+description = "Material used for crafting."
+metadata/_custom_type_script = "uid://cenmx236griyl"

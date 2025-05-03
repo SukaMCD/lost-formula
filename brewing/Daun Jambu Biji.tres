@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://d33w8e3m5yb07"]
+
+[ext_resource type="Texture2D" uid="uid://bsts7frts0g7e" path="res://Assets/Tanaman/daun jambu biji.PNG" id="1_w4vwf"]
+[ext_resource type="Script" uid="uid://cenmx236griyl" path="res://brewing/Item.gd" id="2_v4bd7"]
+
+[resource]
+script = ExtResource("2_v4bd7")
+icon = ExtResource("1_w4vwf")
+name = "Daun Jambu biji"
+repice = Array[ExtResource("2_v4bd7")]([])
+type = "Material"
+description = "Berry used for crafting."
+metadata/_custom_type_script = "uid://cenmx236griyl"

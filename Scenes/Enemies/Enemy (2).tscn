@@ -181,22 +181,22 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 1e+08,
 "texture": SubResource("AtlasTexture_4jfdv")
 }, {
-"duration": 1.0,
+"duration": 1e+06,
 "texture": SubResource("AtlasTexture_abf3q")
 }, {
-"duration": 1.0,
+"duration": 1e+06,
 "texture": SubResource("AtlasTexture_snjnn")
 }, {
-"duration": 1.0,
+"duration": 1e+06,
 "texture": SubResource("AtlasTexture_mq6sd")
 }, {
-"duration": 1.0,
+"duration": 1e+06,
 "texture": SubResource("AtlasTexture_4qf6b")
 }, {
-"duration": 1.0,
+"duration": 1e+06,
 "texture": SubResource("AtlasTexture_ymxr3")
 }],
 "loop": true,
@@ -295,29 +295,30 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4disf"]
-radius = 158.758
+radius = 96.0052
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vn674"]
-radius = 100.225
+radius = 62.2896
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_uhxdy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0.140633, -28.6875)
-scale = Vector2(2.1853, 2.19824)
+position = Vector2(1, 4)
+scale = Vector2(0.982176, 0.940429)
 sprite_frames = SubResource("SpriteFrames_3k452")
-animation = &"Walk"
+animation = &"Attack"
+frame_progress = 0.300308
 
-[node name="decative" type="Area2D" parent="."]
+[node name="detection" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="decative"]
-position = Vector2(6, 56)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection"]
+position = Vector2(1, 32)
 shape = SubResource("CircleShape2D_4disf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 55)
+position = Vector2(3, 32)
 shape = SubResource("CircleShape2D_vn674")
 
-[connection signal="body_entered" from="decative" to="." method="_on_decative_body_entered"]
-[connection signal="body_exited" from="decative" to="." method="_on_decative_body_exited"]
+[connection signal="body_entered" from="detection" to="." method="_on_decative_body_entered"]
+[connection signal="body_exited" from="detection" to="." method="_on_decative_body_exited"]
