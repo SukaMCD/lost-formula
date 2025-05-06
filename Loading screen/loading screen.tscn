@@ -193,9 +193,9 @@ speed_scale = 2.0
 
 [node name="LoadingLabel" type="Label" parent="CanvasLayer5"]
 offset_left = 773.0
-offset_top = 769.0
+offset_top = 752.0
 offset_right = 1120.0
-offset_bottom = 837.0
+offset_bottom = 820.0
 theme_override_fonts/font = ExtResource("13_ofpix")
 theme_override_font_sizes/font_size = 50
 text = "LOADING......."
