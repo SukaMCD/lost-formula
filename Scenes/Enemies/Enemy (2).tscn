@@ -295,10 +295,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4disf"]
-radius = 96.0052
+radius = 112.071
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vn674"]
-radius = 62.2896
+radius = 45.0444
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_uhxdy")

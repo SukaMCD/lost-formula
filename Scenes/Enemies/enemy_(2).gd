@@ -22,11 +22,11 @@ func _play_animation(direction: Vector2):
 		sprite.play("Walk")
 		
 		# Balik arah sprite kalau ke kiri
-		if direction.x < 0:
+		if direction.x > 0:
 			sprite.flip_h = true
 		else:
 			sprite.flip_h = false
-	elif direction.y > 0:
+	elif direction.y < 0:
 		# Gerak ke bawah
 		sprite.play("Down")
 	else:

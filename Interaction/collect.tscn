@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d1sq6hea4pxe5" path="res://Interaction/collect.gd" id="1_sws0y"]
 [ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="2_iefua"]
 [ext_resource type="AudioStream" uid="uid://cvb80c3hgrjsg" path="res://Audio/Interaction.wav" id="3_jusml"]
-[ext_resource type="Texture2D" uid="uid://c87j8n5va6ikh" path="res://Assets/Tanaman/flare blosoom.png" id="4_jusml"]
+[ext_resource type="Texture2D" uid="uid://drlbt7cl5eios" path="res://Assets/Tanaman/ignis bloom.png" id="4_jusml"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sws0y"]
 font = ExtResource("2_iefua")
