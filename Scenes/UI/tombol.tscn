@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bubx3ab7u6lwm"]
 
 [ext_resource type="Script" uid="uid://bg8p16m685s2d" path="res://Scenes/UI/tombol.gd" id="1_vlwbe"]
-[ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="2_atesj"]
+[ext_resource type="FontFile" uid="uid://c45alnu4emdci" path="res://Fonts/mileast/Mileast Italic.otf" id="2_atesj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atesj"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
