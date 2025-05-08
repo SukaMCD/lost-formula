@@ -9,16 +9,16 @@ signal item_changed
 @export var ITEM4 : Item
 
 func _ready():
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(2).timeout
 	add_item(ITEM)
 
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(2).timeout
 	add_item(ITEM2)
 	
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(2).timeout
 	add_item(ITEM3)
 	
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(2).timeout
 	add_item(ITEM4)
 #endregion
 
