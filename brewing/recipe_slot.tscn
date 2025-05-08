@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlju6i8r8qauu"]
+[gd_scene load_steps=2 format=3 uid="uid://hx1av0o0dx7b"]
 
-[ext_resource type="Script" uid="uid://d2ae7hjhrb200" path="res://brewing/repice_slot.gd" id="1_ce5bx"]
+[ext_resource type="Script" uid="uid://dwj1wc7c5tj6y" path="res://brewing/recipe_slot.gd" id="1_3b6li"]
 
 [node name="RecipeSlot" type="PanelContainer"]
-script = ExtResource("1_ce5bx")
+script = ExtResource("1_3b6li")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(100, 100)

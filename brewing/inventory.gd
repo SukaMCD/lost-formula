@@ -1,25 +1,25 @@
 extends GridContainer
 
-signal item_changed 
+signal item_changed
 
 #region New Code Region
 @export var ITEM : Item
 @export var ITEM2 : Item
 @export var ITEM3 : Item
 @export var ITEM4 : Item
-@export var ITEM5 : Item
 
-func _ready() -> void:
-	await get_tree().create_timer(1).timeout
+func _ready():
+	await get_tree().create_timer(0.1).timeout
 	add_item(ITEM)
-	await get_tree().create_timer(1).timeout
+
+	await get_tree().create_timer(0.1).timeout
 	add_item(ITEM2)
-	await get_tree().create_timer(1).timeout
+	
+	await get_tree().create_timer(0.1).timeout
 	add_item(ITEM3)
-	await get_tree().create_timer(1).timeout
+	
+	await get_tree().create_timer(0.1).timeout
 	add_item(ITEM4)
-	await get_tree().create_timer(1).timeout
-	add_item(ITEM5)
 #endregion
 
 func add_item(item):
@@ -38,6 +38,6 @@ func remove_item(item):
 			
 func is_available(item):
 	for i in get_children():
-		if i .item == item:
+		if i.item == item:
 			return true
 	return false

@@ -1,13 +1,17 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dxy8yfsqbt6w1"]
+[gd_resource type="Resource" script_class="item" load_steps=7 format=3 uid="uid://d4nmvyaxpqep4"]
 
 [ext_resource type="Texture2D" uid="uid://cfb513n3wo1td" path="res://Assets/Tanaman/PotionHP.png" id="1_txl2m"]
-[ext_resource type="Script" uid="uid://cenmx236griyl" path="res://brewing/Item.gd" id="2_jkxbh"]
+[ext_resource type="Script" uid="uid://brjnr8awxda4a" path="res://brewing/Item.gd" id="2_6po07"]
+[ext_resource type="Resource" uid="uid://bdqsrv830qh72" path="res://brewing/Berry.tres" id="3_m0o7m"]
+[ext_resource type="Resource" uid="uid://dtrjlp40pwes0" path="res://brewing/Daun jambu biji.tres" id="4_176u1"]
+[ext_resource type="Resource" uid="uid://imwr5g3m2rhq" path="res://brewing/Kunyit.tres" id="5_iy6c4"]
+[ext_resource type="Resource" uid="uid://8mnpo6xyoqd0" path="res://brewing/Temulawak.tres" id="6_8lbt6"]
 
 [resource]
-script = ExtResource("2_jkxbh")
+script = ExtResource("2_6po07")
 icon = ExtResource("1_txl2m")
 name = "Potion"
-repice = Array[ExtResource("2_jkxbh")]([])
-type = "Potion"
-description = "Potion used for combat."
-metadata/_custom_type_script = "uid://cenmx236griyl"
+recipe = Array[ExtResource("2_6po07")]([ExtResource("3_m0o7m"), ExtResource("4_176u1"), ExtResource("5_iy6c4"), ExtResource("6_8lbt6")])
+type = "Material"
+description = "Potion used for Combat"
+metadata/_custom_type_script = "uid://brjnr8awxda4a"

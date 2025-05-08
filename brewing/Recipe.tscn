@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2tjt3cfpw2eg"]
+
+[ext_resource type="Script" uid="uid://bl5whhq8etmud" path="res://brewing/recipe.gd" id="1_5fe0w"]
+[ext_resource type="PackedScene" uid="uid://hx1av0o0dx7b" path="res://brewing/recipe_slot.tscn" id="1_tdjjb"]
+
+[node name="Recipe" type="HBoxContainer"]
+script = ExtResource("1_5fe0w")
+
+[node name="RecipeSlot" parent="." instance=ExtResource("1_tdjjb")]
+layout_mode = 2
+
+[node name="RecipeSlot2" parent="." instance=ExtResource("1_tdjjb")]
+layout_mode = 2
+
+[node name="RecipeSlot3" parent="." instance=ExtResource("1_tdjjb")]
+layout_mode = 2
+
+[node name="RecipeSlot4" parent="." instance=ExtResource("1_tdjjb")]
+layout_mode = 2
+
+[node name="craft" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="craft"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 40
+text = "Craft"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="craft" to="." method="_on_craft_pressed"]

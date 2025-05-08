@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b2wx5ad3485ta"]
+[gd_resource type="Resource" script_class="item" load_steps=3 format=3 uid="uid://co8h0n28j1jlx"]
 
-[ext_resource type="Texture2D" uid="uid://drlbt7cl5eios" path="res://Assets/Tanaman/ignis bloom.png" id="1_s50ld"]
-[ext_resource type="Script" uid="uid://cenmx236griyl" path="res://brewing/Item.gd" id="2_qap1w"]
+[ext_resource type="Texture2D" uid="uid://drlbt7cl5eios" path="res://Assets/Tanaman/ignis bloom.png" id="1_p5y0l"]
+[ext_resource type="Script" uid="uid://brjnr8awxda4a" path="res://brewing/Item.gd" id="2_myy8v"]
 
 [resource]
-script = ExtResource("2_qap1w")
-icon = ExtResource("1_s50ld")
-name = "Ignis bloom"
-repice = Array[ExtResource("2_qap1w")]([])
+script = ExtResource("2_myy8v")
+icon = ExtResource("1_p5y0l")
+name = "Ignis"
+recipe = Array[ExtResource("2_myy8v")]([])
 type = "Material"
-description = "Material used for crafting."
-metadata/_custom_type_script = "uid://cenmx236griyl"
+description = "Material used for crafting"
+metadata/_custom_type_script = "uid://brjnr8awxda4a"

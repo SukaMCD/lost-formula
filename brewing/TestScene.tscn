@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=3 uid="uid://cquk2fxue6fsr"]
+
+[ext_resource type="Script" uid="uid://dlkvk6coh5lpt" path="res://brewing/inventory.gd" id="1_owful"]
+[ext_resource type="Resource" uid="uid://bdqsrv830qh72" path="res://brewing/Berry.tres" id="2_m1y52"]
+[ext_resource type="PackedScene" uid="uid://bu4ayx1347ty" path="res://brewing/slot.tscn" id="2_x2va3"]
+[ext_resource type="Resource" uid="uid://dtrjlp40pwes0" path="res://brewing/Daun jambu biji.tres" id="3_6jsfx"]
+[ext_resource type="Resource" uid="uid://imwr5g3m2rhq" path="res://brewing/Kunyit.tres" id="4_lifax"]
+[ext_resource type="Resource" uid="uid://8mnpo6xyoqd0" path="res://brewing/Temulawak.tres" id="5_6wp7m"]
+[ext_resource type="PackedScene" uid="uid://c2tjt3cfpw2eg" path="res://brewing/Recipe.tscn" id="7_6jsfx"]
+[ext_resource type="Script" uid="uid://btscnboc8od1s" path="res://brewing/recipes.gd" id="7_6wp7m"]
+[ext_resource type="Resource" uid="uid://d4nmvyaxpqep4" path="res://brewing/Potion.tres" id="8_lifax"]
+
+[node name="TestScene" type="Node2D"]
+position = Vector2(1254, 395)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Inventory" type="GridContainer" parent="UI"]
+custom_minimum_size = Vector2(100, 100)
+offset_left = 1254.0
+offset_top = 395.0
+offset_right = 1666.0
+offset_bottom = 703.0
+columns = 4
+script = ExtResource("1_owful")
+ITEM = ExtResource("2_m1y52")
+ITEM2 = ExtResource("3_6jsfx")
+ITEM3 = ExtResource("4_lifax")
+ITEM4 = ExtResource("5_6wp7m")
+
+[node name="slot" parent="UI/Inventory" instance=ExtResource("2_x2va3")]
+layout_mode = 2
+
+[node name="slot2" parent="UI/Inventory" instance=ExtResource("2_x2va3")]
+layout_mode = 2
+
+[node name="slot3" parent="UI/Inventory" instance=ExtResource("2_x2va3")]
+layout_mode = 2
+
+[node name="slot4" parent="UI/Inventory" instance=ExtResource("2_x2va3")]
+layout_mode = 2
+
+[node name="slot5" parent="UI/Inventory" instance=ExtResource("2_x2va3")]
+layout_mode = 2
+
+[node name="slot6" parent="UI/Inventory" instance=ExtResource("2_x2va3")]
+layout_mode = 2
+
+[node name="slot7" parent="UI/Inventory" instance=ExtResource("2_x2va3")]
+layout_mode = 2
+
+[node name="slot8" parent="UI/Inventory" instance=ExtResource("2_x2va3")]
+layout_mode = 2
+
+[node name="slot9" parent="UI/Inventory" instance=ExtResource("2_x2va3")]
+layout_mode = 2
+
+[node name="slot10" parent="UI/Inventory" instance=ExtResource("2_x2va3")]
+layout_mode = 2
+
+[node name="slot11" parent="UI/Inventory" instance=ExtResource("2_x2va3")]
+layout_mode = 2
+
+[node name="slot12" parent="UI/Inventory" instance=ExtResource("2_x2va3")]
+layout_mode = 2
+
+[node name="Recipes" type="VBoxContainer" parent="UI"]
+offset_left = 314.0
+offset_top = 480.0
+offset_right = 830.0
+offset_bottom = 580.0
+script = ExtResource("7_6wp7m")
+
+[node name="Recipe" parent="UI/Recipes" instance=ExtResource("7_6jsfx")]
+layout_mode = 2
+item = ExtResource("8_lifax")
+
+[connection signal="item_changed" from="UI/Inventory" to="UI/Recipes" method="_on_inventory_item_changed"]

@@ -5611,8 +5611,11 @@ texture = ExtResource("6_aqgec")
 50:5/0 = 0
 51:5/0 = 0
 1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:7/0 = 0
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:7/0 = 0
 5:7/0 = 0
 8:7/0 = 0
@@ -5639,8 +5642,10 @@ texture = ExtResource("6_aqgec")
 49:7/0 = 0
 50:7/0 = 0
 1:8/0 = 0
+1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:8/0 = 0
 3:8/0 = 0
+3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:8/0 = 0
 5:8/0 = 0
 6:8/0 = 0
@@ -5679,8 +5684,11 @@ texture = ExtResource("6_aqgec")
 49:8/0 = 0
 50:8/0 = 0
 1:9/0 = 0
+1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:9/0 = 0
+2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:9/0 = 0
+3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:9/0 = 0
 9:9/0 = 0
 10:9/0 = 0
@@ -6544,6 +6552,7 @@ texture = ExtResource("5_ntkhe")
 5:13/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_0d5y7"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2t0ks")
 sources/1 = SubResource("TileSetAtlasSource_4t023")
 sources/2 = SubResource("TileSetAtlasSource_v54g5")
@@ -11993,6 +12002,6 @@ texture_filter = 1
 position = Vector2(181, 603)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("98_2q6my")]
-position = Vector2(1242, 620)
+position = Vector2(1220, 620)
 
 [connection signal="body_entered" from="Node/Enterence" to="Node/Enterence" method="_on_body_entered"]

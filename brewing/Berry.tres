@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dtmhqvobdtt63"]
+[gd_resource type="Resource" script_class="item" load_steps=3 format=3 uid="uid://bdqsrv830qh72"]
 
 [ext_resource type="Texture2D" uid="uid://ccsumdrud5j7r" path="res://Assets/Tanaman/berry.png" id="1_2f3f4"]
-[ext_resource type="Script" uid="uid://cenmx236griyl" path="res://brewing/Item.gd" id="2_gp32h"]
+[ext_resource type="Script" uid="uid://brjnr8awxda4a" path="res://brewing/Item.gd" id="2_2f3f4"]
 
 [resource]
-script = ExtResource("2_gp32h")
+script = ExtResource("2_2f3f4")
 icon = ExtResource("1_2f3f4")
 name = "Berry"
-repice = Array[ExtResource("2_gp32h")]([])
+recipe = Array[ExtResource("2_2f3f4")]([])
 type = "Material"
-description = "Berry used for crafting."
-metadata/_custom_type_script = "uid://cenmx236griyl"
+description = "Material used for crafting"
+metadata/_custom_type_script = "uid://brjnr8awxda4a"

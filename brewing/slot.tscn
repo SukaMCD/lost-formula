@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu4ayx1347ty"]
+
+[ext_resource type="Script" uid="uid://hq280b0jq0m2" path="res://brewing/slot.gd" id="1_cml1n"]
+
+[node name="slot" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cml1n")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+expand_mode = 1

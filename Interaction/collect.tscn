@@ -1,49 +1,44 @@
-[gd_scene load_steps=7 format=3 uid="uid://mmofgm0qxmda"]
+[gd_scene load_steps=6 format=3 uid="uid://mmofgm0qxmda"]
 
 [ext_resource type="Script" uid="uid://d1sq6hea4pxe5" path="res://Interaction/collect.gd" id="1_sws0y"]
-[ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="2_iefua"]
 [ext_resource type="AudioStream" uid="uid://cvb80c3hgrjsg" path="res://Audio/Interaction.wav" id="3_jusml"]
 [ext_resource type="Texture2D" uid="uid://drlbt7cl5eios" path="res://Assets/Tanaman/ignis bloom.png" id="4_jusml"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_sws0y"]
-font = ExtResource("2_iefua")
-font_size = 10
-shadow_size = 2
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_iefua"]
-radius = 27.0185
+radius = 18.0278
 
-[node name="Collectible" type="Area2D"]
+[sub_resource type="LabelSettings" id="LabelSettings_jusml"]
+font_size = 10
+outline_size = 3
+outline_color = Color(0.125911, 0.125911, 0.125911, 1)
+
+[node name="Ignis" type="Area2D"]
 script = ExtResource("1_sws0y")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0186524, 0.0238281)
+texture = ExtResource("4_jusml")
 
-[node name="InteractionLabel" type="Label" parent="CanvasLayer"]
-offset_left = -55.0
-offset_top = -39.0
-offset_right = 50.0
-offset_bottom = -16.0
-text = "[E] "
-label_settings = SubResource("LabelSettings_sws0y")
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_iefua")
+
+[node name="DetectionTimer" type="Timer" parent="."]
 
 [node name="CollectSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_jusml")
 volume_db = 24.0
 area_mask = 16
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-9.53674e-07, -1)
-scale = Vector2(0.0248047, 0.0304688)
-texture = ExtResource("4_jusml")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 2)
-shape = SubResource("CircleShape2D_iefua")
-
-[node name="DetectionTimer" type="Timer" parent="."]
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -35.0
+offset_top = -31.0
+offset_right = 43.0
+offset_bottom = -17.0
+text = "E To Collect"
+label_settings = SubResource("LabelSettings_jusml")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
