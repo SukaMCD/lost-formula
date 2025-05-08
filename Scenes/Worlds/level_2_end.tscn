@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://ek7tjbq5i5mv"]
+[gd_scene load_steps=29 format=4 uid="uid://ek7tjbq5i5mv"]
 
 [ext_resource type="Texture2D" uid="uid://bddi2pvcyb5t0" path="res://Assets/forest/Forest/PNG/Objects.png" id="1_eg8i0"]
 [ext_resource type="Texture2D" uid="uid://brtu153pupd4" path="res://Assets/forest/Forest/Tiled_files/Objects.png" id="2_gvexd"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://cgy4mrcfqd7ry" path="res://Scenes/Gubuk/Gubuk.tscn" id="10_pp2x2"]
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="11_21cx4"]
 [ext_resource type="Script" uid="uid://b3u67mkxlu1ju" path="res://Scenes/Gubuk/Gubuk.gd" id="11_eimml"]
+[ext_resource type="Script" uid="uid://ofal4wp084np" path="res://Scenes/Worlds/EXIT.gd" id="13_jeyg2"]
+[ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="14_geo7b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hkffe"]
 texture = ExtResource("1_eg8i0")
@@ -3628,6 +3630,9 @@ sources/0 = SubResource("TileSetAtlasSource_pt5p4")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21cx4"]
 size = Vector2(32.5, 28)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_geo7b"]
+size = Vector2(116.5, 124.5)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Tilemap" type="Node" parent="."]
@@ -3716,4 +3721,19 @@ shape = SubResource("RectangleShape2D_21cx4")
 
 [node name="AnimationPlayer" parent="Node" instance=ExtResource("11_21cx4")]
 
+[node name="Node2" type="Node" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Node2"]
+script = ExtResource("13_jeyg2")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2/Area2D"]
+position = Vector2(1675, 566)
+shape = SubResource("RectangleShape2D_geo7b")
+
+[node name="AnimationPlayer" parent="Node2" instance=ExtResource("11_21cx4")]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("14_geo7b")]
+
 [connection signal="body_entered" from="Node/Area2D" to="Node/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2/Area2D" to="Node2/Area2D" method="_on_body_entered"]
