@@ -75,4 +75,14 @@ script = ExtResource("7_6wp7m")
 layout_mode = 2
 item = ExtResource("8_lifax")
 
+[node name="Button" type="Button" parent="."]
+offset_left = -1197.0
+offset_top = 560.0
+offset_right = -1004.0
+offset_bottom = 634.0
+theme_override_font_sizes/font_size = 40
+text = "BACK"
+flat = true
+
 [connection signal="item_changed" from="UI/Inventory" to="UI/Recipes" method="_on_inventory_item_changed"]
+[connection signal="pressed" from="Button" to="UI/Inventory" method="_on_button_pressed"]

@@ -1,10 +1,20 @@
 [gd_scene load_steps=7 format=3 uid="uid://bubx3ab7u6lwm"]
 
 [ext_resource type="Script" uid="uid://bg8p16m685s2d" path="res://Scenes/UI/tombol.gd" id="1_vlwbe"]
-[ext_resource type="FontFile" uid="uid://c45alnu4emdci" path="res://Fonts/mileast/Mileast Italic.otf" id="2_atesj"]
+
+[sub_resource type="FontFile" id="FontFile_vlwbe"]
+cache/0/65/0/ascent = 0.0
+cache/0/65/0/descent = 0.0
+cache/0/65/0/underline_position = 0.0
+cache/0/65/0/underline_thickness = 0.0
+cache/0/65/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atesj"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwrag"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -31,12 +41,13 @@ offset_bottom = 103.0
 theme_override_constants/outline_size = 6
 theme_override_constants/h_separation = 5
 theme_override_constants/line_spacing = 5
-theme_override_fonts/font = ExtResource("2_atesj")
+theme_override_fonts/font = SubResource("FontFile_vlwbe")
 theme_override_font_sizes/font_size = 65
 theme_override_styles/focus = SubResource("StyleBoxFlat_atesj")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_qwrag")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vt0ly")
 theme_override_styles/normal = SubResource("StyleBoxFlat_pukmv")
 text = " SKIP >"
+flat = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

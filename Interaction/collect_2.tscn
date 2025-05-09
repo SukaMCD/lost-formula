@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://b56357cmkkf76"]
+
+[ext_resource type="Script" uid="uid://d1sq6hea4pxe5" path="res://Interaction/collect.gd" id="1_v8ta4"]
+[ext_resource type="Texture2D" uid="uid://bsts7frts0g7e" path="res://Assets/Tanaman/daun jambu biji.PNG" id="2_v8ta4"]
+[ext_resource type="AudioStream" uid="uid://cvb80c3hgrjsg" path="res://Audio/Interaction.wav" id="3_yykjg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iefua"]
+radius = 18.0278
+
+[sub_resource type="LabelSettings" id="LabelSettings_jusml"]
+font_size = 10
+outline_size = 3
+outline_color = Color(0.125911, 0.125911, 0.125911, 1)
+
+[node name="Daun Jambu Biji" type="Area2D"]
+script = ExtResource("1_v8ta4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.0312323, -0.124993)
+scale = Vector2(0.0187012, 0.0236328)
+texture = ExtResource("2_v8ta4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_iefua")
+
+[node name="DetectionTimer" type="Timer" parent="."]
+
+[node name="CollectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_yykjg")
+volume_db = 24.0
+area_mask = 16
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -35.0
+offset_top = -31.0
+offset_right = 43.0
+offset_bottom = -17.0
+text = "E To Collect"
+label_settings = SubResource("LabelSettings_jusml")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,16 +1,20 @@
-[gd_scene load_steps=29 format=4 uid="uid://c5b3rjbtsly0y"]
+[gd_scene load_steps=33 format=4 uid="uid://c5b3rjbtsly0y"]
 
 [ext_resource type="Texture2D" uid="uid://i2nkiv3fcdj8" path="res://Assets/forest/grassland/PNG/ground_grasss.png" id="1_ily10"]
 [ext_resource type="Texture2D" uid="uid://cih5ul5rbmmyo" path="res://Assets/forest/grassland/Tiled_files/ground_grasss.png" id="2_tp760"]
 [ext_resource type="Texture2D" uid="uid://8n0occaynvgj" path="res://Assets/forest/grassland/Tiled_files/Details.png" id="3_xchsa"]
 [ext_resource type="Texture2D" uid="uid://b6fkka2geb3xc" path="res://Assets/forest/grassland/Tiled_files/Trees_rocks.png" id="4_fwomk"]
+[ext_resource type="PackedScene" uid="uid://5764258i8gii" path="res://Interaction/collect_1.tscn" id="4_rebtq"]
 [ext_resource type="Texture2D" uid="uid://tdbjwv105myi" path="res://Assets/forest/grassland/PNG/Trees_rocks.png" id="5_qbefv"]
 [ext_resource type="Texture2D" uid="uid://brtu153pupd4" path="res://Assets/forest/Forest/Tiled_files/Objects.png" id="6_fwomk"]
 [ext_resource type="PackedScene" uid="uid://cbewa6u2b2ked" path="res://Scenes/Player/player.tscn" id="7_qbefv"]
 [ext_resource type="Script" uid="uid://bytk2c0v1idwv" path="res://Scenes/Worlds/enterence.gd" id="8_xktjs"]
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="9_4j68t"]
 [ext_resource type="Script" uid="uid://cuu727wxpf338" path="res://Scenes/Worlds/area_2d.gd" id="9_gyh87"]
+[ext_resource type="PackedScene" uid="uid://b56357cmkkf76" path="res://Interaction/collect_2.tscn" id="9_hfwc3"]
+[ext_resource type="PackedScene" uid="uid://ctk77y20wcpq2" path="res://Interaction/collect_3.tscn" id="10_usajs"]
 [ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="11_gqigo"]
+[ext_resource type="PackedScene" uid="uid://cscbtn24x8kcy" path="res://Interaction/collect_4.tscn" id="11_usajs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tp760"]
 texture = ExtResource("1_ily10")
@@ -3567,7 +3571,7 @@ tile_map_data = PackedByteArray("AAAAADAAAAAZAAIAAAAAADEAAAAZAAMAAAAAADIAAAAZAAQ
 tile_set = SubResource("TileSet_qbefv")
 
 [node name="PlayerRoot" parent="Tilemap" instance=ExtResource("7_qbefv")]
-position = Vector2(119, 490)
+position = Vector2(155, 483)
 
 [node name="tree2" type="TileMapLayer" parent="Tilemap"]
 texture_filter = 1
@@ -3603,6 +3607,18 @@ tile_set = SubResource("TileSet_gqigo")
 texture_filter = 1
 tile_map_data = PackedByteArray("AABAAAkAAwANAAEAAABAAAoAAwANAAIAAABBAAkAAwAOAAEAAABBAAoAAwAOAAIAAABBAAsAAwAOAAMAAABCAAkAAwAPAAEAAABCAAoAAwAPAAIAAABCAAsAAwAPAAMAAABDAAkAAwAQAAEAAABDAAoAAwAQAAIAAABDAAsAAwAQAAMAAABLAAgAAwANAAEAAABLAAkAAwANAAIAAABMAAgAAwAOAAEAAABMAAkAAwAOAAIAAABMAAoAAwAOAAMAAABNAAgAAwAPAAEAAABNAAkAAwAPAAIAAABNAAoAAwAPAAMAAABOAAgAAwAQAAEAAABOAAkAAwAQAAIAAABOAAoAAwAQAAMAAABEAAgAAwANAAEAAABEAAkAAwANAAIAAABFAAgAAwAOAAEAAABFAAkAAwAOAAIAAABFAAoAAwAOAAMAAABGAAgAAwAPAAEAAABGAAkAAwAPAAIAAABGAAoAAwAPAAMAAABHAAgAAwAQAAEAAABHAAkAAwAQAAIAAABHAAoAAwAQAAMAAAAuAAcAAwANAAEAAAAuAAgAAwANAAIAAAAvAAcAAwAOAAEAAAAvAAgAAwAOAAIAAAAvAAkAAwAOAAMAAAAwAAcAAwAPAAEAAAAwAAgAAwAPAAIAAAAwAAkAAwAPAAMAAAAxAAcAAwAQAAEAAAAxAAgAAwAQAAIAAAAxAAkAAwAQAAMAAAA=")
 tile_set = SubResource("TileSet_gqigo")
+
+[node name="Berry" parent="Tilemap" instance=ExtResource("4_rebtq")]
+position = Vector2(1021, 381)
+
+[node name="Daun Jambu Biji" parent="Tilemap" instance=ExtResource("9_hfwc3")]
+position = Vector2(1081, 356)
+
+[node name="Kunyit" parent="Tilemap" instance=ExtResource("10_usajs")]
+position = Vector2(1138, 367)
+
+[node name="Temulawak" parent="Tilemap" instance=ExtResource("11_usajs")]
+position = Vector2(1229, 337)
 
 [node name="tree" type="TileMapLayer" parent="Tilemap"]
 texture_filter = 1
@@ -3662,13 +3678,6 @@ position = Vector2(1720, 455)
 shape = SubResource("RectangleShape2D_xktjs")
 
 [node name="AnimationPlayer" parent="Node2" instance=ExtResource("9_4j68t")]
-
-[node name="collshape" type="Node" parent="."]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="collshape"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collshape/StaticBody2D"]
-polygon = PackedVector2Array(29, 472, 23, 466, 27, 362, -5, 362, -6, 537, 28, 531, 120, 532, 142, 536, 179, 534, 195, 548, 384, 548, 403, 534, 412, 519, 429, 515, 573, 518, 583, 541, 606, 564, 641, 564, 655, 570, 661, 582, 655, 597, 638, 599, 585, 597, 585, 601, 582, 603, 572, 604, 553, 628, 554, 646, 602, 665, 664, 661, 708, 663, 711, 645, 743, 644, 744, 632, 741, 627, 749, 617, 817, 611, 828, 613, 827, 624, 824, 643, 835, 643, 871, 631, 871, 541, 875, 537, 945, 539, 946, 551, 998, 573, 1001, 580, 1079, 574, 1136, 573, 1203, 573, 1268, 572, 1321, 579, 1417, 610, 1446, 622, 1475, 578, 1511, 552, 1552, 525, 1622, 525, 1683, 530, 1747, 531, 1804, 529, 1845, 526, 1920, 519, 1920, 79, 0, 81, -5, 360, 27, 361, 23, 466, 27, 470)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("11_gqigo")]
 

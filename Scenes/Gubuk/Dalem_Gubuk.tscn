@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://bodu4igbfrs38"]
+[gd_scene load_steps=11 format=4 uid="uid://bodu4igbfrs38"]
 
 [ext_resource type="Texture2D" uid="uid://br20e3o3b1xpd" path="res://Scenes/Gubuk/InsideHouse.png" id="1_twb3b"]
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="3_uw0pg"]
 [ext_resource type="Script" uid="uid://b4d8fxc4ve6yu" path="res://Scenes/Gubuk/Inside.gd" id="3_xgww1"]
 [ext_resource type="PackedScene" uid="uid://cbewa6u2b2ked" path="res://Scenes/Player/player.tscn" id="4_uw0pg"]
+[ext_resource type="Script" uid="uid://coub11p7yk6xv" path="res://Scenes/Gubuk/Interaksi.gd" id="5_xgww1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4flgg"]
 texture = ExtResource("1_twb3b")
@@ -264,6 +265,12 @@ sources/0 = SubResource("TileSetAtlasSource_4flgg")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_my4vn"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhftx"]
+size = Vector2(30, 15)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gu3mg"]
+font_size = 10
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Dalam_Gubuk" type="TileMapLayer" parent="."]
@@ -286,4 +293,23 @@ shape = SubResource("RectangleShape2D_my4vn")
 
 [node name="AnimationPlayer" parent="Node" instance=ExtResource("3_uw0pg")]
 
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("5_xgww1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(257, 166.5)
+shape = SubResource("RectangleShape2D_qhftx")
+
+[node name="Label" type="Label" parent="Area2D"]
+offset_left = 226.0
+offset_top = 144.0
+offset_right = 289.0
+offset_bottom = 158.0
+text = "E To Brewing"
+label_settings = SubResource("LabelSettings_gu3mg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="body_entered" from="Node/Area2D" to="Node/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
