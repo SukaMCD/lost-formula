@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://bg8p16m685s2d" path="res://Scenes/UI/tombol.gd" id="1_vlwbe"]
 
 [sub_resource type="FontFile" id="FontFile_vlwbe"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/65/0/ascent = 0.0
 cache/0/65/0/descent = 0.0
 cache/0/65/0/underline_position = 0.0

@@ -1,7 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://y01in2hle4cm"]
+[gd_scene load_steps=28 format=3 uid="uid://y01in2hle4cm"]
 
 [ext_resource type="Script" uid="uid://duylvdw7cncbo" path="res://Loading screen/loading_screen.gd" id="1_u0da2"]
-[ext_resource type="VideoStream" path="res://Loading screen/load.ogv" id="2_ekfxf"]
+[ext_resource type="VideoStream" path="res://Loading screen/loading-screen.ogv" id="2_ofpix"]
 [ext_resource type="Texture2D" uid="uid://cdg6vgl84tbh5" path="res://Loading screen/loading screen/loading screen/Untitled8_20250429214855.png" id="2_ub4wi"]
 [ext_resource type="Texture2D" uid="uid://dq6yvcsu4dxic" path="res://Loading screen/loading screen/loading screen/Untitled8_20250429214840.png" id="3_u0da2"]
 [ext_resource type="Texture2D" uid="uid://bhi2dfmc1v4ui" path="res://Loading screen/loading screen/loading screen/Untitled8_20250429214822.png" id="4_5l0sw"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://bqi01mjugobs7" path="res://Assets/Main-character/WALK BACK SIDE.png" id="8_ub4wi"]
 [ext_resource type="Texture2D" uid="uid://bbgfb3tq7qkj2" path="res://Assets/Main-character/IDLE.png" id="9_5l0sw"]
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="11_7s5cf"]
-[ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="12_ekfxf"]
 [ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="13_ofpix"]
 
 [sub_resource type="Animation" id="Animation_5l0sw"]
@@ -153,12 +152,13 @@ grow_vertical = 2
 script = ExtResource("1_u0da2")
 
 [node name="Sprite2D" type="VideoStreamPlayer" parent="."]
+texture_filter = 1
 layout_mode = 0
 offset_left = 10.0
 offset_top = 4.0
 offset_right = 1930.0
 offset_bottom = 1084.0
-stream = ExtResource("2_ekfxf")
+stream = ExtResource("2_ofpix")
 volume_db = 8.6
 autoplay = true
 buffering_msec = 300
@@ -169,9 +169,10 @@ buffering_msec = 300
 libraries = {
 &"": SubResource("AnimationLibrary_7s5cf")
 }
-speed_scale = 0.194
+speed_scale = 0.112
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
 position = Vector2(949.5, 931.5)
 scale = Vector2(0.889844, 0.783594)
 texture = ExtResource("2_ub4wi")
@@ -182,7 +183,9 @@ texture = ExtResource("2_ub4wi")
 position = Vector2(934, 514)
 scale = Vector2(0.334237, 0.279292)
 sprite_frames = SubResource("SpriteFrames_uwx2e")
-animation = &"Idle"
+animation = &"karakter"
+frame = 4
+frame_progress = 0.441607
 speed_scale = 2.0
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="."]
@@ -192,6 +195,7 @@ speed_scale = 2.0
 [node name="CanvasLayer5" type="CanvasLayer" parent="."]
 
 [node name="LoadingLabel" type="Label" parent="CanvasLayer5"]
+texture_filter = 1
 offset_left = 773.0
 offset_top = 752.0
 offset_right = 1120.0
@@ -200,7 +204,3 @@ theme_override_fonts/font = ExtResource("13_ofpix")
 theme_override_font_sizes/font_size = 50
 text = "LOADING......."
 metadata/_edit_use_anchors_ = true
-
-[node name="CanvasLayer4" type="CanvasLayer" parent="."]
-
-[node name="ParallaxBackground" parent="CanvasLayer4" instance=ExtResource("12_ekfxf")]

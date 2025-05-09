@@ -310,4 +310,4 @@ volume_db = 24.0
 pitch_scale = 1.57
 attenuation = 0.933033
 
-[node name="CanvasLayer" parent="." instance=ExtResource("13_06tpx")]
+[node name="Menu Paused" parent="." instance=ExtResource("13_06tpx")]
