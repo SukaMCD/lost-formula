@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="item" load_steps=7 format=3 uid="uid://d4nmvyaxpqep4"]
+[gd_resource type="Resource" script_class="Item" load_steps=7 format=3 uid="uid://d4nmvyaxpqep4"]
 
 [ext_resource type="Texture2D" uid="uid://cfb513n3wo1td" path="res://Assets/Tanaman/PotionHP.png" id="1_txl2m"]
 [ext_resource type="Script" uid="uid://brjnr8awxda4a" path="res://brewing/Item.gd" id="2_6po07"]

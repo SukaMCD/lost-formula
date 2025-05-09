@@ -3662,7 +3662,7 @@ position = Vector2(920, 393)
 
 [node name="PlayerRoot" parent="Tilemap" instance=ExtResource("9_51gjr")]
 y_sort_enabled = true
-position = Vector2(164, 528)
+position = Vector2(220, 529)
 
 [node name="BackClif" type="TileMapLayer" parent="Tilemap"]
 texture_filter = 1

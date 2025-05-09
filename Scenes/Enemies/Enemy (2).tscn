@@ -295,7 +295,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4disf"]
-radius = 93.3435
+radius = 60.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uhxdy"]
 radius = 8.0
@@ -314,11 +314,11 @@ frame_progress = 0.422924
 [node name="detection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection"]
-position = Vector2(8, 30)
+position = Vector2(1, 29)
 shape = SubResource("CircleShape2D_4disf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5, 33)
+position = Vector2(2, 29)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_uhxdy")
 
