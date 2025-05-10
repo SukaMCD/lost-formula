@@ -259,7 +259,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_htcer"]
-radius = 12.0
+radius = 14.0
 
 [node name="PlayerRoot" type="Node2D"]
 
@@ -295,11 +295,11 @@ limit_right = 1920
 limit_bottom = 1080
 limit_smoothed = true
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="player_hitbox" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
 position = Vector2(1, 14)
 rotation = -0.0266723
 shape = SubResource("CircleShape2D_htcer")
@@ -311,3 +311,8 @@ pitch_scale = 1.57
 attenuation = 0.933033
 
 [node name="Menu Paused" parent="." instance=ExtResource("13_06tpx")]
+
+[node name="attack_cooldown" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="attack_cooldown" to="CharacterBody2D" method="_on_attack_cooldown_timeout"]

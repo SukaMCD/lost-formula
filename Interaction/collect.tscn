@@ -13,6 +13,8 @@ outline_size = 3
 outline_color = Color(0.125911, 0.125911, 0.125911, 1)
 
 [node name="Ignis" type="Area2D"]
+y_sort_enabled = true
+texture_filter = 1
 script = ExtResource("1_sws0y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

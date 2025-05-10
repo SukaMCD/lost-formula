@@ -25,6 +25,11 @@ const ATTACK_COOLDOWN_TIME: float = 0.5  # detik
 var is_attacking: bool = false
 var current_animation: String = "Idle"
 
+# Tambahan untuk health dan status mati
+@export var max_health: int = 100
+var current_health: int = max_health
+var is_dead: bool = false
+
 func _ready():
 	add_to_group("player")
 	process_mode = Node.PROCESS_MODE_PAUSABLE
@@ -165,9 +170,20 @@ func set_input_enabled(enabled: bool):
 		if sfx_player and sfx_player.playing:
 			sfx_player.stop()
 
-func _unhandled_input(event):
-	if event.is_action_pressed("accept"):
-		return
-	
-	if !input_enabled or get_tree().paused:
-		get_viewport().set_input_as_handled()
+# Fungsi baru untuk damage dan kematian
+func take_damage(amount: int):
+	if is_dead:
+		return  # Jangan bisa diserang lagi setelah mati
+
+	current_health -= amount
+	print("Player HP:", current_health)
+
+	if current_health <= 0:
+		die()
+
+func die():
+	is_dead = true
+	input_enabled = false
+	velocity = Vector2.ZERO
+	sprite.play("Death")  # Pastikan kamu punya animasi 'Death'
+	print("Player is dead!")

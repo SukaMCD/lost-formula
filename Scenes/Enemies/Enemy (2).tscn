@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bjxj5328l2ux2"]
+[gd_scene load_steps=48 format=3 uid="uid://bjxj5328l2ux2"]
 
 [ext_resource type="Script" uid="uid://dxbkp77edbayj" path="res://Scenes/Enemies/enemy_(2).gd" id="1_uhxdy"]
 [ext_resource type="Texture2D" uid="uid://cgtoj54ycghh0" path="res://Enemy/Enemy/Hellhound_2/Attack_1.png" id="2_3h8iv"]
@@ -301,6 +301,9 @@ radius = 60.0
 radius = 8.0
 height = 54.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_uhxdy"]
+radius = 91.0055
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_uhxdy")
 
@@ -321,6 +324,12 @@ shape = SubResource("CircleShape2D_4disf")
 position = Vector2(2, 29)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_uhxdy")
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(1, 28)
+shape = SubResource("CircleShape2D_uhxdy")
 
 [connection signal="body_entered" from="detection" to="." method="_on_decative_body_entered"]
 [connection signal="body_exited" from="detection" to="." method="_on_decative_body_exited"]
