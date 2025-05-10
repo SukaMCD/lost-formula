@@ -1,152 +1,139 @@
 extends CharacterBody2D
 class_name Player
 
-# Movement properties
+# === Movement ===
 @export var speed: float = 150
 
-# Node references
-@onready var sprite = $AnimatedSprite2D
-@onready var sfx_player: AudioStreamPlayer2D = $sfx_player
-
-# Item tracking
-var collected_items: Dictionary = {}
-var last_direction_x = 1  # Default facing right
-var input_enabled: bool = true
-
-# Timer untuk mengatur jeda langkah
-var footstep_timer: float = 0
-const FOOTSTEP_DELAY: float = 0.3
-
-# Cooldown serangan
-var attack_cooldown: float = 0
-const ATTACK_COOLDOWN_TIME: float = 0.5  # detik
-
-# Animation state tracking
-var is_attacking: bool = false
-var current_animation: String = "Idle"
-
-# Tambahan untuk health dan status mati
+# === Health ===
 @export var max_health: int = 100
 var current_health: int = max_health
 var is_dead: bool = false
 
+# === Node References ===
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var sfx_player: AudioStreamPlayer2D = $sfx_player
+
+# === Input & State ===
+var input_enabled: bool = true
+var is_attacking: bool = false
+var current_animation: String = "Idle"
+var last_direction_x: int = 1  # Default facing right
+
+# === Timers ===
+var footstep_timer: float = 0.0
+const FOOTSTEP_DELAY: float = 0.3
+
+var attack_cooldown: float = 0.0
+const ATTACK_COOLDOWN_TIME: float = 0.5
+
+# === Inventory / Tracking ===
+var collected_items: Dictionary = {}
+
+# === READY ===
 func _ready():
 	add_to_group("player")
 	process_mode = Node.PROCESS_MODE_PAUSABLE
+
 	if sfx_player:
 		sfx_player.volume_db = 5
-	
-	# Connect animation finished signal
+
 	sprite.animation_finished.connect(_on_animation_finished)
-	
-	# Register attack input with correct case sensitivity
+
+	# Setup attack input if missing
 	if not InputMap.has_action("attack"):
+		var event := InputEventKey.new()
+		event.keycode = KEY_K
 		InputMap.add_action("attack")
-		var event = InputEventKey.new()
-		event.keycode = KEY_SPACE  # Space bar for attack
 		InputMap.action_add_event("attack", event)
 
-func _physics_process(delta):
+# === PHYSICS LOOP ===
+func _physics_process(delta: float) -> void:
 	if !input_enabled or get_tree().paused:
 		handle_disabled_state()
 		return
 
-	# Perbarui cooldown serangan
 	if attack_cooldown > 0:
 		attack_cooldown -= delta
 
-	var input_vector = get_input_vector()
-	
-	# Always process movement to keep controls responsive
+	var input_vector := get_input_vector()
 	process_movement(input_vector)
-	
-	# Handle animations
 	update_animation(input_vector)
-	
 	move_and_slide()
 
-func handle_disabled_state():
-	velocity = Vector2.ZERO
-	sprite.play("Idle")
-	if sfx_player and sfx_player.playing:
-		sfx_player.stop()
-
+# === INPUT ===
 func get_input_vector() -> Vector2:
 	return Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
 
-func process_movement(input_vector: Vector2):
-	# Always process movement input to keep controls responsive
+# === MOVEMENT ===
+func process_movement(input_vector: Vector2) -> void:
 	velocity = input_vector * speed
 	if input_vector.x != 0:
 		last_direction_x = sign(input_vector.x)
 
-func update_animation(input_vector: Vector2):
-	# If currently attacking, don't change animation until it's done
+# === ANIMATION ===
+func update_animation(input_vector: Vector2) -> void:
 	if is_attacking:
 		return
-		
-	# Check for attack input - use lowercase "attack" to match InputMap
+
 	if Input.is_action_just_pressed("attack") and attack_cooldown <= 0:
 		start_attack()
 		return
-	
-	# Handle movement animations
+
 	if input_vector.length() > 0:
 		handle_moving_animations(input_vector)
 	else:
 		play_animation("Idle")
-		sprite.flip_h = last_direction_x < 0  # Maintain facing direction even when idle
+		sprite.flip_h = last_direction_x < 0
 		if sfx_player and sfx_player.is_playing():
 			sfx_player.stop()
 
-func handle_moving_animations(input_vector: Vector2):
+func handle_moving_animations(input_vector: Vector2) -> void:
 	if input_vector.x != 0:
 		play_animation("Walk")
-		sprite.flip_h = input_vector.x < 0  # Flip based on horizontal movement
+		sprite.flip_h = input_vector.x < 0
 	elif input_vector.y < 0:
 		play_animation("Up")
-		sprite.flip_h = last_direction_x < 0  # Maintain horizontal facing direction
+		sprite.flip_h = last_direction_x < 0
 	elif input_vector.y > 0:
 		play_animation("Down")
-		sprite.flip_h = last_direction_x < 0  # Maintain horizontal facing direction
+		sprite.flip_h = last_direction_x < 0
 
 	play_footstep_sound()
 
-# Improved animation playing with state tracking
-func play_animation(anim_name: String):
+func play_animation(anim_name: String) -> void:
 	if current_animation != anim_name:
 		current_animation = anim_name
 		sprite.play(anim_name)
 
-# Handle attack start with proper state management
-func start_attack():
-	is_attacking = true
-	play_animation("Attack")
-	
-	# Always face right during attack (flip_h = false means facing right)
-	sprite.flip_h = false
-	last_direction_x = 1  # Update last_direction_x to match
-	
-	attack_cooldown = ATTACK_COOLDOWN_TIME
-	
-	if sfx_player and !sfx_player.playing:
-		sfx_player.play()
-
-# Handle animation completion - this is key for smooth transitions
-func _on_animation_finished():
-	# If attack animation finished, immediately return to movement animation
+func _on_animation_finished() -> void:
 	if current_animation == "Attack":
 		is_attacking = false
-		
-		# Immediately check current input state and update animation
-		var input_vector = get_input_vector()
+		var input_vector := get_input_vector()
 		if input_vector.length() > 0:
 			handle_moving_animations(input_vector)
 		else:
 			play_animation("Idle")
-			sprite.flip_h = last_direction_x < 0  # Maintain facing direction
+			sprite.flip_h = last_direction_x < 0
 
-func play_footstep_sound():
+# === ATTACK ===
+func start_attack():
+	if is_attacking:
+		return
+
+	is_attacking = true
+	play_animation("Attack")
+
+	# Flip sprite sesuai arah terakhir
+	sprite.flip_h = last_direction_x < 0
+
+	attack_cooldown = ATTACK_COOLDOWN_TIME
+
+	if sfx_player and !sfx_player.playing:
+		sfx_player.play()
+
+
+# === FOOTSTEPS ===
+func play_footstep_sound() -> void:
 	if footstep_timer > 0:
 		footstep_timer -= get_process_delta_time()
 	else:
@@ -154,26 +141,17 @@ func play_footstep_sound():
 			sfx_player.play()
 			footstep_timer = FOOTSTEP_DELAY
 
-func track_item(item_id: String, quantity: int):
-	if collected_items.has(item_id):
-		collected_items[item_id] += quantity
-	else:
-		collected_items[item_id] = quantity
-	print("Item terkumpul:", collected_items)
+# === DISABLED STATE ===
+func handle_disabled_state() -> void:
+	velocity = Vector2.ZERO
+	sprite.play("Idle")
+	if sfx_player and sfx_player.playing:
+		sfx_player.stop()
 
-func set_input_enabled(enabled: bool):
-	input_enabled = enabled
-	if !enabled:
-		velocity = Vector2.ZERO
-		if sprite:
-			sprite.stop()
-		if sfx_player and sfx_player.playing:
-			sfx_player.stop()
-
-# Fungsi baru untuk damage dan kematian
-func take_damage(amount: int):
+# === DAMAGE & DEATH ===
+func take_damage(amount: int) -> void:
 	if is_dead:
-		return  # Jangan bisa diserang lagi setelah mati
+		return
 
 	current_health -= amount
 	print("Player HP:", current_health)
@@ -181,9 +159,23 @@ func take_damage(amount: int):
 	if current_health <= 0:
 		die()
 
-func die():
+func die() -> void:
 	is_dead = true
 	input_enabled = false
 	velocity = Vector2.ZERO
-	sprite.play("Death")  # Pastikan kamu punya animasi 'Death'
+	sprite.play("Death")
 	print("Player is dead!")
+
+# === INVENTORY ===
+func track_item(item_id: String, quantity: int) -> void:
+	collected_items[item_id] = collected_items.get(item_id, 0) + quantity
+	print("Item terkumpul:", collected_items)
+
+# === INPUT CONTROL ===
+func set_input_enabled(enabled: bool) -> void:
+	input_enabled = enabled
+	if !enabled:
+		velocity = Vector2.ZERO
+		sprite.stop()
+		if sfx_player and sfx_player.playing:
+			sfx_player.stop()
