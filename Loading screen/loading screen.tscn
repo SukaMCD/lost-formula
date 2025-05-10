@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=3 uid="uid://y01in2hle4cm"]
 
 [ext_resource type="Script" uid="uid://duylvdw7cncbo" path="res://Loading screen/loading_screen.gd" id="1_u0da2"]
-[ext_resource type="VideoStream" path="res://Loading screen/loading-screen.ogv" id="2_ofpix"]
+[ext_resource type="VideoStream" uid="uid://dcdnk7vedkqn2" path="res://Loading screen/loading-screen.ogv" id="2_ofpix"]
 [ext_resource type="Texture2D" uid="uid://cdg6vgl84tbh5" path="res://Loading screen/loading screen/loading screen/Untitled8_20250429214855.png" id="2_ub4wi"]
 [ext_resource type="Texture2D" uid="uid://dq6yvcsu4dxic" path="res://Loading screen/loading screen/loading screen/Untitled8_20250429214840.png" id="3_u0da2"]
 [ext_resource type="Texture2D" uid="uid://bhi2dfmc1v4ui" path="res://Loading screen/loading screen/loading screen/Untitled8_20250429214822.png" id="4_5l0sw"]
