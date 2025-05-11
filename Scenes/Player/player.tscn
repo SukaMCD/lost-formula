@@ -16,7 +16,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sweqy"]
 radius = 13.6812
-height = 109.45
+height = 95.7686
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qr1w5"]
 atlas = ExtResource("6_oikmp")
@@ -259,7 +259,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_htcer"]
-radius = 11.0454
+radius = 7.07107
 
 [node name="PlayerRoot" type="Node2D"]
 
@@ -273,7 +273,7 @@ script = ExtResource("1_i3pqv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(-1.90735e-06, 2)
+position = Vector2(-2, -2)
 scale = Vector2(0.584743, 0.584743)
 shape = SubResource("CapsuleShape2D_sweqy")
 
@@ -300,7 +300,7 @@ collision_layer = 0
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
-position = Vector2(1.49012e-08, 2)
+position = Vector2(0, 2)
 rotation = -0.0266723
 shape = SubResource("CircleShape2D_htcer")
 
