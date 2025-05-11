@@ -28,10 +28,10 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iohqi"]
 bg_color = Color(0.314316, 0.314316, 0.314316, 0.827451)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_5qo5t"]
 color = Color(1, 1, 1, 1)
@@ -39,11 +39,11 @@ thickness = 6
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_iohqi"]
 color = Color(0.31982, 0.527251, 1, 1)
-thickness = 6
+thickness = 10
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_driid"]
 color = Color(0.321569, 0.52549, 1, 1)
-thickness = 6
+thickness = 10
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -134,10 +134,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -667.5
-offset_top = 106.0
-offset_right = 702.5
-offset_bottom = 329.0
+offset_left = -665.5
+offset_top = 93.0
+offset_right = 704.5
+offset_bottom = 316.0
 grow_horizontal = 2
 theme_override_constants/text_highlight_h_padding = 10
 theme_override_constants/shadow_offset_y = 20
@@ -160,10 +160,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -542.5
-offset_top = 142.0
-offset_right = 562.5
-offset_bottom = 550.0
+offset_left = -539.5
+offset_top = 129.0
+offset_right = 565.5
+offset_bottom = 537.0
 grow_horizontal = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.647059, 0, 1)
@@ -184,10 +184,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -540.5
-offset_top = -117.5
-offset_right = 561.5
-offset_bottom = 512.5
+offset_left = -539.5
+offset_top = -132.5
+offset_right = 558.5
+offset_bottom = 470.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iohqi")
@@ -206,6 +206,7 @@ vertical_alignment = 1
 
 [node name="back" type="Button" parent="settings"]
 custom_minimum_size = Vector2(300, 100)
+layout_mode = 0
 offset_left = 359.0
 offset_top = 461.0
 offset_right = 756.0
@@ -231,10 +232,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -459.0
-offset_top = -132.0
-offset_right = 456.0
-offset_bottom = 50.0
+offset_left = -438.0
+offset_top = -131.5
+offset_right = 427.0
+offset_bottom = 52.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 40
@@ -242,11 +243,11 @@ theme_override_constants/separation = 40
 [node name="HBoxContainer" type="HBoxContainer" parent="settings/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_constants/separation = 50
+theme_override_constants/separation = 57
 
 [node name="Label" type="Label" parent="settings/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 40
 text = "Sound Effect "
 
 [node name="AudioControl" type="HSlider" parent="settings/VBoxContainer/HBoxContainer"]
@@ -268,7 +269,7 @@ theme_override_constants/separation = 680
 
 [node name="Label" type="Label" parent="settings/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 40
 text = "Fullsceen"
 
 [node name="FullscreenControl" type="CheckButton" parent="settings/VBoxContainer/HBoxContainer2"]
