@@ -94,7 +94,7 @@
 [ext_resource type="Texture2D" uid="uid://d1bkitbww5q10" path="res://Assets/forest/grassland/PNG/Details.png" id="87_2k048"]
 [ext_resource type="PackedScene" uid="uid://mmofgm0qxmda" path="res://Interaction/collect.tscn" id="93_2h4kg"]
 [ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="94_mbxr0"]
-[ext_resource type="Script" path="res://Scenes/Player/enterence.gd" id="96_gmx8p"]
+[ext_resource type="Script" uid="uid://cky1modqs6d5x" path="res://Scenes/Player/enterence.gd" id="96_gmx8p"]
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="96_noknt"]
 [ext_resource type="PackedScene" uid="uid://bjxj5328l2ux2" path="res://Scenes/Enemies/Enemy (2).tscn" id="98_2q6my"]
 [ext_resource type="AudioStream" uid="uid://ckudbjlljwhdv" path="res://Audio/Forest.wav" id="98_gmx8p"]
@@ -5611,11 +5611,8 @@ texture = ExtResource("6_aqgec")
 50:5/0 = 0
 51:5/0 = 0
 1:7/0 = 0
-1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:7/0 = 0
-2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:7/0 = 0
-3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:7/0 = 0
 5:7/0 = 0
 8:7/0 = 0
@@ -5642,10 +5639,8 @@ texture = ExtResource("6_aqgec")
 49:7/0 = 0
 50:7/0 = 0
 1:8/0 = 0
-1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:8/0 = 0
 3:8/0 = 0
-3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:8/0 = 0
 5:8/0 = 0
 6:8/0 = 0
@@ -5684,11 +5679,8 @@ texture = ExtResource("6_aqgec")
 49:8/0 = 0
 50:8/0 = 0
 1:9/0 = 0
-1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:9/0 = 0
-2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:9/0 = 0
-3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:9/0 = 0
 9:9/0 = 0
 10:9/0 = 0
@@ -6552,7 +6544,6 @@ texture = ExtResource("5_ntkhe")
 5:13/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_0d5y7"]
-physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2t0ks")
 sources/1 = SubResource("TileSetAtlasSource_4t023")
 sources/2 = SubResource("TileSetAtlasSource_v54g5")
