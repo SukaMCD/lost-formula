@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c3b61p8laq138" path="res://Loading screen/loading screen/loading screen/Untitled8_20250429214746.png" id="6_ekfxf"]
 [ext_resource type="Texture2D" uid="uid://chmykbi2b14jv" path="res://Loading screen/loading screen/loading screen/Untitled8_20250429214731.png" id="7_ofpix"]
 [ext_resource type="Texture2D" uid="uid://bqi01mjugobs7" path="res://Assets/Main-character/WALK BACK SIDE.png" id="8_ub4wi"]
-[ext_resource type="Texture2D" uid="uid://bbgfb3tq7qkj2" path="res://Assets/Main-character/IDLE.png" id="9_5l0sw"]
+[ext_resource type="Texture2D" uid="uid://bbgfb3tq7qkj2" path="res://Assets/Main-character/idle.png" id="9_5l0sw"]
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="11_7s5cf"]
 [ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="13_ofpix"]
 
