@@ -1,11 +1,7 @@
 ~ this_is_a_node_title
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.[wave amp=25 freq=5][/wave]
-- Start again => this_is_a_node_title
-- End the conversation => END
-Nathan: For more information see the online documentation.
+Arhan bermain: [[Hi|Hello|kai]], ini sebuah arahan bermain.
+Gunakan tombol → ← ↓ ↑ atau W A S D untuk berjalan.
+Tekan Esc untuk membuka menu pause.
+Tekan E untuk mengambil item dan melakukan brewing.
+Gunakan Space untuk menyerang.
 => END

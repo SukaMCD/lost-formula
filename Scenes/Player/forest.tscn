@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bj211dcdqyltn" path="res://Assets/forest/grassland/PNG/water_detilazation.png" id="12_jmg4w"]
 [ext_resource type="Texture2D" uid="uid://bs3msvb6uyjki" path="res://Assets/forest/grassland/PNG/Objects_separated/Bush11.png" id="13_dfoln"]
 [ext_resource type="Texture2D" uid="uid://b72o3aa3gh0ej" path="res://Assets/forest/grassland/PNG/Objects_separated/Bush12.png" id="14_2k048"]
+[ext_resource type="PackedScene" uid="uid://ctk77y20wcpq2" path="res://Interaction/kunyit.tscn" id="14_gmx8p"]
 [ext_resource type="Texture2D" uid="uid://7tvtbxgnhemg" path="res://Assets/forest/grassland/PNG/Objects_separated/Bush13.png" id="15_r4ilv"]
 [ext_resource type="Texture2D" uid="uid://dp3ry15rcuw5" path="res://Assets/forest/grassland/PNG/Objects_separated/Bush14.png" id="16_qo1bb"]
 [ext_resource type="Texture2D" uid="uid://c2wne43lpif3i" path="res://Assets/forest/grassland/PNG/Objects_separated/Bush15.png" id="17_4eku6"]
@@ -92,7 +93,6 @@
 [ext_resource type="Texture2D" uid="uid://bddi2pvcyb5t0" path="res://Assets/forest/Forest/PNG/Objects.png" id="85_dfoln"]
 [ext_resource type="Texture2D" uid="uid://brtu153pupd4" path="res://Assets/forest/Forest/Tiled_files/Objects.png" id="86_2k048"]
 [ext_resource type="Texture2D" uid="uid://d1bkitbww5q10" path="res://Assets/forest/grassland/PNG/Details.png" id="87_2k048"]
-[ext_resource type="PackedScene" uid="uid://mmofgm0qxmda" path="res://Interaction/collect.tscn" id="93_2h4kg"]
 [ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="94_mbxr0"]
 [ext_resource type="Script" uid="uid://cky1modqs6d5x" path="res://Scenes/Player/enterence.gd" id="96_gmx8p"]
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="96_noknt"]
@@ -11932,8 +11932,8 @@ position = Vector2(71, 614)
 
 [node name="Node2D" type="Node" parent="Tilemap"]
 
-[node name="Collectible" parent="Tilemap/Node2D" instance=ExtResource("93_2h4kg")]
-position = Vector2(906, 704)
+[node name="Kunyit" parent="Tilemap/Node2D" instance=ExtResource("14_gmx8p")]
+position = Vector2(907, 711)
 
 [node name="Tree" type="TileMapLayer" parent="Tilemap"]
 y_sort_enabled = true
@@ -11983,7 +11983,7 @@ tile_set = SubResource("TileSet_4eku6")
 [node name="Node" type="Node" parent="."]
 
 [node name="Enterence" type="Area2D" parent="Node"]
-position = Vector2(4, 15)
+position = Vector2(23, 8)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("96_gmx8p")
