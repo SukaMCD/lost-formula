@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bhbh0usrooof"
+path="res://.godot/imported/berry.dialogue-c2c06c5843d0835cf79c8b283132607d.tres"
+
+[deps]
+
+source_file="res://addons/berry.dialogue"
+dest_files=["res://.godot/imported/berry.dialogue-c2c06c5843d0835cf79c8b283132607d.tres"]
+
+[params]
+
+defaults=true

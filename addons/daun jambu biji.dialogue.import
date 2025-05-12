@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b2i28sgwuonct"
+path="res://.godot/imported/daun jambu biji.dialogue-cf6f1ee103e395a413190e6c78419d3d.tres"
+
+[deps]
+
+source_file="res://addons/daun jambu biji.dialogue"
+dest_files=["res://.godot/imported/daun jambu biji.dialogue-cf6f1ee103e395a413190e6c78419d3d.tres"]
+
+[params]
+
+defaults=true

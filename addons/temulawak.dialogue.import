@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://jlbw0q063fmq"
+path="res://.godot/imported/temulawak.dialogue-29f4ce76175327b80cf3d061d4573ccb.tres"
+
+[deps]
+
+source_file="res://addons/temulawak.dialogue"
+dest_files=["res://.godot/imported/temulawak.dialogue-29f4ce76175327b80cf3d061d4573ccb.tres"]
+
+[params]
+
+defaults=true

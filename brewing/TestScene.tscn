@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dlkvk6coh5lpt" path="res://brewing/inventory.gd" id="1_owful"]
 [ext_resource type="Resource" uid="uid://bdqsrv830qh72" path="res://brewing/Berry.tres" id="2_m1y52"]
 [ext_resource type="PackedScene" uid="uid://bu4ayx1347ty" path="res://brewing/slot.tscn" id="2_x2va3"]
-[ext_resource type="Resource" uid="uid://dtrjlp40pwes0" path="res://brewing/Daun jambu biji.tres" id="3_6jsfx"]
+[ext_resource type="Resource" uid="uid://dtrjlp40pwes0" path="res://brewing/Daun Jambu Biji.tres" id="3_6jsfx"]
 [ext_resource type="Resource" uid="uid://imwr5g3m2rhq" path="res://brewing/Kunyit.tres" id="4_lifax"]
 [ext_resource type="Resource" uid="uid://8mnpo6xyoqd0" path="res://brewing/Temulawak.tres" id="5_6wp7m"]
 [ext_resource type="PackedScene" uid="uid://c2tjt3cfpw2eg" path="res://brewing/Recipe.tscn" id="7_6jsfx"]

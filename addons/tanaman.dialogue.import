@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dc8tv3p0gdi2j"
+path="res://.godot/imported/tanaman.dialogue-d01ad10829510dd6e58cc1e5334c3be6.tres"
+
+[deps]
+
+source_file="res://addons/tanaman.dialogue"
+dest_files=["res://.godot/imported/tanaman.dialogue-d01ad10829510dd6e58cc1e5334c3be6.tres"]
+
+[params]
+
+defaults=true
