@@ -4680,6 +4680,8 @@ sources/4 = SubResource("TileSetAtlasSource_ruabu")
 size = Vector2(125, 180)
 
 [node name="Node2D2" type="Node2D"]
+y_sort_enabled = true
+texture_filter = 1
 
 [node name="tilemap" type="Node" parent="."]
 

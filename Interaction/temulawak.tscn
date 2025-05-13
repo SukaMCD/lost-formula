@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cscbtn24x8kcy"]
 
-[ext_resource type="Script" uid="uid://d1sq6hea4pxe5" path="res://Interaction/collect.gd" id="1_yurop"]
+[ext_resource type="Script" uid="uid://d0wqd34uj4y8e" path="res://Interaction/temulawak.gd" id="1_el2mq"]
 [ext_resource type="Texture2D" uid="uid://dc00wtr8yfvsl" path="res://Assets/Tanaman/Temulawak.png" id="2_yurop"]
 [ext_resource type="AudioStream" uid="uid://cvb80c3hgrjsg" path="res://Audio/Interaction.wav" id="3_wd3y3"]
 
@@ -13,7 +13,7 @@ outline_size = 3
 outline_color = Color(0.125911, 0.125911, 0.125911, 1)
 
 [node name="Temulawak" type="Area2D"]
-script = ExtResource("1_yurop")
+script = ExtResource("1_el2mq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.0312323, -0.124993)

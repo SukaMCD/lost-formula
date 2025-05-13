@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b56357cmkkf76"]
 
-[ext_resource type="Script" uid="uid://d1sq6hea4pxe5" path="res://Interaction/collect.gd" id="1_v8ta4"]
+[ext_resource type="Script" uid="uid://cpixtrxuvv8k4" path="res://Interaction/jambu_biji.gd" id="1_6ras1"]
 [ext_resource type="Texture2D" uid="uid://bsts7frts0g7e" path="res://Assets/Tanaman/daun jambu biji.PNG" id="2_v8ta4"]
 [ext_resource type="AudioStream" uid="uid://cvb80c3hgrjsg" path="res://Audio/Interaction.wav" id="3_yykjg"]
 
@@ -13,7 +13,7 @@ outline_size = 3
 outline_color = Color(0.125911, 0.125911, 0.125911, 1)
 
 [node name="Daun Jambu Biji" type="Area2D"]
-script = ExtResource("1_v8ta4")
+script = ExtResource("1_6ras1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.0312323, -0.124993)

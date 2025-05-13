@@ -307,7 +307,7 @@ shape = SubResource("CircleShape2D_htcer")
 
 [node name="sfx_player" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_dd0ac")
-volume_db = 24.0
+volume_db = 3.795
 pitch_scale = 1.57
 attenuation = 0.933033
 

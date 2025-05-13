@@ -183,3 +183,4 @@ func set_input_enabled(enabled: bool) -> void:
 		sprite.stop()
 		if sfx_player and sfx_player.playing:
 			sfx_player.stop()
+			
