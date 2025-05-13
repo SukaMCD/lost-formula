@@ -20,6 +20,7 @@ config/icon="res://UI/icon.svg"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Loading="*res://Scripts/Elements/loading.gd"
 InteractionManager="*res://Interaction/InteractionManager.tscn"
+PopUpText="*res://UI/pop_up_text.gd"
 
 [display]
 

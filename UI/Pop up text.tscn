@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1p7cxrmavqg3"]
+
+[ext_resource type="Script" uid="uid://bisg0bft73jb4" path="res://UI/pop_up_text.gd" id="1_aflud"]
+
+[node name="PopUpText" type="Node2D"]
+script = ExtResource("1_aflud")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PopupPanel" type="Panel" parent="CanvasLayer"]
+offset_right = 618.0
+offset_bottom = 210.0
+
+[node name="PopupLabel" type="Label" parent="CanvasLayer/PopupPanel"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 45.0
+offset_right = 533.0
+offset_bottom = 141.0
+text = "Item kunyit sudah terkumpul"
+horizontal_alignment = 1
+vertical_alignment = 1
