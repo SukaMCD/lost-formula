@@ -12000,6 +12000,6 @@ stream = ExtResource("98_gmx8p")
 volume_db = 3.887
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("98_2q6my")]
-position = Vector2(1270, 610)
+position = Vector2(1215, 634)
 
 [connection signal="body_entered" from="Node/Enterence" to="Node/Enterence" method="_on_body_entered"]

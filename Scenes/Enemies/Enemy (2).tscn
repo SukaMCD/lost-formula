@@ -295,14 +295,14 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4disf"]
-radius = 97.0464
+radius = 43.1856
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uhxdy"]
 radius = 8.0
-height = 54.0
+height = 46.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uhxdy"]
-radius = 28.2843
+radius = 15.0333
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_uhxdy")
@@ -317,18 +317,18 @@ frame_progress = 0.422924
 [node name="detection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection"]
-position = Vector2(1, 29)
+position = Vector2(3, 23)
 shape = SubResource("CircleShape2D_4disf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 29)
+position = Vector2(5, 34)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_uhxdy")
 
 [node name="hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(1, 28)
+position = Vector2(2, 24)
 shape = SubResource("CircleShape2D_uhxdy")
 
 [connection signal="body_entered" from="detection" to="." method="_on_decative_body_entered"]
