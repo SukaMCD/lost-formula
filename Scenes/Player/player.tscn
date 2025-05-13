@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cbewa6u2b2ked"]
+[gd_scene load_steps=44 format=3 uid="uid://cbewa6u2b2ked"]
 
 [ext_resource type="Script" uid="uid://b2ran2twf82b5" path="res://Scripts/Characters/character_body_2d.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://gsfnwslklv0j" path="res://Assets/Main-character/WALK FRONT SIDE (1).png" id="2_htcer"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://xeoqw0t28fnc" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/FIGHT ( SWORD 1).png" id="10_r5xpd"]
 [ext_resource type="Texture2D" uid="uid://bywh1gwrgvdm" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/tile006.png" id="11_ks1b7"]
 [ext_resource type="PackedScene" uid="uid://b7qx0vdyj25xk" path="res://UI/paused_menu.tscn" id="13_06tpx"]
+[ext_resource type="PackedScene" uid="uid://bj8fhqyrtnm16" path="res://Scenes/UI/HealthBar/Healthbar.tscn" id="14_7g0yx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sweqy"]
 radius = 10.2609
@@ -314,5 +315,11 @@ attenuation = 0.933033
 
 [node name="attack_cooldown" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="Healtbar" parent="." instance=ExtResource("14_7g0yx")]
+offset_left = -10.0
+offset_top = -22.0
+offset_right = 10.0
+offset_bottom = -18.0
 
 [connection signal="timeout" from="attack_cooldown" to="CharacterBody2D" method="_on_attack_cooldown_timeout"]
