@@ -18,8 +18,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_au0oc")
-base_button = ExtResource("3_fg0ae")
-total_levels = 2
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
