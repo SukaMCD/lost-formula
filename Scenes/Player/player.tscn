@@ -300,7 +300,7 @@ collision_layer = 0
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
-position = Vector2(-1, 7)
+position = Vector2(-1, 10)
 rotation = -0.0266723
 shape = SubResource("CircleShape2D_htcer")
 
