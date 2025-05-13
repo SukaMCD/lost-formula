@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://ckv6qqpnvln76"]
+[gd_scene load_steps=31 format=4 uid="uid://ckv6qqpnvln76"]
 
 [ext_resource type="Texture2D" uid="uid://dpscoaaxrrahi" path="res://Assets/forest/Forest/Tiled_files/lianas.png" id="1_p4cih"]
 [ext_resource type="Texture2D" uid="uid://brtu153pupd4" path="res://Assets/forest/Forest/Tiled_files/Objects.png" id="2_yfexy"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://ok4ue31r85ct" path="res://Scenes/Worlds/ENTERENCE_LEVEL2.gd" id="11_hpc4t"]
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="11_tvxvv"]
 [ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="13_5ge37"]
+[ext_resource type="AudioStream" uid="uid://ckudbjlljwhdv" path="res://Audio/Forest.wav" id="15_7vchu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0voq6"]
 texture = ExtResource("1_p4cih")
@@ -4751,5 +4752,9 @@ shape = SubResource("RectangleShape2D_hpc4t")
 [node name="AnimationPlayer" parent="Node" instance=ExtResource("11_tvxvv")]
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("13_5ge37")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_7vchu")
+volume_db = 3.887
 
 [connection signal="body_entered" from="Node/ENTERENCE_LEVEL2" to="Node/ENTERENCE_LEVEL2" method="_on_body_entered"]

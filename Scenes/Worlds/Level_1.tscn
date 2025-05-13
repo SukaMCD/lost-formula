@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://c5b3rjbtsly0y"]
+[gd_scene load_steps=33 format=4 uid="uid://c5b3rjbtsly0y"]
 
 [ext_resource type="Texture2D" uid="uid://i2nkiv3fcdj8" path="res://Assets/forest/grassland/PNG/ground_grasss.png" id="1_ily10"]
 [ext_resource type="Texture2D" uid="uid://cih5ul5rbmmyo" path="res://Assets/forest/grassland/Tiled_files/ground_grasss.png" id="2_tp760"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://b56357cmkkf76" path="res://Interaction/jambu biji.tscn" id="9_hfwc3"]
 [ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="11_gqigo"]
 [ext_resource type="PackedScene" uid="uid://cscbtn24x8kcy" path="res://Interaction/temulawak.tscn" id="11_usajs"]
+[ext_resource type="AudioStream" uid="uid://ckudbjlljwhdv" path="res://Audio/Forest.wav" id="15_usajs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tp760"]
 texture = ExtResource("1_ily10")
@@ -3601,7 +3602,7 @@ sources/2 = SubResource("TileSetAtlasSource_4j68t")
 sources/3 = SubResource("TileSetAtlasSource_qbefv")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyh87"]
-size = Vector2(52, 46)
+size = Vector2(44, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xktjs"]
 size = Vector2(80.75, 31)
@@ -3727,7 +3728,7 @@ script = ExtResource("8_xktjs")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/ENTERENCE"]
-position = Vector2(31, 498)
+position = Vector2(40, 508)
 shape = SubResource("RectangleShape2D_gyh87")
 
 [node name="AnimationPlayer" parent="Node" instance=ExtResource("9_4j68t")]
@@ -3746,6 +3747,10 @@ shape = SubResource("RectangleShape2D_xktjs")
 [node name="AnimationPlayer" parent="Node2" instance=ExtResource("9_4j68t")]
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("11_gqigo")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_usajs")
+volume_db = 3.887
 
 [connection signal="body_entered" from="Node/ENTERENCE" to="Node/ENTERENCE" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2/Area2D" to="Node2/Area2D" method="_on_body_entered"]
