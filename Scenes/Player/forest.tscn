@@ -11928,7 +11928,12 @@ tile_set = SubResource("TileSet_pftgg")
 use_kinematic_bodies = true
 
 [node name="PlayerRoot" parent="Tilemap" instance=ExtResource("83_xydxr")]
+y_sort_enabled = true
+texture_filter = 1
 position = Vector2(71, 614)
+
+[node name="CharacterBody2D" parent="Tilemap" instance=ExtResource("98_2q6my")]
+position = Vector2(1226, 611)
 
 [node name="Node2D" type="Node" parent="Tilemap"]
 
@@ -11998,8 +12003,5 @@ shape = SubResource("RectangleShape2D_2q6my")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("98_gmx8p")
 volume_db = 3.887
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("98_2q6my")]
-position = Vector2(1226, 611)
 
 [connection signal="body_entered" from="Node/Enterence" to="Node/Enterence" method="_on_body_entered"]

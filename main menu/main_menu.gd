@@ -21,7 +21,7 @@ func _on_start_pressed() -> void:
 
 func _on_button_2_pressed() -> void:
 	$CanvasLayer/AnimationPlayer.play("Fade_out")
-	get_tree().change_scene_to_file("res://Assets/CUT SCENE.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Levels/level_selection.tscn")
 
 # Fungsi yang dipanggil saat tombol 'Exit' ditekan
 func _on_button_3_pressed() -> void:

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bfklxipfcokga"]
 
-[ext_resource type="VideoStream" path="res://CUT SCENE/cut-sceneee.ogv" id="1_xnxrh"]
+[ext_resource type="VideoStream" uid="uid://ci6s7agpopevi" path="res://CUT SCENE/cut-sceneee.ogv" id="1_xnxrh"]
 [ext_resource type="Script" uid="uid://d0u401m2j3par" path="res://Assets/cut_scene.gd" id="2_ey17s"]
 [ext_resource type="PackedScene" uid="uid://bubx3ab7u6lwm" path="res://Scenes/UI/tombol.tscn" id="3_xnxrh"]
 

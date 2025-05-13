@@ -46,6 +46,11 @@ func _ready():
 		InputMap.add_action("attack")
 		InputMap.action_add_event("attack", event)
 
+func _unhandled_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("dialog"):
+		DialogueManager.show_example_dialogue_balloon(load("res://addons/arahan.dialogue"))
+		return
+		
 # === PHYSICS LOOP ===
 func _physics_process(delta: float) -> void:
 	if !input_enabled or get_tree().paused:
@@ -130,7 +135,6 @@ func start_attack():
 
 	if sfx_player and !sfx_player.playing:
 		sfx_player.play()
-
 
 # === FOOTSTEPS ===
 func play_footstep_sound() -> void:
