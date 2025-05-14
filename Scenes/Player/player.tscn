@@ -1,6 +1,6 @@
 [gd_scene load_steps=44 format=3 uid="uid://cbewa6u2b2ked"]
 
-[ext_resource type="Script" uid="uid://b2ran2twf82b5" path="res://Scripts/Characters/character_body_2d.gd" id="1_i3pqv"]
+[ext_resource type="Script" uid="uid://b2ran2twf82b5" path="res://Scripts/Characters/player.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://gsfnwslklv0j" path="res://Assets/Main-character/WALK FRONT SIDE (1).png" id="2_htcer"]
 [ext_resource type="Texture2D" uid="uid://bbgfb3tq7qkj2" path="res://Assets/Main-character/idle.png" id="3_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://bqi01mjugobs7" path="res://Assets/Main-character/WALK BACK SIDE.png" id="4_dd0ac"]
@@ -322,4 +322,6 @@ offset_top = -22.0
 offset_right = 10.0
 offset_bottom = -18.0
 
+[connection signal="body_entered" from="player_hitbox" to="CharacterBody2D" method="_on_player_hitbox_body_entered"]
+[connection signal="body_exited" from="player_hitbox" to="CharacterBody2D" method="_on_player_hitbox_body_exited"]
 [connection signal="timeout" from="attack_cooldown" to="CharacterBody2D" method="_on_attack_cooldown_timeout"]

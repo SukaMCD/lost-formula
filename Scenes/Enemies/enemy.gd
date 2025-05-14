@@ -58,3 +58,6 @@ func _on_decative_body_exited(body: Node2D) -> void:
 	player = null
 	player_chase = false
 	print("Player lost!")
+
+func enemy():
+	pass
