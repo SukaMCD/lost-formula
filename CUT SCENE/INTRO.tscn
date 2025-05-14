@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6q6v60qhvphl"]
 
 [ext_resource type="Script" uid="uid://couqeqsx5c1f1" path="res://CUT SCENE/intro.gd" id="1_uqkve"]
-[ext_resource type="VideoStream" path="res://CUT SCENE/intro.ogv" id="2_uqkve"]
+[ext_resource type="VideoStream" uid="uid://x7qlrmabjkke" path="res://CUT SCENE/intro.ogv" id="2_uqkve"]
 
 [node name="Intro" type="Node2D"]
 script = ExtResource("1_uqkve")
