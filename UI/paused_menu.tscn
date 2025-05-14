@@ -77,13 +77,18 @@ _data = {
 }
 
 [node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
+layer = 10
 
 [node name="Pause_menu" type="Control" parent="."]
+process_mode = 3
+z_index = 10
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_egfxf")
 
 [node name="ColorRect" type="ColorRect" parent="Pause_menu"]
+z_index = 10
 material = SubResource("ShaderMaterial_pg5cs")
 layout_mode = 1
 anchors_preset = 15
@@ -96,6 +101,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="PanelContainer" parent="Pause_menu"]
+process_mode = 3
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 561.0
@@ -104,12 +110,14 @@ offset_right = 1272.0
 offset_bottom = 943.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Pause_menu/Panel"]
+process_mode = 3
 layout_mode = 2
 size_flags_stretch_ratio = 2.68
-theme_override_constants/separation = 50
+theme_override_constants/separation = 35
 
 [node name="Resume" type="Button" parent="Pause_menu/Panel/VBoxContainer"]
 process_mode = 3
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
@@ -119,6 +127,7 @@ text = "Resume"
 
 [node name="Exit" type="Button" parent="Pause_menu/Panel/VBoxContainer"]
 process_mode = 3
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
@@ -128,6 +137,7 @@ text = "Restart"
 
 [node name="Load" type="Button" parent="Pause_menu/Panel/VBoxContainer"]
 process_mode = 3
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6

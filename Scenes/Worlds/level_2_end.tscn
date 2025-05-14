@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://ek7tjbq5i5mv"]
+[gd_scene load_steps=31 format=4 uid="uid://ek7tjbq5i5mv"]
 
 [ext_resource type="Texture2D" uid="uid://bddi2pvcyb5t0" path="res://Assets/forest/Forest/PNG/Objects.png" id="1_eg8i0"]
 [ext_resource type="Texture2D" uid="uid://brtu153pupd4" path="res://Assets/forest/Forest/Tiled_files/Objects.png" id="2_gvexd"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://ofal4wp084np" path="res://Scenes/Worlds/EXIT.gd" id="13_jeyg2"]
 [ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="14_geo7b"]
 [ext_resource type="AudioStream" uid="uid://ckudbjlljwhdv" path="res://Audio/Forest.wav" id="15_pt5p4"]
+[ext_resource type="PackedScene" uid="uid://b7qx0vdyj25xk" path="res://UI/paused_menu.tscn" id="16_iqxlb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hkffe"]
 texture = ExtResource("1_eg8i0")
@@ -3740,11 +3741,19 @@ shape = SubResource("RectangleShape2D_geo7b")
 
 [node name="AnimationPlayer" parent="Node2" instance=ExtResource("11_21cx4")]
 
-[node name="ParallaxBackground" parent="." instance=ExtResource("14_geo7b")]
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_pt5p4")
 volume_db = 3.887
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="ParallaxBackground" parent="CanvasLayer" instance=ExtResource("14_geo7b")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="CanvasLayer" parent="CanvasLayer2" instance=ExtResource("16_iqxlb")]
 
 [connection signal="body_entered" from="Node/Area2D" to="Node/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2/Area2D" to="Node2/Area2D" method="_on_body_entered"]
