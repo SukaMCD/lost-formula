@@ -95,7 +95,7 @@
 [ext_resource type="Texture2D" uid="uid://brtu153pupd4" path="res://Assets/forest/Forest/Tiled_files/Objects.png" id="86_2k048"]
 [ext_resource type="Texture2D" uid="uid://d1bkitbww5q10" path="res://Assets/forest/grassland/PNG/Details.png" id="87_2k048"]
 [ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="94_mbxr0"]
-[ext_resource type="Script" uid="uid://cky1modqs6d5x" path="res://Scenes/Player/enterence.gd" id="96_gmx8p"]
+[ext_resource type="Script" path="res://Scenes/Player/enterence.gd" id="96_gmx8p"]
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="96_noknt"]
 [ext_resource type="PackedScene" uid="uid://bjxj5328l2ux2" path="res://Scenes/Enemies/enemy.tscn" id="98_2q6my"]
 [ext_resource type="AudioStream" uid="uid://ckudbjlljwhdv" path="res://Audio/Forest.wav" id="98_gmx8p"]

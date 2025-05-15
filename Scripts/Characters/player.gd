@@ -1,18 +1,14 @@
 extends CharacterBody2D
 class_name Player
 
-var enemy_inattack_range = false
-var enemy_attack_cooldown = true
-var health = 100
-var player_alive = true
-
 # === Movement ===
 @export var speed: float = 150
 
 # === Health ===
-@export var max_health: int = 100
-var current_health: int = max_health
-var is_dead: bool = false
+var enemy_inattack_range = false
+var enemy_attack_cooldown = true
+var health = 100
+var player_alive = true
 
 # === Node References ===
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -181,22 +177,7 @@ func handle_disabled_state() -> void:
 		sfx_player.stop()
 
 # === DAMAGE & DEATH ===
-func take_damage(amount: int) -> void:
-	if is_dead:
-		return
 
-	current_health -= amount
-	print("Player HP:", current_health)
-
-	if current_health <= 0:
-		die()
-
-func die() -> void:
-	is_dead = true
-	input_enabled = false
-	velocity = Vector2.ZERO
-	sprite.play("Death")
-	print("Player is dead!")
 
 # === INVENTORY ===
 func track_item(item_id: String, quantity: int) -> void:

@@ -312,8 +312,7 @@ script = ExtResource("1_uhxdy")
 position = Vector2(0.999998, 0.999998)
 scale = Vector2(0.647338, 0.618652)
 sprite_frames = SubResource("SpriteFrames_3k452")
-animation = &"Jump"
-frame_progress = 0.116749
+animation = &"Run"
 
 [node name="detection" type="Area2D" parent="."]
 

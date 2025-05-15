@@ -295,30 +295,32 @@ limit_right = 1920
 limit_bottom = 1080
 limit_smoothed = true
 
-[node name="player_hitbox" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 16
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
-position = Vector2(-1, 11)
-rotation = -0.0266723
-shape = SubResource("CircleShape2D_htcer")
-
-[node name="sfx_player" type="AudioStreamPlayer2D" parent="."]
+[node name="sfx_player" type="AudioStreamPlayer2D" parent="CharacterBody2D"]
+scale = Vector2(2, 2)
 stream = ExtResource("6_dd0ac")
 volume_db = 3.795
 pitch_scale = 1.57
 attenuation = 0.933033
 
-[node name="attack_cooldown" type="Timer" parent="."]
+[node name="attack_cooldown" type="Timer" parent="CharacterBody2D"]
 wait_time = 0.5
 
-[node name="Healtbar" parent="." instance=ExtResource("14_7g0yx")]
-offset_left = -10.0
-offset_top = -22.0
+[node name="Healtbar" parent="CharacterBody2D" instance=ExtResource("14_7g0yx")]
+offset_left = -14.0
+offset_top = -36.0
 offset_right = 10.0
-offset_bottom = -18.0
+offset_bottom = -32.0
 
-[connection signal="body_entered" from="player_hitbox" to="CharacterBody2D" method="_on_player_hitbox_body_entered"]
-[connection signal="body_exited" from="player_hitbox" to="CharacterBody2D" method="_on_player_hitbox_body_exited"]
-[connection signal="timeout" from="attack_cooldown" to="CharacterBody2D" method="_on_attack_cooldown_timeout"]
+[node name="player_hitbox" type="Area2D" parent="CharacterBody2D"]
+scale = Vector2(2, 2)
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/player_hitbox"]
+position = Vector2(-1, 11)
+rotation = -0.0266723
+shape = SubResource("CircleShape2D_htcer")
+
+[connection signal="timeout" from="CharacterBody2D/attack_cooldown" to="CharacterBody2D" method="_on_attack_cooldown_timeout"]
+[connection signal="body_entered" from="CharacterBody2D/player_hitbox" to="CharacterBody2D" method="_on_player_hitbox_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D/player_hitbox" to="CharacterBody2D" method="_on_player_hitbox_body_exited"]
