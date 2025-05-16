@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cq2ie1ppuamna"
+path="res://.godot/imported/potion.dialogue-53b3631d971bbea06241d55424661022.tres"
+
+[deps]
+
+source_file="res://potion.dialogue"
+dest_files=["res://.godot/imported/potion.dialogue-53b3631d971bbea06241d55424661022.tres"]
+
+[params]
+
+defaults=true

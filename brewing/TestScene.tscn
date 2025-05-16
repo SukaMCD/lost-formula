@@ -84,5 +84,17 @@ theme_override_font_sizes/font_size = 40
 text = "BACK"
 flat = true
 
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -940.0
+offset_top = 189.0
+offset_right = -424.0
+offset_bottom = 189.0
+
+[node name="CraftingDialogLabel" type="Label" parent="."]
+offset_left = -427.0
+offset_top = -183.0
+offset_right = -167.0
+offset_bottom = -106.0
+
 [connection signal="item_changed" from="UI/Inventory" to="UI/Recipes" method="_on_inventory_item_changed"]
-[connection signal="pressed" from="Button" to="UI/Inventory" method="_on_button_pressed"]
+[connection signal="pressed" from="TextureButton" to="UI/Inventory" method="_on_texture_button_pressed"]
