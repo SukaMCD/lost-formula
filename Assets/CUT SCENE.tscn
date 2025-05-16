@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://bubx3ab7u6lwm" path="res://Scenes/UI/tombol.tscn" id="3_xnxrh"]
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer"]
-offset_left = 5.0
+offset_left = -4.0
 offset_top = -1.0
-offset_right = 1916.0
-offset_bottom = 1070.0
+offset_right = 1927.0
+offset_bottom = 1087.0
 stream = ExtResource("1_xnxrh")
 volume_db = 17.9
 autoplay = true
@@ -16,6 +16,6 @@ expand = true
 script = ExtResource("2_ey17s")
 
 [node name="Tombol" parent="." instance=ExtResource("3_xnxrh")]
-position = Vector2(1660, 919)
+position = Vector2(1654, 911)
 
 [connection signal="finished" from="." to="." method="_on_finished"]

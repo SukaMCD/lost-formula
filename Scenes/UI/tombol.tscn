@@ -1,56 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://bubx3ab7u6lwm"]
+[gd_scene load_steps=3 format=3 uid="uid://bubx3ab7u6lwm"]
 
 [ext_resource type="Script" uid="uid://bg8p16m685s2d" path="res://Scenes/UI/tombol.gd" id="1_vlwbe"]
-
-[sub_resource type="FontFile" id="FontFile_vlwbe"]
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/65/0/ascent = 0.0
-cache/0/65/0/descent = 0.0
-cache/0/65/0/underline_position = 0.0
-cache/0/65/0/underline_thickness = 0.0
-cache/0/65/0/scale = 1.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atesj"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwrag"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vt0ly"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.8, 0.8, 0.8, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pukmv"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+[ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="2_atesj"]
 
 [node name="Tombol" type="Node2D"]
 script = ExtResource("1_vlwbe")
 
-[node name="Button" type="Button" parent="."]
-offset_left = -29.0
-offset_top = 1.0
-offset_right = 213.0
-offset_bottom = 103.0
-theme_override_constants/outline_size = 6
-theme_override_constants/h_separation = 5
-theme_override_constants/line_spacing = 5
-theme_override_fonts/font = SubResource("FontFile_vlwbe")
-theme_override_font_sizes/font_size = 65
-theme_override_styles/focus = SubResource("StyleBoxFlat_atesj")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_qwrag")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vt0ly")
-theme_override_styles/normal = SubResource("StyleBoxFlat_pukmv")
-text = " SKIP >"
-flat = true
+[node name="Label" type="Label" parent="."]
+offset_left = 4.0
+offset_right = 178.0
+offset_bottom = 68.0
+theme_override_fonts/font = ExtResource("2_atesj")
+theme_override_font_sizes/font_size = 60
+text = "SKIP >"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 177.0
+offset_bottom = 69.0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
