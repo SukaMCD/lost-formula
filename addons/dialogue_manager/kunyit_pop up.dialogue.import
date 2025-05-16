@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cx7ok77w3yfrk"
+path="res://.godot/imported/kunyit_pop up.dialogue-acaba7102eb8c5952b66573d392521e1.tres"
+
+[deps]
+
+source_file="res://addons/dialogue_manager/kunyit_pop up.dialogue"
+dest_files=["res://.godot/imported/kunyit_pop up.dialogue-acaba7102eb8c5952b66573d392521e1.tres"]
+
+[params]
+
+defaults=true

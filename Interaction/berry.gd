@@ -7,6 +7,7 @@ func _process(delta: float) -> void:
 	$Label.visible = showInteractLabel
 	
 	if showInteractLabel && Input.is_action_just_pressed("interact"):
+		DialogueManager.show_example_dialogue_balloon(load("res://addons/dialogue_manager/Berry_pop up.dialogue"))
 		queue_free()
 
 func _on_body_entered(body: Node2D) -> void:

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bxsceit8suq0r"
+path="res://.godot/imported/jambu biji_pop up.dialogue-b0636e015ead19328e9dd1967b537c78.tres"
+
+[deps]
+
+source_file="res://addons/dialogue_manager/jambu biji_pop up.dialogue"
+dest_files=["res://.godot/imported/jambu biji_pop up.dialogue-b0636e015ead19328e9dd1967b537c78.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://ckm48dgo21j4q"
+path="res://.godot/imported/Temulawak_pop up.dialogue-100cd18664319a0d952bcb7b319b9e90.tres"
+
+[deps]
+
+source_file="res://addons/dialogue_manager/Temulawak_pop up.dialogue"
+dest_files=["res://.godot/imported/Temulawak_pop up.dialogue-100cd18664319a0d952bcb7b319b9e90.tres"]
+
+[params]
+
+defaults=true

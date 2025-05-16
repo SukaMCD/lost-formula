@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dhvdouben5mu3"
+path="res://.godot/imported/Berry_pop up.dialogue-33f9313df1862727babb65b88fd52782.tres"
+
+[deps]
+
+source_file="res://addons/dialogue_manager/Berry_pop up.dialogue"
+dest_files=["res://.godot/imported/Berry_pop up.dialogue-33f9313df1862727babb65b88fd52782.tres"]
+
+[params]
+
+defaults=true
