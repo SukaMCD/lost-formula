@@ -10,6 +10,8 @@ extends CharacterBody2D
 @export var attack_distance = 50
 @export var min_distance = 20
 @export var detection_radius = 200
+@export var knockback_strength = 150  # Kekuatan knockback
+@export var knockback_duration = 0.15  # Durasi knockback dalam detik
 
 @export_group("Health")
 @export var max_health: int = 50
@@ -18,22 +20,38 @@ extends CharacterBody2D
 var player = null
 var can_attack = true
 var is_alive = true
+var knockback_velocity = Vector2.ZERO
+var is_knockback = false
 
 @onready var sprite = $AnimatedSprite2D
 @onready var detection_area = $DetectionArea
+@onready var health_bar = $EnemyHealthbar
 
 func _ready():
 	if detection_area:
 		var shape = detection_area.get_node("CollisionShape2D")
 		if shape and shape.shape:
 			shape.shape.radius = detection_radius
+			
+	# Initialize health
+	if health_bar:
+		health_bar.init_health(max_health)
+		current_health = max_health
 
-func take_damage(amount: int) -> void:
+func take_damage(amount: int, attacker_position: Vector2 = Vector2.ZERO) -> void:
 	if !is_alive:
 		return
 		
 	current_health -= amount
 	print("Enemy took %d damage! Health: %d/%d" % [amount, current_health, max_health])
+	
+	# Update healthbar
+	if health_bar:
+		health_bar.health = current_health
+	
+	# Apply knockback
+	if attacker_position != Vector2.ZERO:
+		apply_knockback(attacker_position)
 	
 	# Flash effect
 	sprite.modulate = Color(1, 0.3, 0.3, 0.7)
@@ -45,6 +63,17 @@ func take_damage(amount: int) -> void:
 	else:
 		# Optional: Play hurt animation
 		pass
+
+func apply_knockback(attacker_pos: Vector2) -> void:
+	# Arah knockback dari attacker ke enemy
+	var knockback_direction = (global_position - attacker_pos).normalized()
+	knockback_velocity = knockback_direction * knockback_strength
+	is_knockback = true
+	
+	# Reset knockback setelah duration
+	await get_tree().create_timer(knockback_duration).timeout
+	is_knockback = false
+	knockback_velocity = Vector2.ZERO
 
 func die() -> void:
 	is_alive = false
@@ -61,6 +90,11 @@ func die() -> void:
 
 func _physics_process(delta):
 	if !is_alive:
+		return
+		
+	if is_knockback:
+		velocity = knockback_velocity
+		move_and_slide()
 		return
 		
 	if !player:
@@ -125,3 +159,7 @@ func _on_detection_area_body_entered(body):
 func _on_detection_area_body_exited(body):
 	if body == player:
 		player = null
+
+# Add this function so player can detect this is an enemy
+func enemy():
+	pass  # This is just a marker function

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bj8fhqyrtnm16"]
 
-[ext_resource type="Script" uid="uid://cs53pn33m0j7i" path="res://Scenes/UI/HealthBar/healthbar.gd" id="1_sv8is"]
+[ext_resource type="Script" uid="uid://cs53pn33m0j7i" path="res://Scenes/UI/HealthBar/Healthbar.gd" id="1_sv8is"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_co8l5"]
 
@@ -19,13 +19,13 @@ shadow_offset = Vector2(0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fdmdr"]
 bg_color = Color(0.881937, 0.881937, 0.881937, 1)
 
-[node name="Healtbar" type="ProgressBar"]
+[node name="Healthbar" type="ProgressBar"]
 z_index = 1
 offset_right = 240.0
 offset_bottom = 4.0
 theme_override_styles/background = SubResource("StyleBoxEmpty_co8l5")
 theme_override_styles/fill = SubResource("StyleBoxFlat_i2gvx")
-value = 60.0
+value = 100.0
 show_percentage = false
 script = ExtResource("1_sv8is")
 
@@ -39,7 +39,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_u2udj")
 theme_override_styles/fill = SubResource("StyleBoxFlat_fdmdr")
-value = 80.0
+value = 100.0
 show_percentage = false
 
 [node name="Timer" type="Timer" parent="."]

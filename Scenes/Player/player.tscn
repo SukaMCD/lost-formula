@@ -360,7 +360,7 @@ attenuation = 0.933033
 [node name="attack_cooldown" type="Timer" parent="CharacterBody2D"]
 wait_time = 0.5
 
-[node name="Healtbar" parent="CharacterBody2D" instance=ExtResource("14_7g0yx")]
+[node name="Healthbar" parent="CharacterBody2D" instance=ExtResource("14_7g0yx")]
 offset_left = -14.0
 offset_top = -36.0
 offset_right = 10.0

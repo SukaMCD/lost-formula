@@ -22,6 +22,7 @@ var player_alive = true
 @onready var sfx_player: AudioStreamPlayer2D = $sfx_player
 @onready var attack_hitbox: Area2D = $attack_hitbox
 @onready var attack_collision: CollisionShape2D = $attack_hitbox/CollisionShape2D
+@onready var healthbar = $Healthbar
 
 # === Input & State ===
 var input_enabled: bool = true
@@ -57,6 +58,12 @@ func _ready():
 
 	if sfx_player:
 		sfx_player.volume_db = 5
+
+	# Initialize health and healthbar
+	current_health = max_health
+	if healthbar:
+		healthbar.init_health(max_health)
+		print("Player health initialized:", current_health, "/", max_health)
 
 	sprite.animation_finished.connect(_on_animation_finished)
 
@@ -220,7 +227,7 @@ func start_attack():
 
 func _on_attack_hitbox_area_entered(area: Area2D) -> void:
 	if area.get_parent().has_method("take_damage"):
-		area.get_parent().take_damage(ATTACK_DAMAGE)
+		area.get_parent().take_damage(ATTACK_DAMAGE, global_position)
 		print("Hit enemy! Dealing %d damage" % ATTACK_DAMAGE)
 
 # === FOOTSTEPS ===
@@ -242,13 +249,24 @@ func handle_disabled_state() -> void:
 # === DAMAGE & DEATH ===
 func take_damage(amount: int) -> void:
 	if is_invincible or !player_alive:
+		print("Player can't take damage - Invincible:", is_invincible, " Alive:", player_alive)
 		return
 		
+	print("Player taking damage:", amount, " Current health before:", current_health)
 	current_health -= amount
+	print("Player health after damage:", current_health)
+	
 	is_invincible = true
 	invincible_timer = invincible_duration
 	
-	# Flash effect saat kena damage
+	# Update healthbar
+	if healthbar:
+		print("Updating healthbar to:", current_health)
+		healthbar.health = current_health
+	else:
+		print("Warning: Healthbar not found!")
+	
+	# Flash effect
 	sprite.modulate = Color(1, 0.3, 0.3, 0.7)
 	await get_tree().create_timer(0.1).timeout
 	sprite.modulate = Color(1, 1, 1, 1)
@@ -271,10 +289,14 @@ func die() -> void:
 
 func heal(amount: int) -> void:
 	current_health = min(current_health + amount, max_health)
+	if healthbar:
+		healthbar.health = current_health
 
 func enemy_attack():
 	if enemy_inattack_range and enemy_attack_cooldown and player_alive:
+		print("Enemy attacking player!")
 		take_damage(10)  # Enemy deals 10 damage
+		print("Player health after damage:", current_health)
 		enemy_attack_cooldown = false
 		await get_tree().create_timer(1.0).timeout
 		enemy_attack_cooldown = true
@@ -298,11 +320,12 @@ func player():
 
 func _on_player_hitbox_body_entered(body: Node2D) -> void:
 	if body.has_method("enemy"):
+		print("Enemy entered attack range")
 		enemy_inattack_range = true
-
 
 func _on_player_hitbox_body_exited(body: Node2D) -> void:
 	if body.has_method("enemy"):
+		print("Enemy left attack range")
 		enemy_inattack_range = false
 
 func start_dodge(direction: Vector2) -> void:
