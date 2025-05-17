@@ -6709,6 +6709,13 @@ position = Vector2(220, 562)
 
 [node name="enemy" parent="." instance=ExtResource("3_iscim")]
 position = Vector2(209, 442)
+speed = 150
+acceleration = 900
+friction = 800
+attack_damage = 10
+attack_distance = 50
+min_distance = 20
+detection_radius = 200
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

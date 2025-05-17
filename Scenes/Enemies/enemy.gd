@@ -8,23 +8,61 @@ extends CharacterBody2D
 @export_group("Combat")
 @export var attack_damage = 10
 @export var attack_distance = 50
-@export var min_distance = 20  # Jarak minimum dengan player
+@export var min_distance = 20
 @export var detection_radius = 200
+
+@export_group("Health")
+@export var max_health: int = 50
+@export var current_health: int = 50
 
 var player = null
 var can_attack = true
+var is_alive = true
 
 @onready var sprite = $AnimatedSprite2D
 @onready var detection_area = $DetectionArea
 
 func _ready():
-	# Set detection area radius
 	if detection_area:
 		var shape = detection_area.get_node("CollisionShape2D")
 		if shape and shape.shape:
 			shape.shape.radius = detection_radius
 
+func take_damage(amount: int) -> void:
+	if !is_alive:
+		return
+		
+	current_health -= amount
+	print("Enemy took %d damage! Health: %d/%d" % [amount, current_health, max_health])
+	
+	# Flash effect
+	sprite.modulate = Color(1, 0.3, 0.3, 0.7)
+	await get_tree().create_timer(0.1).timeout
+	sprite.modulate = Color(1, 1, 1, 1)
+	
+	if current_health <= 0:
+		die()
+	else:
+		# Optional: Play hurt animation
+		pass
+
+func die() -> void:
+	is_alive = false
+	print("Enemy died!")
+	# Play death animation if available
+	sprite.play("Death")  # Menggunakan sprite.play() instead of play_animation()
+	# Disable collision
+	collision_layer = 0
+	collision_mask = 0
+	# Wait for animation
+	await sprite.animation_finished
+	# Remove enemy
+	queue_free()
+
 func _physics_process(delta):
+	if !is_alive:
+		return
+		
 	if !player:
 		apply_friction(delta)
 		sprite.play("Idle")
@@ -55,6 +93,18 @@ func _physics_process(delta):
 	move_and_slide()
 	update_animation()
 
+func attack():
+	if !can_attack or !is_alive:
+		return
+		
+	sprite.play("Attack")
+	if player.has_method("take_damage"):
+		player.take_damage(attack_damage)
+	
+	can_attack = false
+	await get_tree().create_timer(1.0).timeout
+	can_attack = true
+
 func apply_friction(delta):
 	velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 	move_and_slide()
@@ -67,18 +117,6 @@ func update_animation():
 		sprite.play("Attack")
 	else:
 		sprite.play("Idle")
-
-func attack():
-	if !can_attack:
-		return
-		
-	sprite.play("Attack")
-	if player.has_method("take_damage"):
-		player.take_damage(attack_damage)
-	
-	can_attack = false
-	await get_tree().create_timer(1.0).timeout
-	can_attack = true
 
 func _on_detection_area_body_entered(body):
 	if body.is_in_group("player"):

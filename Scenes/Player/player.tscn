@@ -296,8 +296,8 @@ animations = [{
 radius = 4.97155
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7g0yx"]
-radius = 30.0
-height = 60.0
+radius = 56.0
+height = 112.0
 
 [node name="PlayerRoot" type="Node2D"]
 
@@ -321,10 +321,25 @@ texture_filter = 1
 position = Vector2(-2, 2)
 scale = Vector2(0.0608339, 0.0529766)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"Dodge"
-frame = 3
-frame_progress = 0.828731
+animation = &"Walk"
 offset = Vector2(0, -15)
+
+[node name="player_hitbox" type="Area2D" parent="CharacterBody2D"]
+scale = Vector2(2, 2)
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/player_hitbox"]
+position = Vector2(-1, 2)
+rotation = -0.0266723
+shape = SubResource("CapsuleShape2D_06tpx")
+
+[node name="attack_hitbox" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/attack_hitbox"]
+position = Vector2(-2, 4)
+shape = SubResource("CapsuleShape2D_7g0yx")
+disabled = true
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 y_sort_enabled = true
@@ -351,22 +366,7 @@ offset_top = -36.0
 offset_right = 10.0
 offset_bottom = -32.0
 
-[node name="player_hitbox" type="Area2D" parent="CharacterBody2D"]
-scale = Vector2(2, 2)
-collision_layer = 0
-collision_mask = 16
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/player_hitbox"]
-position = Vector2(-1, 2)
-rotation = -0.0266723
-shape = SubResource("CapsuleShape2D_06tpx")
-
-[node name="attack_hitbox" type="Area2D" parent="CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/attack_hitbox"]
-position = Vector2(-2, 4)
-shape = SubResource("CapsuleShape2D_7g0yx")
-
-[connection signal="timeout" from="CharacterBody2D/attack_cooldown" to="CharacterBody2D" method="_on_attack_cooldown_timeout"]
 [connection signal="body_entered" from="CharacterBody2D/player_hitbox" to="CharacterBody2D" method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="CharacterBody2D/player_hitbox" to="CharacterBody2D" method="_on_player_hitbox_body_exited"]
+[connection signal="area_entered" from="CharacterBody2D/attack_hitbox" to="CharacterBody2D" method="_on_attack_hitbox_area_entered"]
+[connection signal="timeout" from="CharacterBody2D/attack_cooldown" to="CharacterBody2D" method="_on_attack_cooldown_timeout"]
