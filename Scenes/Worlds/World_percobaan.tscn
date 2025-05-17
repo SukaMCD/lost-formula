@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dhx7wd1k4evkn" path="res://TileSet Assets/asset.jpeg" id="1_8y5le"]
 [ext_resource type="PackedScene" uid="uid://cbewa6u2b2ked" path="res://Scenes/Player/player.tscn" id="2_3306l"]
 [ext_resource type="PackedScene" uid="uid://do7bo123mhekl" path="res://Scenes/UI/door.tscn" id="2_iscim"]
-[ext_resource type="PackedScene" uid="uid://bjxj5328l2ux2" path="res://Scenes/Enemies/enemy.tscn" id="3_iscim"]
+[ext_resource type="PackedScene" uid="uid://qdcd6evsuclc" path="res://Scenes/Enemies/Enemy.tscn" id="3_iscim"]
 [ext_resource type="Texture2D" uid="uid://dwcn3mcbhbt6r" path="res://Assets/Objects_separately/Rock1_grass_shadow_dark2.png" id="4_45qbf"]
 [ext_resource type="Texture2D" uid="uid://julxgaeo4gfx" path="res://Assets/Objects_separately/Rock1_grass_shadow_dark4.png" id="5_6x3ok"]
 [ext_resource type="Texture2D" uid="uid://b732loqdrsfeo" path="res://Assets/Objects_separately/Rock1_grass_shadow_dark1.png" id="6_klwp3"]
@@ -6670,7 +6670,7 @@ texture = ExtResource("1_8y5le")
 [sub_resource type="TileSet" id="TileSet_mjgr2"]
 sources/0 = SubResource("TileSetAtlasSource_1bmd2")
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

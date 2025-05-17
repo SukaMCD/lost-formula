@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ppc6tjdyc5y8" path="res://Scenes/UI/base_button.tscn" id="3_fg0ae"]
 [ext_resource type="FontFile" uid="uid://tkxc8wuyouse" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf" id="5_hloht"]
 [ext_resource type="Texture2D" uid="uid://dypmhpia8ut8l" path="res://UI/logo.png" id="6_fxxw2"]
-[ext_resource type="Script" uid="uid://c3bqrfo4axfaw" path="res://Scenes/Levels/texture_button.gd" id="7_h8sqn"]
+[ext_resource type="Script" path="res://Scenes/Levels/texture_button.gd" id="7_h8sqn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8sqn"]
 texture = ExtResource("2_hloht")

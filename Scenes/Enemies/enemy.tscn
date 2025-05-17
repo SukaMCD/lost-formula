@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://bjxj5328l2ux2"]
+[gd_scene load_steps=48 format=3 uid="uid://qdcd6evsuclc"]
 
 [ext_resource type="Script" uid="uid://dxbkp77edbayj" path="res://Scenes/Enemies/enemy.gd" id="1_uhxdy"]
 [ext_resource type="Texture2D" uid="uid://cgtoj54ycghh0" path="res://Enemy/Enemy/Hellhound_2/Attack_1.png" id="2_3h8iv"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://cwfboxp3gmcyb" path="res://Enemy/Enemy/Hellhound_2/Jump.png" id="4_52xpa"]
 [ext_resource type="Texture2D" uid="uid://cjjb8p4y6l27f" path="res://Enemy/Enemy/Hellhound_2/Run.png" id="5_jdgko"]
 [ext_resource type="Texture2D" uid="uid://d38qohoi72tsh" path="res://Enemy/Enemy/Hellhound_2/Walk.png" id="6_j4qr3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uhxdy"]
+radius = 8.0
+height = 46.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eyr4u"]
 atlas = ExtResource("2_3h8iv")
@@ -297,16 +301,18 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_4disf"]
 radius = 78.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uhxdy"]
-radius = 8.0
-height = 46.0
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_468r6"]
 radius = 37.1776
 height = 95.7769
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_uhxdy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 34)
+rotation = -1.5708
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_uhxdy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.999998, 0.999998)
@@ -319,11 +325,6 @@ animation = &"Run"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection"]
 position = Vector2(0, 26)
 shape = SubResource("CircleShape2D_4disf")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 34)
-rotation = -1.5708
-shape = SubResource("CapsuleShape2D_uhxdy")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0.999998, 0.999998)
