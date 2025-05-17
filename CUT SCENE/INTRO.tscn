@@ -7,10 +7,8 @@
 script = ExtResource("1_uqkve")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-offset_left = 1.0
-offset_top = 2.0
-offset_right = 1921.0
-offset_bottom = 1082.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 stream = ExtResource("2_uqkve")
 volume_db = 17.98
 autoplay = true

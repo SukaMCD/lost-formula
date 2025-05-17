@@ -124,10 +124,10 @@ func play_last_direction_idle() -> void:
 	var anim = last_move_anim
 	play_animation(anim)
 	# set frame ke frame terakhir
-	var frame_count = sprite.frames.get_frame_count(anim)
+	var frame_count = sprite.sprite_frames.get_frame_count(anim)
 	if frame_count > 0:
 		sprite.frame = frame_count - 1
-	sprite.playing = false
+	sprite.stop()
 	# set flip sesuai arah terakhir
 	if anim == "Walk":
 		sprite.flip_h = last_direction_x < 0
@@ -138,7 +138,8 @@ func play_animation(anim_name: String) -> void:
 	if current_animation != anim_name:
 		current_animation = anim_name
 		sprite.play(anim_name)
-		sprite.playing = true
+		sprite.play()
+
 
 func _on_animation_finished() -> void:
 	if current_animation == "Attack":

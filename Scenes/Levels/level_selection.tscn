@@ -1,14 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://ok7pudrbw581"]
+[gd_scene load_steps=10 format=3 uid="uid://ok7pudrbw581"]
 
 [ext_resource type="Script" uid="uid://cujej4ra45315" path="res://Scripts/Elements/level_selection.gd" id="1_au0oc"]
 [ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="1_tsd2a"]
-[ext_resource type="Texture2D" uid="uid://33j4vtvl1ypc" path="res://UI/WhatsApp Image 2025-03-19 at 11.16.40.jpeg" id="2_hloht"]
+[ext_resource type="Texture2D" uid="uid://c87h6fs6bxyc1" path="res://UI/bg main menu.jpg" id="2_hloht"]
 [ext_resource type="PackedScene" uid="uid://ppc6tjdyc5y8" path="res://Scenes/UI/base_button.tscn" id="3_fg0ae"]
-[ext_resource type="FontFile" uid="uid://c45alnu4emdci" path="res://Fonts/mileast/Mileast Italic.otf" id="3_fxxw2"]
+[ext_resource type="FontFile" uid="uid://tkxc8wuyouse" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf" id="5_hloht"]
+[ext_resource type="Texture2D" uid="uid://dypmhpia8ut8l" path="res://UI/logo.png" id="6_fxxw2"]
+[ext_resource type="Script" uid="uid://c3bqrfo4axfaw" path="res://Scenes/Levels/texture_button.gd" id="7_h8sqn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8sqn"]
 texture = ExtResource("2_hloht")
-modulate_color = Color(0.497474, 0.497474, 0.497474, 1)
+modulate_color = Color(0.717647, 0.717647, 0.717647, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_67v8r"]
+texture = ExtResource("6_fxxw2")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -31,8 +36,8 @@ offset_left = -4.0
 offset_top = 77.0
 offset_right = 1919.0
 offset_bottom = 159.0
-theme_override_fonts/font = ExtResource("3_fxxw2")
-theme_override_font_sizes/font_size = 60
+theme_override_fonts/font = ExtResource("1_tsd2a")
+theme_override_font_sizes/font_size = 75
 text = "LEVEL SELECTION"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -80,23 +85,44 @@ ellipsis_char = ""
 
 [node name="CanvasGroup" type="CanvasLayer" parent="."]
 
-[node name="Control" parent="CanvasGroup" instance=ExtResource("3_fg0ae")]
-offset_left = 258.0
-offset_top = 246.0
-offset_right = -1144.0
-offset_bottom = -217.0
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+[node name="Level 1" parent="CanvasGroup" instance=ExtResource("3_fg0ae")]
+offset_left = 363.0
+offset_top = 277.0
+offset_right = -1039.0
+offset_bottom = -186.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("5_hloht")
+theme_override_font_sizes/font_size = 50
 text = "LEVEL 1"
 
-[node name="Control2" parent="CanvasGroup" instance=ExtResource("3_fg0ae")]
-offset_left = 1121.0
-offset_top = 246.0
-offset_right = -281.0
-offset_bottom = -217.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+[node name="Level 2" parent="CanvasGroup" instance=ExtResource("3_fg0ae")]
+offset_left = 1045.0
+offset_top = 276.0
+offset_right = -357.0
+offset_bottom = -187.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_hloht")
+theme_override_font_sizes/font_size = 50
 text = "LEVEL 2"
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -19.0
+offset_top = 945.0
+offset_right = 178.0
+offset_bottom = 1070.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_67v8r")
+
+[node name="TextureButton" type="TextureButton" parent="Panel2"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 6.0
+offset_right = 148.0
+offset_bottom = 120.0
+script = ExtResource("7_h8sqn")
+
+[connection signal="pressed" from="Panel2/TextureButton" to="Panel2/TextureButton" method="_on_pressed"]

@@ -11,13 +11,10 @@ signal item_changed
 func _ready():
 	await get_tree().create_timer(2).timeout
 	add_item(ITEM)
-
 	await get_tree().create_timer(2).timeout
 	add_item(ITEM2)
-	
 	await get_tree().create_timer(2).timeout
 	add_item(ITEM3)
-	
 	await get_tree().create_timer(2).timeout
 	add_item(ITEM4)
 #endregion
@@ -34,7 +31,6 @@ func remove_item(item):
 		if i.item == item:
 			i.item = null
 			item_changed.emit()
-			# Tampilkan dialog setelah crafting
 			DialogueManager.show_example_dialogue_balloon(load("res://potion.dialogue"))
 			return
 

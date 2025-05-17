@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2tjt3cfpw2eg"]
+[gd_scene load_steps=4 format=3 uid="uid://c2tjt3cfpw2eg"]
 
 [ext_resource type="Script" uid="uid://bl5whhq8etmud" path="res://brewing/recipe.gd" id="1_5fe0w"]
 [ext_resource type="PackedScene" uid="uid://hx1av0o0dx7b" path="res://brewing/recipe_slot.tscn" id="1_tdjjb"]
+[ext_resource type="AudioStream" uid="uid://cvb80c3hgrjsg" path="res://Audio/Interaction.wav" id="3_tmb5q"]
 
 [node name="Recipe" type="HBoxContainer"]
 script = ExtResource("1_5fe0w")
@@ -27,10 +28,16 @@ expand_icon = true
 
 [node name="Label" type="Label" parent="craft"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_font_sizes/font_size = 40
-text = "Craft"
+offset_left = 10.0
+offset_top = 3.0
+offset_right = 85.0
+offset_bottom = 44.875
+theme_override_font_sizes/font_size = 30
+text = "Brew"
 horizontal_alignment = 1
+
+[node name="Brew" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_tmb5q")
+volume_db = 10.895
 
 [connection signal="pressed" from="craft" to="." method="_on_craft_pressed"]
