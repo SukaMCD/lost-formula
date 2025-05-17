@@ -1,38 +1,89 @@
 extends CharacterBody2D
 
-@export var speed = 50
+@export_group("Movement")
+@export var speed = 150
+@export var acceleration = 900
+@export var friction = 800
 
-var player_chase = false
+@export_group("Combat")
+@export var attack_damage = 10
+@export var attack_distance = 50
+@export var min_distance = 20  # Jarak minimum dengan player
+@export var detection_radius = 200
+
 var player = null
+var can_attack = true
 
 @onready var sprite = $AnimatedSprite2D
+@onready var detection_area = $DetectionArea
+
+func _ready():
+	# Set detection area radius
+	if detection_area:
+		var shape = detection_area.get_node("CollisionShape2D")
+		if shape and shape.shape:
+			shape.shape.radius = detection_radius
 
 func _physics_process(delta):
-	if player_chase and player != null:
-		var direction = (player.global_position - global_position).normalized()
-		global_position += direction * speed * delta
-		_play_animation(direction)
+	if !player:
+		apply_friction(delta)
+		sprite.play("Idle")
+		return
+		
+	var direction = global_position.direction_to(player.global_position)
+	var distance = global_position.distance_to(player.global_position)
+	
+	if distance <= attack_distance and can_attack:
+		# Stop and attack
+		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
+		attack()
+	else:
+		# Chase player but maintain minimum distance
+		var target_velocity
+		if distance < min_distance:
+			# Bergerak menjauh dari player
+			target_velocity = -direction * speed
+		elif distance > attack_distance:
+			# Mengejar player
+			target_velocity = direction * speed
+		else:
+			# Di antara min_distance dan attack_distance, diam di tempat
+			target_velocity = Vector2.ZERO
+			
+		velocity = velocity.move_toward(target_velocity, acceleration * delta)
+		
+	move_and_slide()
+	update_animation()
+
+func apply_friction(delta):
+	velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
+	move_and_slide()
+
+func update_animation():
+	if velocity.length() > 10:
+		sprite.play("Run")
+		sprite.flip_h = velocity.x > 0
+	elif !can_attack:
+		sprite.play("Attack")
 	else:
 		sprite.play("Idle")
 
-func _play_animation(direction: Vector2):
-	if abs(direction.x) > abs(direction.y):
-		sprite.play("Walk")
-		sprite.flip_h = direction.x > 0
-	elif direction.y < 0:
-		sprite.play("Down")
-	else:
-		sprite.play("Up")
+func attack():
+	if !can_attack:
+		return
+		
+	sprite.play("Attack")
+	if player.has_method("take_damage"):
+		player.take_damage(attack_damage)
+	
+	can_attack = false
+	await get_tree().create_timer(1.0).timeout
+	can_attack = true
 
-func _on_decative_body_entered(body: Node2D) -> void:
-	player = body
-	player_chase = true
-	print("Player detected:", player.name)
+func _on_detection_area_body_entered(body):
+	if body.is_in_group("player"):
+		player = body
 
-func _on_decative_body_exited(body: Node2D) -> void:
-	player = null
-	player_chase = false
-	print("Player lost!")
-
-func enemy():
-	pass
+func _on_detection_area_body_exited(body):
+	if body == player:
+		player = null

@@ -3,6 +3,8 @@ class_name Player
 
 # === Movement ===
 @export var speed: float = 150
+@export var dodge_speed: float = 400  # Kecepatan dodge
+@export var dodge_duration: float = 0.2  # Durasi dodge dalam detik
 
 # === Health ===
 var enemy_inattack_range = false
@@ -29,6 +31,13 @@ var attack_cooldown: float = 0.0
 const ATTACK_COOLDOWN_TIME: float = 0.5
 const ATTACK_DAMAGE: int = 20 # Tambahkan konstanta untuk damage
 
+# === Dodge State ===
+var is_dodging: bool = false
+var dodge_timer: float = 0.0
+var dodge_cooldown: float = 0.0
+const DODGE_COOLDOWN_TIME: float = 0.5
+var dodge_direction: Vector2 = Vector2.ZERO
+
 # === Inventory / Tracking ===
 var collected_items: Dictionary = {}
 
@@ -51,6 +60,13 @@ func _ready():
 		event.keycode = KEY_J
 		InputMap.add_action("attack")
 		InputMap.action_add_event("attack", event)
+		
+	# Setup dodge input
+	if not InputMap.has_action("dodge"):
+		var event := InputEventKey.new()
+		event.keycode = KEY_K
+		InputMap.add_action("dodge")
+		InputMap.action_add_event("dodge", event)
 
 	# Pastikan AttackHitbox ada
 	if not attack_hitbox:
@@ -70,8 +86,26 @@ func _physics_process(delta: float) -> void:
 
 	if attack_cooldown > 0:
 		attack_cooldown -= delta
+	if dodge_cooldown > 0:
+		dodge_cooldown -= delta
+
+	# Update dodge timer
+	if is_dodging:
+		dodge_timer -= delta
+		if dodge_timer <= 0:
+			end_dodge()
+		else:
+			velocity = dodge_direction * dodge_speed
+			move_and_slide()
+			return
 
 	var input_vector := get_input_vector()
+	
+	# Check for dodge input
+	if Input.is_action_just_pressed("dodge") and !is_dodging and dodge_cooldown <= 0:
+		start_dodge(input_vector)
+		return
+
 	process_movement(input_vector)
 	update_animation(input_vector)
 	move_and_slide()
@@ -88,6 +122,9 @@ func process_movement(input_vector: Vector2) -> void:
 
 # === ANIMATION ===
 func update_animation(input_vector: Vector2) -> void:
+	if is_dodging:
+		return
+		
 	if is_attacking:
 		return
 
@@ -100,7 +137,7 @@ func update_animation(input_vector: Vector2) -> void:
 	else:
 		play_animation("Idle")
 		sprite.flip_h = last_direction_x < 0
-		if sfx_player and sfx_player.is_playing():
+		if sfx_player and sfx_player.playing:
 			sfx_player.stop()
 
 func handle_moving_animations(input_vector: Vector2) -> void:
@@ -124,10 +161,17 @@ func play_animation(anim_name: String) -> void:
 func _on_animation_finished() -> void:
 	if current_animation == "Attack":
 		is_attacking = false
-		# Nonaktifkan hitbox setelah animasi selesai
 		if attack_hitbox:
 			attack_hitbox.monitoring = false
-			attack_hitbox.disconnect("area_entered", _on_attack_hit_area_entered) # Disconnect signal
+			attack_hitbox.disconnect("area_entered", _on_attack_hit_area_entered)
+		var input_vector := get_input_vector()
+		if input_vector.length() > 0:
+			handle_moving_animations(input_vector)
+		else:
+			play_animation("Idle")
+			sprite.flip_h = last_direction_x < 0
+	elif current_animation == "Dodge":
+		end_dodge()
 		var input_vector := get_input_vector()
 		if input_vector.length() > 0:
 			handle_moving_animations(input_vector)
@@ -208,3 +252,18 @@ func _on_player_hitbox_body_exited(body: Node2D) -> void:
 func enemy_attack():
 	if enemy_inattack_range:
 		print("Player took damage")
+
+func start_dodge(direction: Vector2) -> void:
+	if direction == Vector2.ZERO:
+		direction = Vector2.RIGHT * last_direction_x
+	
+	is_dodging = true
+	dodge_timer = dodge_duration
+	dodge_direction = direction.normalized()
+	dodge_cooldown = DODGE_COOLDOWN_TIME
+	play_animation("Dodge")
+
+func end_dodge() -> void:
+	is_dodging = false
+	dodge_timer = 0.0
+	velocity = Vector2.ZERO

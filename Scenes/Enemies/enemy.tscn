@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://d38qohoi72tsh" path="res://Enemy/Enemy/Hellhound_2/Walk.png" id="6_j4qr3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uhxdy"]
-radius = 8.0
-height = 46.0
+radius = 16.0
+height = 64.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eyr4u"]
 atlas = ExtResource("2_3h8iv")
@@ -299,31 +299,32 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4disf"]
-radius = 78.0
+radius = 125.399
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_468r6"]
 radius = 37.1776
 height = 95.7769
 
-[node name="player" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_uhxdy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 34)
+position = Vector2(-1, -7)
 rotation = -1.5708
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_uhxdy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0.999998, 0.999998)
+position = Vector2(-1, -32)
 scale = Vector2(0.647338, 0.618652)
 sprite_frames = SubResource("SpriteFrames_3k452")
 animation = &"Run"
 
-[node name="detection" type="Area2D" parent="."]
+[node name="detection_area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="detection"]
-position = Vector2(0, 26)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+position = Vector2(-2, -6)
 shape = SubResource("CircleShape2D_4disf")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -331,9 +332,9 @@ position = Vector2(0.999998, 0.999998)
 scale = Vector2(0.647338, 0.618652)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1.54479, 43.6433)
+position = Vector2(-4.63436, -11.3149)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_468r6")
 
-[connection signal="body_entered" from="detection" to="." method="_on_decative_body_entered"]
-[connection signal="body_exited" from="detection" to="." method="_on_decative_body_exited"]
+[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
