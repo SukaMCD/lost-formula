@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://c5b3rjbtsly0y"]
+[gd_scene load_steps=38 format=4 uid="uid://c5b3rjbtsly0y"]
 
 [ext_resource type="Texture2D" uid="uid://i2nkiv3fcdj8" path="res://Assets/forest/grassland/PNG/ground_grasss.png" id="1_ily10"]
 [ext_resource type="TileSet" uid="uid://dgwmn6cfh42b5" path="res://Scenes/Worlds/Level_1.tres" id="2_3faca"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://5764258i8gii" path="res://Interaction/berry.tscn" id="4_rebtq"]
 [ext_resource type="Texture2D" uid="uid://tdbjwv105myi" path="res://Assets/forest/grassland/PNG/Trees_rocks.png" id="5_qbefv"]
 [ext_resource type="PackedScene" uid="uid://bjxj5328l2ux2" path="res://Scenes/Enemies/enemy.tscn" id="6_dw4ri"]
+[ext_resource type="Script" uid="uid://dleusqfq251sn" path="res://Scripts/Managers/enemy_spawn_manager.gd" id="6_fsavw"]
 [ext_resource type="Texture2D" uid="uid://brtu153pupd4" path="res://Assets/forest/Forest/Tiled_files/Objects.png" id="6_fwomk"]
 [ext_resource type="PackedScene" uid="uid://cbewa6u2b2ked" path="res://Scenes/Player/player.tscn" id="7_qbefv"]
 [ext_resource type="Script" path="res://Scenes/Worlds/enterence.gd" id="8_xktjs"]
@@ -3798,7 +3799,17 @@ tile_map_data = PackedByteArray("AAAAADAAAAAZAAIAAAAAADEAAAAZAAMAAAAAADIAAAAZAAQ
 tile_set = SubResource("TileSet_qbefv")
 
 [node name="Enemy" parent="Tilemap" instance=ExtResource("6_dw4ri")]
-position = Vector2(1062, 201)
+position = Vector2(905, 195)
+rotation = -3.14159
+scale = Vector2(1, -1)
+max_health = 100
+current_health = 100
+
+[node name="Enemy2" parent="Tilemap" node_paths=PackedStringArray("spawn_points") instance=ExtResource("6_dw4ri")]
+position = Vector2(1174, 488)
+script = ExtResource("6_fsavw")
+enemy_scene = null
+spawn_points = []
 
 [node name="tree2" type="TileMapLayer" parent="Tilemap"]
 y_sort_enabled = true
