@@ -1,63 +1,65 @@
-[gd_scene load_steps=4 format=3 uid="uid://bq42lmbv1vkif"]
+[gd_scene load_steps=8 format=3 uid="uid://bq42lmbv1vkif"]
 
-[ext_resource type="Texture2D" uid="uid://515fj5vop0lr" path="res://Health bar/health bars/health bars/Border.png" id="1_tusa7"]
-[ext_resource type="Texture2D" uid="uid://cismsq3enmvj0" path="res://Health bar/health bars/health bars/Health.png" id="2_4kir8"]
+[ext_resource type="Script" uid="uid://d1y7321ef0mia" path="res://Scenes/UI/HealthBar/UIHealthbar.gd" id="1_1vtfx"]
+[ext_resource type="Texture2D" uid="uid://b53vhbmqf3ma4" path="res://Health bar/health bars/health bars/IMG_0841.PNG" id="2_tusa7"]
 
-[sub_resource type="GDScript" id="GDScript_6qpeb"]
-script/source = "extends ProgressBar
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4kir8"]
+texture = ExtResource("2_tusa7")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lsqfl"]
 
-@onready var timer = $Timer
-@onready var damage_bar = $Damagebar
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibi1u"]
+bg_color = Color(0.243137, 0.698039, 0.470588, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40ng8"]
+bg_color = Color(0.117647, 0.117647, 0.117647, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0, 0, 0, 0.392157)
+shadow_offset = Vector2(0, 1)
 
-var health = 0 : set = _set_health
-
-
-func _set_health(new_healt):
-	var prev_health = health
-	health = min(max_value, new_healt)
-	value = health
-	
-	if health <= 0:
-		queue_free()
-	
-	if health < prev_health:
-		timer.start()
-	else:
-		damage_bar.value = health
-
-
-func init_health(_healt):
-	health = _healt
-	max_value = health
-	value = health
-	damage_bar.max_value = health
-	damage_bar.value = health
-
-func _on_timer_timeout() -> void:
-	damage_bar.value = health
-
-
-func _on_timer_2_timeout() -> void:
-	pass # Replace with function body.
-"
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_phhou"]
+bg_color = Color(0.882353, 0.882353, 0.882353, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1vtfx")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 34.0
+offset_top = 10.0
+offset_right = 224.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4kir8")
+
+[node name="UIHealthbar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 54.0
+offset_right = 676.0
+offset_bottom = 161.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_lsqfl")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ibi1u")
+value = 50.0
+show_percentage = false
+
+[node name="Damagebar" type="ProgressBar" parent="UIHealthbar"]
+z_index = -1
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = SubResource("GDScript_6qpeb")
+theme_override_styles/background = SubResource("StyleBoxFlat_40ng8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_phhou")
+value = 50.0
+show_percentage = false
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-layout_mode = 0
-offset_left = -30.0
-offset_top = -529.0
-offset_right = 1250.0
-offset_bottom = 751.0
-value = 100.0
-texture_over = ExtResource("1_tusa7")
-texture_progress = ExtResource("2_4kir8")
+[node name="Timer" type="Timer" parent="UIHealthbar"]
+wait_time = 0.4
