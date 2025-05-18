@@ -3825,10 +3825,6 @@ position = Vector2(1039, 508)
 max_health = 100
 current_health = 100
 
-[node name="PlayerRoot" parent="Tilemap" instance=ExtResource("7_qbefv")]
-y_sort_enabled = true
-position = Vector2(320, 485)
-
 [node name="tree2" type="TileMapLayer" parent="Tilemap"]
 z_index = 5
 y_sort_enabled = true
@@ -3877,6 +3873,10 @@ z_index = 5
 y_sort_enabled = true
 texture_filter = 1
 tile_set = SubResource("TileSet_gqigo")
+
+[node name="PlayerRoot" parent="Tilemap" instance=ExtResource("7_qbefv")]
+y_sort_enabled = true
+position = Vector2(320, 485)
 
 [node name="Berry" parent="Tilemap" instance=ExtResource("4_rebtq")]
 position = Vector2(711, 190)
