@@ -22,8 +22,3 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_body_exited(body: Node2D) -> void:
 	if body is Player:
 		showInteractLabel = false
-
-# OPTIONAL: jika kamu ingin pemain tetap bisa men-trigger dialog manual
-func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("dialog"):
-		DialogueManager.show_example_dialogue_balloon(load("res://addons/daun jambu biji.dialogue"))
