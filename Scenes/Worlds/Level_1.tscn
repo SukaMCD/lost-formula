@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b6fkka2geb3xc" path="res://Assets/forest/grassland/Tiled_files/Trees_rocks.png" id="4_fwomk"]
 [ext_resource type="PackedScene" uid="uid://5764258i8gii" path="res://Interaction/berry.tscn" id="4_rebtq"]
 [ext_resource type="Texture2D" uid="uid://tdbjwv105myi" path="res://Assets/forest/grassland/PNG/Trees_rocks.png" id="5_qbefv"]
-[ext_resource type="PackedScene" uid="uid://bjxj5328l2ux2" path="res://Scenes/Enemies/enemy.tscn" id="6_dw4ri"]
+[ext_resource type="PackedScene" uid="uid://bjxj5328l2ux2" path="res://Scenes/Enemies/Enemy.tscn" id="6_dw4ri"]
 [ext_resource type="Script" uid="uid://dleusqfq251sn" path="res://Scripts/Managers/enemy_spawn_manager.gd" id="6_fsavw"]
 [ext_resource type="Texture2D" uid="uid://brtu153pupd4" path="res://Assets/forest/Forest/Tiled_files/Objects.png" id="6_fwomk"]
 [ext_resource type="PackedScene" uid="uid://cbewa6u2b2ked" path="res://Scenes/Player/player.tscn" id="7_qbefv"]

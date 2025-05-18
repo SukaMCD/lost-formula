@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b56357cmkkf76" path="res://Interaction/jambu biji.tscn" id="11_7vchu"]
 [ext_resource type="Script" uid="uid://ok4ue31r85ct" path="res://Scenes/Worlds/ENTERENCE_LEVEL2.gd" id="11_hpc4t"]
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="11_tvxvv"]
-[ext_resource type="PackedScene" uid="uid://bjxj5328l2ux2" path="res://Scenes/Enemies/enemy.tscn" id="12_50vmd"]
+[ext_resource type="PackedScene" uid="uid://bjxj5328l2ux2" path="res://Scenes/Enemies/Enemy.tscn" id="12_50vmd"]
 [ext_resource type="PackedScene" uid="uid://dgitnw6wiohsr" path="res://UI/FogShader.tscn" id="13_5ge37"]
 [ext_resource type="AudioStream" uid="uid://ckudbjlljwhdv" path="res://Audio/Forest.wav" id="15_7vchu"]
 [ext_resource type="PackedScene" uid="uid://b7qx0vdyj25xk" path="res://UI/paused_menu.tscn" id="16_01w8r"]
