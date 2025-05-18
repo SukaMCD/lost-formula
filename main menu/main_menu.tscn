@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://nxu72nj0222s" path="res://main menu/audio_control.gd" id="9_5qo5t"]
 [ext_resource type="Script" uid="uid://evap2fqwewff" path="res://main menu/fullscreen_control.gd" id="10_driid"]
 [ext_resource type="Texture2D" uid="uid://dypmhpia8ut8l" path="res://UI/logo.png" id="12_ft5q2"]
-[ext_resource type="Script" uid="uid://cd4lpeooe3e3" path="res://main menu/texture_button.gd" id="13_6o5wd"]
+[ext_resource type="Script" path="res://main menu/texture_button.gd" id="13_6o5wd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_auhsi"]
 texture = ExtResource("2_iohqi")
