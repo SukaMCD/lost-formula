@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpu06hl2woub5"]
 
 [ext_resource type="Script" uid="uid://crjedly6vjqg2" path="res://control.gd" id="1_x5n43"]
-[ext_resource type="VideoStream" path="res://CUT SCENE/ending-1-mxbegp.ogv" id="2_x5n43"]
+[ext_resource type="VideoStream" path="res://CUT SCENE/0518-_1_.ogv" id="2_x5n43"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -17,10 +17,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = -7.0
-offset_right = 2.0
-offset_bottom = -7.0
+offset_left = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("2_x5n43")
