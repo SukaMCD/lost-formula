@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bssaop6f5xjvo"]
 
 [ext_resource type="VideoStream" path="res://CUT SCENE/pergantian-lvl-1-dan-2-_1_.ogv" id="1_l15ui"]
-[ext_resource type="Script" uid="uid://c3cb52v7nthq" path="res://Scenes/UI/pergantian_scene.gd" id="1_vp217"]
+[ext_resource type="Script" path="res://Scenes/UI/pergantian_scene.gd" id="1_vp217"]
 [ext_resource type="PackedScene" uid="uid://csxo7gaftt7uc" path="res://UI/Transisi.tscn" id="3_asyjs"]
 
 [node name="Control" type="Control"]
