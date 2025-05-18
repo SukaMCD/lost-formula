@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://qdcd6evsuclc"]
+[gd_scene load_steps=65 format=3 uid="uid://bjxj5328l2ux2"]
 
 [ext_resource type="Script" uid="uid://dxbkp77edbayj" path="res://Scenes/Enemies/enemy.gd" id="1_uhxdy"]
 [ext_resource type="Texture2D" uid="uid://cgtoj54ycghh0" path="res://Enemy/Enemy/Hellhound_2/Attack_1.png" id="2_3h8iv"]

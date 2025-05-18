@@ -34,14 +34,13 @@ func resume():
 
 # Dipanggil saat tombol "Resume" diklik
 func _on_resume_pressed() -> void:
-	print("Resume clicked.")
-	resume()
-
-# Dipanggil saat tombol "Exit" diklik
-func _on_exit_pressed() -> void:
 	print("Exit clicked.")
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://main menu/main_menu.tscn")
+
+# Dipanggil saat tombol "Exit" diklik
+func _on_exit_pressed() -> void:
+	get_tree().quit()  # Keluar dari game
 
 # Dipanggil saat tombol "Load" diklik
 func _on_load_pressed() -> void:

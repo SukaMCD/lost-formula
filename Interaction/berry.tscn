@@ -27,7 +27,7 @@ shape = SubResource("CircleShape2D_iefua")
 
 [node name="CollectSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_d7ig3")
-volume_db = 24.0
+volume_db = 4.19
 area_mask = 16
 
 [node name="Label" type="Label" parent="."]

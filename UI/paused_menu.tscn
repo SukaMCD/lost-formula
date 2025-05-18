@@ -133,7 +133,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_y170y")
-text = "Restart"
+text = "Quit"
 
 [node name="Load" type="Button" parent="Pause_menu/Panel/VBoxContainer"]
 process_mode = 3
@@ -143,7 +143,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_y170y")
-text = "Quit"
+text = "Restart"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Pause_menu"]
 root_node = NodePath("../..")
