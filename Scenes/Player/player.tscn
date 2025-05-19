@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://cbewa6u2b2ked"]
+[gd_scene load_steps=52 format=3 uid="uid://cbewa6u2b2ked"]
 
 [ext_resource type="Script" uid="uid://b2ran2twf82b5" path="res://Scripts/Characters/player.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://gsfnwslklv0j" path="res://Assets/Main-character/WALK FRONT SIDE (1).png" id="2_htcer"]
@@ -9,10 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://crtbyxde6av5x" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/tile000.png" id="6_oikmp"]
 [ext_resource type="Texture2D" uid="uid://cd6qle2jf01cn" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/tile001.png" id="7_06tpx"]
 [ext_resource type="Texture2D" uid="uid://8k8lyw1ayt80" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/tile002.png" id="8_7g0yx"]
-[ext_resource type="Texture2D" uid="uid://c5jryhut13s02" path="res://Assets/Main-character/DODGE.png" id="8_dey5f"]
+[ext_resource type="Texture2D" uid="uid://dvp70har4gjtx" path="res://Assets/Main-character/Dodge/Dogde_1.png" id="8_ks1b7"]
 [ext_resource type="Texture2D" uid="uid://be265w4wrovqq" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/FIGHT ( SWORD ) (1) - Copy.png" id="9_dey5f"]
+[ext_resource type="Texture2D" uid="uid://b7bm0iw5nu1c6" path="res://Assets/Main-character/Dodge/Dogde_2.png" id="9_hnuln"]
+[ext_resource type="Texture2D" uid="uid://k2by7k1pd8vn" path="res://Assets/Main-character/Dodge/Dodge_3.png" id="10_aqm4k"]
 [ext_resource type="Texture2D" uid="uid://xeoqw0t28fnc" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/FIGHT ( SWORD 1).png" id="10_r5xpd"]
 [ext_resource type="Texture2D" uid="uid://bywh1gwrgvdm" path="res://Assets/Main-character/Fight Sword/Fight Sword ( yang udh di crop )/tile006.png" id="11_ks1b7"]
+[ext_resource type="Texture2D" uid="uid://crwuaq0fx21fx" path="res://Assets/Main-character/Dodge/Dodge_4.png" id="11_rcvs5"]
 [ext_resource type="PackedScene" uid="uid://bj8fhqyrtnm16" path="res://Scenes/UI/HealthBar/Healthbar.tscn" id="14_7g0yx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sweqy"]
@@ -44,20 +47,20 @@ atlas = ExtResource("11_ks1b7")
 region = Rect2(0, 0, 891, 1328)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4no11"]
-atlas = ExtResource("8_dey5f")
-region = Rect2(0, 0, 626, 1328)
+atlas = ExtResource("8_ks1b7")
+region = Rect2(0, 0, 1280, 1280)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fcwna"]
-atlas = ExtResource("8_dey5f")
-region = Rect2(626, 0, 626, 1328)
+atlas = ExtResource("9_hnuln")
+region = Rect2(0, 0, 1280, 1280)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1agin"]
-atlas = ExtResource("8_dey5f")
-region = Rect2(1252, 0, 626, 1328)
+atlas = ExtResource("10_aqm4k")
+region = Rect2(0, 0, 1280, 1280)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2jnj1"]
-atlas = ExtResource("8_dey5f")
-region = Rect2(1878, 0, 626, 1328)
+atlas = ExtResource("11_rcvs5")
+region = Rect2(0, 0, 681, 1262)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jlvik"]
 atlas = ExtResource("2_htcer")
@@ -321,7 +324,9 @@ texture_filter = 1
 position = Vector2(-2, 2)
 scale = Vector2(0.0608339, 0.0529766)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"Walk"
+animation = &"Dodge"
+frame = 3
+frame_progress = 1.0
 offset = Vector2(0, -15)
 
 [node name="player_hitbox" type="Area2D" parent="CharacterBody2D"]
