@@ -15,7 +15,7 @@ modulate_color = Color(0.717647, 0.717647, 0.717647, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_67v8r"]
 texture = ExtResource("6_fxxw2")
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
