@@ -1,7 +1,4 @@
 extends Node2D
-
-var kunyit_collected := false  # Hanya ini yang dibutuhkan di level ini
-
 signal hero_mati
 
 @onready var transition = $CanvasLayer2/AnimationPlayer
@@ -21,10 +18,6 @@ func fade_in_sound():
 		forest_sound.volume_db += fade_speed
 		await get_tree().create_timer(0.1).timeout
 
-# Fungsi untuk cek apakah pemain boleh lanjut
-func can_proceed_to_next_scene() -> bool:
-	return kunyit_collected
-	
 func _unhandled_input(event: InputEvent) -> void:
 	DialogueManager.show_example_dialogue_balloon(load("res://addons/arahan.dialogue"))
 	return

@@ -261,7 +261,6 @@ func take_damage(amount: int) -> void:
 	is_invincible = true
 	invincible_timer = invincible_duration
 	
-	get_parent().emit_signal("hero_mati")
 	
 	# Update healthbar
 	if healthbar:
@@ -280,6 +279,8 @@ func take_damage(amount: int) -> void:
 	else:
 		# Optional: Play hurt animation/sound
 		pass
+		
+	get_parent().emit_signal("hero_mati")
 
 func die() -> void:
 	player_alive = false
@@ -290,6 +291,7 @@ func die() -> void:
 	# Optional: Play death sound
 	print("Player died!")
 	# Bisa tambahkan logika game over di sini
+	
 
 func heal(amount: int) -> void:
 	current_health = min(current_health + amount, max_health)
