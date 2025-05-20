@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://nxu72nj0222s" path="res://main menu/audio_control.gd" id="9_5qo5t"]
 [ext_resource type="Script" uid="uid://evap2fqwewff" path="res://main menu/fullscreen_control.gd" id="10_driid"]
 [ext_resource type="Texture2D" uid="uid://dypmhpia8ut8l" path="res://UI/logo.png" id="12_ft5q2"]
-[ext_resource type="Script" path="res://main menu/texture_button.gd" id="13_6o5wd"]
+[ext_resource type="Script" uid="uid://cd4lpeooe3e3" path="res://main menu/texture_button.gd" id="13_6o5wd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_auhsi"]
 texture = ExtResource("2_iohqi")
@@ -76,10 +76,10 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_auhsi")
 [node name="font" type="Panel" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 53.0
-offset_top = -110.0
-offset_right = 1873.0
-offset_bottom = 1710.0
+offset_left = 49.0
+offset_top = -65.0
+offset_right = 1869.0
+offset_bottom = 1755.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_ft5q2")
 
 [node name="main buttons" type="HBoxContainer" parent="."]
@@ -89,10 +89,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -482.0
-offset_top = 38.0
-offset_right = 498.0
-offset_bottom = 138.0
+offset_left = -501.5
+offset_top = -11.5
+offset_right = 478.5
+offset_bottom = 88.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 40
@@ -165,10 +165,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -545.5
-offset_top = -132.5
-offset_right = 552.5
-offset_bottom = 470.5
+offset_left = -559.5
+offset_top = -157.5
+offset_right = 538.5
+offset_bottom = 445.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iohqi")
@@ -177,10 +177,10 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_iohqi")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = -2.0
-offset_top = 28.0
-offset_right = -2.0
-offset_bottom = 131.0
+offset_left = 6.0
+offset_top = 33.0
+offset_right = 6.0
+offset_bottom = 136.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("5_6fy38")
 theme_override_font_sizes/font_size = 50
