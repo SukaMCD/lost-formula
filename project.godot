@@ -132,5 +132,7 @@ locale/translations_pot_files=PackedStringArray("res://Dialogues/dialogue.dialog
 
 [rendering]
 
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 camera/depth_of_field/depth_of_field_bokeh_quality=3
 environment/ssao/quality=3
