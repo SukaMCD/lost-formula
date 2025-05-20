@@ -1,4 +1,4 @@
-[gd_scene load_steps=209 format=4 uid="uid://dkaupuhm4j7e3"]
+[gd_scene load_steps=212 format=4 uid="uid://dkaupuhm4j7e3"]
 
 [ext_resource type="Script" uid="uid://bw7yj02jpvjmt" path="res://Scenes/forest.gd" id="1_1gotx"]
 [ext_resource type="Texture2D" uid="uid://bp2nu123o32o3" path="res://Assets/forest/grassland/Tiled_files/water_detilazation.png" id="1_86vi4"]
@@ -100,6 +100,9 @@
 [ext_resource type="PackedScene" uid="uid://bjxj5328l2ux2" path="res://Scenes/Enemies/enemy.tscn" id="98_2q6my"]
 [ext_resource type="AudioStream" uid="uid://ckudbjlljwhdv" path="res://Audio/Forest.wav" id="98_gmx8p"]
 [ext_resource type="PackedScene" uid="uid://b7qx0vdyj25xk" path="res://UI/paused_menu.tscn" id="100_ibr0n"]
+[ext_resource type="Script" uid="uid://cq0k077um8dky" path="res://Scenes/Player/pop_up_kalah.gd" id="101_6mlwm"]
+[ext_resource type="Texture2D" uid="uid://d3d6ox4yf3xof" path="res://Assets/Prefabs/6.png" id="101_y26u7"]
+[ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="103_psckt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_knb8s"]
 texture = ExtResource("2_4eku6")
@@ -10843,7 +10846,7 @@ use_kinematic_bodies = true
 position = Vector2(907, 711)
 
 [node name="Enemy" parent="Tilemap" instance=ExtResource("98_2q6my")]
-position = Vector2(1217, 618)
+position = Vector2(1196, 648)
 
 [node name="Player" parent="Tilemap" instance=ExtResource("83_xydxr")]
 y_sort_enabled = true
@@ -10921,4 +10924,43 @@ layer = 10
 
 [node name="ParallaxBackground" parent="CanvasLayer3" instance=ExtResource("94_mbxr0")]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PopUpKalah" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 173.0
+offset_top = -218.0
+offset_right = 301.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("101_6mlwm")
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PopUpKalah"]
+layout_mode = 2
+texture = ExtResource("101_y26u7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PopUpKalah"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/PopUpKalah/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("103_psckt")
+theme_override_font_sizes/font_size = 12
+text = "Yahh kalah"
+
+[node name="Ulangi" type="Button" parent="CanvasLayer/PopUpKalah/VBoxContainer"]
+layout_mode = 2
+text = "Ulangi"
+
+[node name="Keluar" type="Button" parent="CanvasLayer/PopUpKalah/VBoxContainer"]
+layout_mode = 2
+text = "Keluar"
+
+[connection signal="hero_mati" from="." to="CanvasLayer/PopUpKalah" method="_on_forest_hero_mati"]
 [connection signal="body_entered" from="Node/Enterence" to="Node/Enterence" method="_on_body_entered"]

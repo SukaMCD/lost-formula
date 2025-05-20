@@ -4729,18 +4729,13 @@ scale = Vector2(1, -1)
 max_health = 200
 current_health = 200
 
-[node name="Enemy2" parent="tilemap" instance=ExtResource("12_50vmd")]
-position = Vector2(714, 443)
-max_health = 200
-current_health = 200
-
 [node name="Enemy3" parent="tilemap" instance=ExtResource("12_50vmd")]
-position = Vector2(953, 515)
+position = Vector2(815, 503)
 max_health = 200
 current_health = 200
 
 [node name="Enemy4" parent="tilemap" instance=ExtResource("12_50vmd")]
-position = Vector2(955, 376)
+position = Vector2(820, 371)
 max_health = 200
 current_health = 200
 

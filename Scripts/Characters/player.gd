@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
+signal hero_mati
+
 # === Movement ===
 @export var speed: float = 150
 @export var dodge_speed: float = 400  # Kecepatan dodge
@@ -258,6 +260,8 @@ func take_damage(amount: int) -> void:
 	
 	is_invincible = true
 	invincible_timer = invincible_duration
+	
+	get_parent().emit_signal("hero_mati")
 	
 	# Update healthbar
 	if healthbar:

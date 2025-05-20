@@ -324,9 +324,7 @@ texture_filter = 1
 position = Vector2(-2, 2)
 scale = Vector2(0.0608339, 0.0529766)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
-animation = &"Dodge"
-frame = 3
-frame_progress = 1.0
+animation = &"Attack"
 offset = Vector2(0, -15)
 
 [node name="player_hitbox" type="Area2D" parent="CharacterBody2D"]
@@ -371,6 +369,7 @@ offset_top = -36.0
 offset_right = 10.0
 offset_bottom = -32.0
 
+[connection signal="hero_mati" from="CharacterBody2D" to="CharacterBody2D" method="_on_hero_mati"]
 [connection signal="body_entered" from="CharacterBody2D/player_hitbox" to="CharacterBody2D" method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="CharacterBody2D/player_hitbox" to="CharacterBody2D" method="_on_player_hitbox_body_exited"]
 [connection signal="area_entered" from="CharacterBody2D/attack_hitbox" to="CharacterBody2D" method="_on_attack_hitbox_area_entered"]

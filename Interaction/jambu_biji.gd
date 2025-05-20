@@ -16,7 +16,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		showInteractLabel = true
 		if not hasShownDialogue:
-			DialogueManager.show_example_dialogue_balloon(load("res://addons/daun jambu biji.dialogue"))
+			DialogueManager.show_example_dialogue_balloon(load("res://addons/dialogue_manager/jambu biji_pop up.dialogue"))
 			hasShownDialogue = true  # Supaya hanya muncul sekali
 
 func _on_body_exited(body: Node2D) -> void:

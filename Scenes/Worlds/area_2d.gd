@@ -11,4 +11,4 @@ func _on_body_entered(_body: Node2D) -> void:
 	await anim_player.animation_finished
 
 	# Ganti scene setelah fade selesai
-	get_tree().change_scene_to_file("res://Scenes/UI/PERGANTIAN SCENE.tscn")
+	get_tree().change_scene_to_file("res://CUT SCENE/Pergantian_Scene.tscn")
