@@ -10962,5 +10962,7 @@ text = "Ulangi"
 layout_mode = 2
 text = "Keluar"
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+
 [connection signal="hero_mati" from="." to="CanvasLayer/PopUpKalah" method="_on_forest_hero_mati"]
 [connection signal="body_entered" from="Node/Enterence" to="Node/Enterence" method="_on_body_entered"]
