@@ -3702,7 +3702,7 @@ tile_set = SubResource("TileSet_eimml")
 
 [node name="PlayerRoot" parent="Tilemap" instance=ExtResource("9_51gjr")]
 y_sort_enabled = true
-position = Vector2(334, 608)
+position = Vector2(332, 589)
 
 [node name="Tree" type="TileMapLayer" parent="Tilemap"]
 z_index = 5
