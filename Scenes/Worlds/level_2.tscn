@@ -4789,7 +4789,7 @@ shape = SubResource("RectangleShape2D_hpc4t")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_7vchu")
-volume_db = 3.887
+volume_db = 20.567
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 10

@@ -3913,7 +3913,7 @@ shape = SubResource("RectangleShape2D_xktjs")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(6, 7)
 stream = ExtResource("15_usajs")
-volume_db = 3.887
+volume_db = 20.567
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 10
