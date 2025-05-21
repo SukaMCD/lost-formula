@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ok7pudrbw581"]
+[gd_scene load_steps=11 format=3 uid="uid://ok7pudrbw581"]
 
 [ext_resource type="Script" uid="uid://cujej4ra45315" path="res://Scripts/Elements/level_selection.gd" id="1_au0oc"]
 [ext_resource type="FontFile" uid="uid://cavtr11k7fl1w" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf" id="1_tsd2a"]
@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://ppc6tjdyc5y8" path="res://Scenes/UI/base_button.tscn" id="3_fg0ae"]
 [ext_resource type="FontFile" uid="uid://tkxc8wuyouse" path="res://Fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf" id="5_hloht"]
 [ext_resource type="Texture2D" uid="uid://dypmhpia8ut8l" path="res://UI/logo.png" id="6_fxxw2"]
-[ext_resource type="Script" path="res://Scenes/Levels/texture_button.gd" id="7_h8sqn"]
+[ext_resource type="Script" uid="uid://c3bqrfo4axfaw" path="res://Scenes/Levels/texture_button.gd" id="7_h8sqn"]
+[ext_resource type="AudioStream" uid="uid://ckudbjlljwhdv" path="res://Audio/Forest.wav" id="8_67v8r"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8sqn"]
 texture = ExtResource("2_hloht")
@@ -124,5 +125,9 @@ offset_top = 6.0
 offset_right = 148.0
 offset_bottom = 120.0
 script = ExtResource("7_h8sqn")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_67v8r")
+volume_db = 17.333
 
 [connection signal="pressed" from="Panel2/TextureButton" to="Panel2/TextureButton" method="_on_pressed"]
