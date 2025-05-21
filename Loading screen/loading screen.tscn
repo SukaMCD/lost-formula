@@ -169,7 +169,7 @@ buffering_msec = 300
 libraries = {
 &"": SubResource("AnimationLibrary_7s5cf")
 }
-speed_scale = 0.112
+speed_scale = 0.778
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
 texture_filter = 1
