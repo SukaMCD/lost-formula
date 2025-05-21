@@ -10991,6 +10991,7 @@ layer = 10
 [node name="ParallaxBackground" parent="CanvasLayer3" instance=ExtResource("94_mbxr0")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="PopUpKalah" type="CenterContainer" parent="CanvasLayer"]
 anchors_preset = 8
